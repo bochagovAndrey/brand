@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-  <main class="content-page">
+  <main class="content-page content-page--courses">
     <div class="content-page__back">
       <a href="index.html" class="btn btn--ghost">&larr; Назад к материалам дня</a>
     </div>
@@ -20,27 +20,29 @@
       <p>Обзор всех курсов, программ и форматов обучения</p>
     </header>
 
-    <section class="content-block">
-      <h2 class="course-list__title">Список курсов</h2>
-      <ul class="course-list__grid">
-        <li class="course-list__item"><span class="course-list__num">1</span><span class="course-list__name">Английский 360°</span></li>
-        <li class="course-list__item"><span class="course-list__num">2</span><span class="course-list__name">Общий английский</span></li>
-        <li class="course-list__item"><span class="course-list__num">3</span><span class="course-list__name">Путешествия и переезд</span></li>
-        <li class="course-list__item"><span class="course-list__num">4</span><span class="course-list__name">Разговорная практика</span></li>
-        <li class="course-list__item"><span class="course-list__num">5</span><span class="course-list__name">Бизнес-коммуникация</span></li>
-        <li class="course-list__item"><span class="course-list__num">6</span><span class="course-list__name">Подготовка к собеседованию</span></li>
-        <li class="course-list__item"><span class="course-list__num">7</span><span class="course-list__name">Английский для менеджеров</span></li>
-        <li class="course-list__item"><span class="course-list__num">8</span><span class="course-list__name">Английский для IT / разработчиков ПО</span></li>
-        <li class="course-list__item"><span class="course-list__num">9</span><span class="course-list__name">Профессиональный английский</span></li>
-        <li class="course-list__item"><span class="course-list__num">10</span><span class="course-list__name">Skills</span></li>
-        <li class="course-list__item"><span class="course-list__num">11</span><span class="course-list__name">Английский для детей 8–11 лет</span></li>
-        <li class="course-list__item"><span class="course-list__num">12</span><span class="course-list__name">Английский для школы 8–11 лет</span></li>
-        <li class="course-list__item"><span class="course-list__num">13</span><span class="course-list__name">Английский для подростков 12–17 лет</span></li>
-        <li class="course-list__item"><span class="course-list__num">14</span><span class="course-list__name">Английский для школы 12–17 лет</span></li>
-        <li class="course-list__item"><span class="course-list__num">15</span><span class="course-list__name">Подготовка к ЕГЭ</span></li>
-        <li class="course-list__item"><span class="course-list__num">16</span><span class="course-list__name">Подготовка к ОГЭ</span></li>
-        <li class="course-list__item"><span class="course-list__num">17</span><span class="course-list__name">Английский 360° Kids</span></li>
-      </ul>
+    <section class="content-block courses-browser" id="courses-browser">
+      <div class="courses-browser__grid-wrap" id="courses-grid-wrap">
+        <h2 class="course-list__title">Список курсов</h2>
+        <p class="courses-browser__hint">Нажмите на курс, чтобы открыть описание</p>
+        <ul class="course-list__grid" id="courses-grid"></ul>
+      </div>
+
+      <div class="courses-browser__detail" id="courses-detail">
+        <aside class="courses-sidebar" aria-label="Список курсов">
+          <button type="button" class="courses-sidebar__back" id="courses-back-grid">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="15 18 9 12 15 6"/>
+            </svg>
+            Все курсы
+          </button>
+          <ul class="courses-sidebar__list" id="courses-sidebar"></ul>
+        </aside>
+
+        <article class="courses-detail" aria-live="polite">
+          <h2 class="courses-detail__title" id="courses-detail-title"></h2>
+          <div class="courses-detail__body" id="courses-detail-body"></div>
+        </article>
+      </div>
     </section>
 
     <div class="tip">
@@ -53,5 +55,8 @@
       </p>
     </div>
   </main>
+
+  <script src="courses-data.js"></script>
+  <script src="courses.js"></script>
 </body>
 </html>
