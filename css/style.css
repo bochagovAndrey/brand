@@ -490,6 +490,14 @@ body {
   padding: 48px 24px 64px;
 }
 
+.day-picker__cover {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  margin-bottom: 32px;
+}
+
 .day-picker__heading {
   font-size: 32px;
   font-weight: 700;

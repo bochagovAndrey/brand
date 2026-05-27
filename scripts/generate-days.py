@@ -78,7 +78,7 @@ def root_index() -> str:
 </head>
 <body>
   <main class="day-picker">
-    <h1 class="day-picker__heading">Онбординг</h1>
+    <img class="day-picker__cover" src="обложкаонбординга.png" alt="Онбординг — всё, что нужно для старта и успешной работы в Инглекс">
     <p class="day-picker__sub">Выберите день — каждый открывается по прямой ссылке</p>
     <div class="day-picker__grid">
 {chr(10).join(cards)}
