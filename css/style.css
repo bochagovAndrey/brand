@@ -13,6 +13,8 @@
   --blue-soft: #dbe4ff;
   --green-light: #e6fcf5;
   --green: #12b886;
+  --amber-light: #fff9db;
+  --amber: #f59f00;
   --gray-50: #f8f9fb;
   --gray-100: #f1f3f5;
   --gray-200: #e9ecef;
@@ -109,6 +111,23 @@ body {
   border-radius: var(--radius-sm);
   padding: 16px;
   box-shadow: var(--shadow);
+}
+
+.preview-card--link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.preview-card--link:hover {
+  border-color: var(--blue-soft);
+  box-shadow: 0 4px 12px rgba(76, 110, 245, 0.12);
+}
+
+.preview-card--link .preview-card__icon--test {
+  background: var(--amber-light);
+  color: var(--amber);
 }
 
 .preview-card__icon {
@@ -259,6 +278,11 @@ body {
 .material-item__icon--green {
   background: var(--green-light);
   color: var(--green);
+}
+
+.material-item__icon--amber {
+  background: var(--amber-light);
+  color: var(--amber);
 }
 
 .material-item__content {
