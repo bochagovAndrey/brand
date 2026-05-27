@@ -1,0 +1,177 @@
+/* FAQ page — Englex style */
+
+.faq-page {
+  background: #f7f8fc;
+}
+
+.faq {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 32px 64px;
+}
+
+.faq__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.faq__back {
+  display: inline-block;
+  font-size: 14px;
+  color: #6b7280;
+  text-decoration: none;
+  margin-bottom: 16px;
+  transition: color 0.15s;
+}
+
+.faq__back:hover {
+  color: #7c3aed;
+}
+
+.faq__title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1e1b4b;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.faq__subtitle {
+  font-size: 16px;
+  color: #6b7280;
+}
+
+.faq__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  padding-top: 8px;
+}
+
+.faq__logo span {
+  font-size: 22px;
+  font-weight: 600;
+  color: #312e81;
+  letter-spacing: -0.02em;
+}
+
+.faq__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.faq-card {
+  background: linear-gradient(145deg, #f3f0ff 0%, #ede9fe 100%);
+  border-radius: 20px;
+  padding: 28px 28px 32px;
+  position: relative;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.faq-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(124, 58, 237, 0.1);
+}
+
+.faq-card__q {
+  font-size: 17px;
+  font-weight: 700;
+  color: #1e1b4b;
+  line-height: 1.4;
+  margin-bottom: 16px;
+}
+
+.faq-card__a {
+  font-size: 14px;
+  line-height: 1.65;
+  color: #374151;
+}
+
+.faq-card__a p {
+  margin-bottom: 12px;
+}
+
+.faq-card__a p:last-child {
+  margin-bottom: 0;
+}
+
+.faq-card__a a {
+  color: #7c3aed;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  word-break: break-word;
+}
+
+.faq-card__a a:hover {
+  color: #6d28d9;
+}
+
+.faq-card__list {
+  margin: 0 0 12px 0;
+  padding-left: 20px;
+}
+
+.faq-card__list li {
+  margin-bottom: 6px;
+  line-height: 1.55;
+}
+
+.faq-card__list--levels li {
+  margin-bottom: 8px;
+}
+
+.faq-card__link {
+  margin-top: 4px;
+}
+
+.faq-card__figure {
+  margin-top: 20px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.faq-card__figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Last card spans full width for the infographic */
+.faq-card:last-child {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 900px) {
+  .faq__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .faq-card:last-child {
+    grid-column: auto;
+  }
+
+  .faq__header {
+    flex-direction: column;
+  }
+
+  .faq__title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 600px) {
+  .faq {
+    padding: 24px 16px 48px;
+  }
+
+  .faq-card {
+    padding: 20px;
+  }
+}
