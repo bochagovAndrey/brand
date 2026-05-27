@@ -77,8 +77,16 @@ def root_index() -> str:
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <main class="day-picker">
-    <img class="day-picker__cover" src="обложкаонбординга.png" alt="Онбординг — всё, что нужно для старта и успешной работы в Инглекс">
+  <main class="page">
+    <section class="hero hero--cover">
+      <img class="hero__cover" src="обложкаонбординга.png" alt="Онбординг — всё, что нужно для старта и успешной работы в Инглекс">
+    </section>
+
+    <section class="day-picker__welcome">
+      <h2 class="day-picker__welcome-title">Добро пожаловать!</h2>
+      <p class="day-picker__welcome-text">Этот процесс онбординга создан, чтобы помочь вам быстро освоиться в компании, познакомиться с ключевыми инструментами и узнать главные правила взаимодействия в команде 💞</p>
+    </section>
+
     <p class="day-picker__sub">Выберите день — каждый открывается по прямой ссылке</p>
     <div class="day-picker__grid">
 {chr(10).join(cards)}
