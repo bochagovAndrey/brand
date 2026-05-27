@@ -59,7 +59,7 @@ def format_answer(answer_lines: list[str], num: int) -> str:
         level_html = "".join(f"<li>{linkify(l)}</li>" for l in levels)
         img = (
             '<figure class="faq-card__figure">'
-            '<img src="assets/cefr-levels.jpg" alt="Обучение по уровням CEFR" loading="lazy">'
+            '<img src="image1.jpg" alt="Обучение по уровням CEFR" loading="lazy">'
             "</figure>"
         )
         return (
