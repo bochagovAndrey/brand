@@ -7,7 +7,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 TXT = ROOT / "1.txt"
-OUT = ROOT / "questions.html"
+OUT = ROOT / "day-1" / "questions.html"
 
 URL_RE = re.compile(r"https?://[^\s<,)]+")
 LEVEL_RE = re.compile(r"^(A\d?|B\d?|C\d?|A|B|C)\s*—")
@@ -122,8 +122,8 @@ def main() -> None:
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/questions.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/questions.css">
 </head>
 <body class="faq-page">
   <main class="faq">

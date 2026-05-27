@@ -469,3 +469,90 @@ body {
     margin-top: 4px;
   }
 }
+
+.day-empty {
+  font-size: 15px;
+  color: var(--gray-500);
+  line-height: 1.6;
+}
+
+.day-empty code {
+  font-size: 13px;
+  background: var(--gray-100);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* Root day picker */
+.day-picker {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 48px 24px 64px;
+}
+
+.day-picker__heading {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--gray-800);
+}
+
+.day-picker__sub {
+  font-size: 16px;
+  color: var(--gray-500);
+  margin-bottom: 32px;
+}
+
+.day-picker__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.day-picker__card {
+  display: block;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  padding: 24px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: var(--shadow);
+  transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+}
+
+.day-picker__card:hover {
+  transform: translateY(-2px);
+  border-color: var(--blue-soft);
+  box-shadow: 0 8px 24px rgba(76, 110, 245, 0.1);
+}
+
+.day-picker__num {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--blue);
+  background: var(--blue-light);
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+.day-picker__title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--gray-800);
+}
+
+.day-picker__desc {
+  font-size: 14px;
+  color: var(--gray-500);
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .day-picker__grid {
+    grid-template-columns: 1fr;
+  }
+}
