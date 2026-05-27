@@ -94,7 +94,8 @@ body {
   display: block;
   overflow: hidden;
   border-radius: var(--radius);
-  aspect-ratio: 1120 / 200;
+  width: 100%;
+  height: clamp(240px, calc(100vh - 480px), 320px);
 }
 
 .hero__cover {

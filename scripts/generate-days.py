@@ -78,8 +78,8 @@ def root_index() -> str:
 </head>
 <body>
   <main class="page">
-    <section class="hero hero--cover">
-      <img class="hero__cover" src="обложкаонбординга.png" alt="Онбординг — всё, что нужно для старта и успешной работы в Инглекс">
+    <section class="hero hero--cover" style="overflow: hidden; border-radius: 16px; width: 100%; height: clamp(240px, calc(100vh - 480px), 320px);">
+      <img class="hero__cover" src="обложкаонбординга.png" alt="Онбординг — всё, что нужно для старта и успешной работы в Инглекс" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: left center;">
     </section>
 
     <section class="day-picker__welcome">
