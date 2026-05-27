@@ -68,7 +68,26 @@ def format_answer(answer_lines: list[str], num: int) -> str:
             + img
         )
 
-    return "".join(para(line) for line in answer_lines)
+    return format_default_answer(answer_lines)
+
+
+def format_default_answer(answer_lines: list[str]) -> str:
+    parts = []
+    i = 0
+    while i < len(answer_lines):
+        line = answer_lines[i]
+        stripped = line.strip()
+        if stripped.startswith("•"):
+            bullets = []
+            while i < len(answer_lines) and answer_lines[i].strip().startswith("•"):
+                bullets.append(answer_lines[i].strip().lstrip("•").strip())
+                i += 1
+            items = "".join(f"<li>{linkify(b)}</li>" for b in bullets)
+            parts.append(f'<ul class="faq-card__list">{items}</ul>')
+        else:
+            parts.append(para(line))
+            i += 1
+    return "".join(parts)
 
 
 def card_html(question: str, answer_html: str) -> str:

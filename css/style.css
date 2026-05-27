@@ -130,6 +130,11 @@ body {
   color: var(--amber);
 }
 
+.preview-card__icon--green {
+  background: var(--green-light);
+  color: var(--green);
+}
+
 .preview-card__icon {
   width: 40px;
   height: 40px;
