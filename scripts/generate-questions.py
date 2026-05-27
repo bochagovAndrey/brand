@@ -11,6 +11,11 @@ OUT = ROOT / "questions.html"
 
 URL_RE = re.compile(r"https?://[^\s<,)]+")
 LEVEL_RE = re.compile(r"^(A\d?|B\d?|C\d?|A|B|C)\s*—")
+SEPARATOR_RE = re.compile(r"^_+$")
+
+
+def clean_lines(lines: list[str]) -> list[str]:
+    return [line for line in lines if not SEPARATOR_RE.match(line.strip())]
 
 
 def linkify(text: str) -> str:
@@ -43,7 +48,9 @@ def format_answer(answer_lines: list[str], num: int) -> str:
         intro = para(answer_lines[0])
         criteria = answer_lines[1:7]
         rest = answer_lines[7:]
-        items = "".join(f"<li>{linkify(c.rstrip('; '))}</li>" for c in criteria)
+        items = "".join(
+            f"<li>{linkify(c.lstrip('*').strip().rstrip('; '))}</li>" for c in criteria
+        )
         list_html = f'<ul class="faq-card__list">{items}</ul>'
         rest_html = "".join(para(l) for l in rest)
         return intro + list_html + rest_html
@@ -52,8 +59,9 @@ def format_answer(answer_lines: list[str], num: int) -> str:
         parts = []
         levels = []
         for line in answer_lines:
-            if LEVEL_RE.match(line.strip()):
-                levels.append(line.strip())
+            stripped = line.strip().lstrip("*").strip()
+            if LEVEL_RE.match(stripped):
+                levels.append(stripped)
             else:
                 parts.append(para(line))
         level_html = "".join(f"<li>{linkify(l)}</li>" for l in levels)
@@ -103,7 +111,7 @@ def main() -> None:
     cards = []
     for i, block in enumerate(blocks, 1):
         lines = block.split("\n")
-        cards.append(card_html(lines[0], format_answer(lines[1:], i)))
+        cards.append(card_html(lines[0], format_answer(clean_lines(lines[1:]), i)))
 
     page = f"""<!DOCTYPE html>
 <html lang="ru">
