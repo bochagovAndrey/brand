@@ -53,7 +53,7 @@
 
     <section class="top-section">
       <h2 class="section-title">Что вас ждёт сегодня</h2>
-      <div class="preview-cards preview-cards--single">
+      <div class="preview-cards">
         <article class="preview-card">
           <div class="preview-card__icon preview-card__icon--green">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -72,13 +72,22 @@
           <h3 class="preview-card__title">Продукты школы (17 курсов)</h3>
           <p class="preview-card__desc">Изучите все курсы нашей школы: их особенности, программу, форматы и результаты обучения.</p>
         </article>
+        <article class="preview-card">
+          <div class="preview-card__icon preview-card__icon--amber">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+          </div>
+          <h3 class="preview-card__title">Закрепление</h3>
+          <p class="preview-card__desc">Проверьте знания по системе курсов и системе обучения</p>
+        </article>
       </div>
     </section>
 
     <section class="materials">
       <div class="materials__header">
         <h2>Материалы дня</h2>
-        <span class="badge">2 этапа</span>
+        <span class="badge">3 этапа</span>
       </div>
 
       <article class="material-item">
@@ -101,48 +110,61 @@
         <a href="#" class="btn btn--outline">Изучить</a>
       </article>
 
+      <article class="material-item">
+        <span class="material-item__num">2</span>
+        <div class="material-item__icon material-item__icon--blue">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 3 4 6 4s6-2 6-4v-5"/>
+          </svg>
+        </div>
+        <div class="material-item__content">
+          <h3 class="material-item__title">Продукты школы (17 курсов)</h3>
+          <p class="material-item__desc">Обзор всех курсов, программ и форматов обучения</p>
+        </div>
+        <span class="material-item__tag">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/>
+          </svg>
+          17 курсов
+        </span>
+        <a href="courses.html" class="btn btn--outline">Изучить</a>
+      </article>
+
       <div class="material-group">
         <article class="material-item">
-          <span class="material-item__num">2</span>
-          <div class="material-item__icon material-item__icon--blue">
+          <span class="material-item__num">3</span>
+          <div class="material-item__icon material-item__icon--amber">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
             </svg>
           </div>
           <div class="material-item__content">
-            <h3 class="material-item__title">Продукты школы (17 курсов)</h3>
-            <p class="material-item__desc">Обзор всех курсов, программ и форматов обучения</p>
+            <h3 class="material-item__title">Закрепление</h3>
+            <p class="material-item__desc">Проверьте знания по материалам дня в двух тестах</p>
           </div>
           <span class="material-item__tag">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/>
             </svg>
-            17 курсов
+            2 теста
           </span>
-          <a href="#" class="btn btn--outline">Изучить</a>
         </article>
 
-        <div class="course-list">
-          <h3 class="course-list__title">Список курсов</h3>
-          <ul class="course-list__grid">
-            <li class="course-list__item"><span class="course-list__num">1</span>Английский 360°</li>
-            <li class="course-list__item"><span class="course-list__num">2</span>Общий английский</li>
-            <li class="course-list__item"><span class="course-list__num">3</span>Путешествия и переезд</li>
-            <li class="course-list__item"><span class="course-list__num">4</span>Разговорная практика</li>
-            <li class="course-list__item"><span class="course-list__num">5</span>Бизнес-коммуникация</li>
-            <li class="course-list__item"><span class="course-list__num">6</span>Подготовка к собеседованию</li>
-            <li class="course-list__item"><span class="course-list__num">7</span>Английский для менеджеров</li>
-            <li class="course-list__item"><span class="course-list__num">8</span>Английский для IT / разработчиков ПО</li>
-            <li class="course-list__item"><span class="course-list__num">9</span>Профессиональный английский</li>
-            <li class="course-list__item"><span class="course-list__num">10</span>Skills</li>
-            <li class="course-list__item"><span class="course-list__num">11</span>Английский для детей 8–11 лет</li>
-            <li class="course-list__item"><span class="course-list__num">12</span>Английский для школы 8–11 лет</li>
-            <li class="course-list__item"><span class="course-list__num">13</span>Английский для подростков 12–17 лет</li>
-            <li class="course-list__item"><span class="course-list__num">14</span>Английский для школы 12–17 лет</li>
-            <li class="course-list__item"><span class="course-list__num">15</span>Подготовка к ЕГЭ</li>
-            <li class="course-list__item"><span class="course-list__num">16</span>Подготовка к ОГЭ</li>
-            <li class="course-list__item"><span class="course-list__num">17</span>Английский 360° Kids</li>
-          </ul>
+        <div class="test-list">
+          <article class="test-list__item">
+            <div class="test-list__content">
+              <h4 class="test-list__title">Система курсов</h4>
+              <p class="test-list__desc">Тест по продуктам и курсам школы</p>
+            </div>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfCE9uXEavZqS5zKYceJRiqSCXFObQ7yOOrii-AiMoZfRU-9Q/viewform?usp=publish-editor" class="btn btn--outline" target="_blank" rel="noopener noreferrer">Пройти тест</a>
+          </article>
+          <article class="test-list__item">
+            <div class="test-list__content">
+              <h4 class="test-list__title">Система обучения</h4>
+              <p class="test-list__desc">Тест по форматам и процессу обучения</p>
+            </div>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeZHoWb3QriNHajoEqA1KadyR4kGVftYV-W5Ay0IWcm2F2zfQ/viewform?usp=sharing&ouid=111394815258818618085" class="btn btn--outline" target="_blank" rel="noopener noreferrer">Пройти тест</a>
+          </article>
         </div>
       </div>
 
