@@ -27,9 +27,9 @@ def day_page(num: int, title: str, hero_title: str, hero_desc: str) -> str:
 </head>
 <body>
   <main class="page page--day">
-    <div class="page__back">
+    <nav class="page__back" aria-label="Навигация">
       <a href="../index.html" class="btn btn--ghost">&larr; Назад к онбордингу</a>
-    </div>
+    </nav>
 
     <section class="hero">
       <div class="hero__content">

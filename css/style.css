@@ -43,7 +43,34 @@ body {
 }
 
 .page__back {
+  display: block;
   margin-bottom: 24px;
+  position: relative;
+  z-index: 10;
+}
+
+.page__back .btn--ghost,
+.page__back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--gray-800);
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 6px 0;
+}
+
+.page__back .btn--ghost:hover,
+.page__back-link:hover {
+  color: var(--blue);
+}
+
+.content-page__back--stack {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
 }
 
 /* Hero banner */
@@ -1042,9 +1069,10 @@ body {
   font-weight: 700;
 }
 
-.page--day .btn--ghost {
+.page--day .page__back .btn--ghost {
   font-size: 15px;
   font-weight: 600;
+  color: var(--gray-800);
 }
 
 .page--day .day-empty {
@@ -1064,9 +1092,10 @@ body {
   color: var(--gray-600);
 }
 
-.content-page--courses .btn--ghost {
+.content-page--courses .content-page__back .btn--ghost {
   font-size: 15px;
   font-weight: 600;
+  color: var(--gray-800);
 }
 
 .content-page--courses .content-block {
