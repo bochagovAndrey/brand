@@ -26,7 +26,11 @@ def day_page(num: int, title: str, hero_title: str, hero_desc: str) -> str:
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-  <main class="page">
+  <main class="page page--day">
+    <div class="page__back">
+      <a href="../index.html" class="btn btn--ghost">&larr; Назад к онбордингу</a>
+    </div>
+
     <section class="hero">
       <div class="hero__content">
         <h1 class="hero__title">{hero_title}</h1>
