@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Автозвонок для подтверждения — День 5</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <main class="content-page content-page--guide">
+    <div class="content-page__back">
+      <a href="index.html" class="btn btn--ghost">&larr; Назад к материалам дня</a>
+    </div>
+
+    <header class="content-page__header">
+      <h1>Автозвонок для подтверждения</h1>
+      <p>Как работает робот-звонок перед вводным уроком и что делать координатору после него</p>
+    </header>
+
+    <section class="content-block guide-intro">
+      <p class="guide-intro__text">За <strong>1,5 часа</strong> до вводного урока студент (или родитель, если студент — ребёнок) получает автоматический звонок от робота. Робот сообщает, что занятие через 1,5 часа, и просит подтвердить участие: ответить <strong>«Да»</strong> или <strong>«Нет»</strong>.</p>
+      <ul class="guide-intro__facts">
+        <li>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          Автозвонок работает с <strong>8:00 до 22:00</strong>
+        </li>
+        <li>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+          </svg>
+          Для ВУ с <strong>09:00 до 23:00</strong> (на 8:00 звонка в 7:00 не будет)
+        </li>
+      </ul>
+    </section>
+
+    <section class="content-block">
+      <h2 class="guide-section__title">Что происходит после звонка</h2>
+      <div class="guide-outcomes">
+        <article class="guide-outcome guide-outcome--yes">
+          <h3 class="guide-outcome__title">«Да»</h3>
+          <p class="guide-outcome__text">Урок проводится по плану — ждём студента на ВУ. В amoCRM сделка переходит в этап <strong>«Подтвердил ВУ»</strong>.</p>
+        </article>
+        <article class="guide-outcome guide-outcome--warn">
+          <h3 class="guide-outcome__title">Нет ответа или не распознан ответ</h3>
+          <p class="guide-outcome__text">Урок проводится по плану — ждём студента на ВУ. В amoCRM сделка остаётся в этапе <strong>«Записан на ВУ»</strong> и ставится задача.</p>
+        </article>
+        <article class="guide-outcome guide-outcome--no">
+          <h3 class="guide-outcome__title">«Нет»</h3>
+          <p class="guide-outcome__text">Урок автоматически отменяется. Преподавателю уходит СМС, в ЛКМ — уведомление «Студент отменил вводный!». Сделка переходит в <strong>«Отказ ВУ»</strong>.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-block">
+      <h2 class="guide-section__title">В личном кабинете (ЛКМ)</h2>
+      <p class="guide-section__lead">После звонка на карточке ВУ в листингах (<strong>Все вводные</strong>, <strong>Запланированные</strong>, <strong>Состоявшиеся</strong>, <strong>Несостоявшиеся</strong>, <strong>Студент отсутствовал</strong>) отображается иконка статуса. При наведении — пояснение.</p>
+
+      <ul class="guide-call-icons">
+        <li class="guide-call-icons__item">
+          <img src="autocall-2.png" alt="" width="32" height="32" class="guide-call-icons__img" aria-hidden="true">
+          <div>
+            <strong class="guide-call-icons__label guide-call-icons__label--green">Зелёная</strong>
+            <span class="guide-call-icons__desc">— подтверждено</span>
+          </div>
+        </li>
+        <li class="guide-call-icons__item">
+          <img src="autocall-3.png" alt="" width="32" height="32" class="guide-call-icons__img" aria-hidden="true">
+          <div>
+            <strong class="guide-call-icons__label guide-call-icons__label--red">Красная</strong>
+            <span class="guide-call-icons__desc">— отменено</span>
+          </div>
+        </li>
+        <li class="guide-call-icons__item">
+          <img src="autocall-4.png" alt="" width="32" height="32" class="guide-call-icons__img" aria-hidden="true">
+          <div>
+            <strong class="guide-call-icons__label guide-call-icons__label--amber">Жёлтая</strong>
+            <span class="guide-call-icons__desc">— не удалось дозвониться</span>
+          </div>
+        </li>
+      </ul>
+
+      <figure class="guide-step__figure">
+        <img src="autocall-1.png" alt="Список вводных уроков в ЛКМ: у занятия отображается зелёная иконка телефона со статусом автозвонка" width="1200" loading="lazy">
+        <figcaption>Листинг вводных — иконка автозвонка на карточке урока</figcaption>
+      </figure>
+    </section>
+
+    <section class="content-block">
+      <h2 class="guide-section__title">В amoCRM</h2>
+
+      <div class="guide-amo-flow">
+        <article class="guide-amo-row">
+          <figure class="guide-amo-row__stage">
+            <img src="autocall-5.png" alt="Этап в amoCRM: Подтвердил ВУ" width="572" loading="lazy">
+          </figure>
+          <div class="guide-amo-row__body">
+            <p class="guide-amo-row__text">
+              Если студент <strong>подтвердил</strong> своё присутствие в автозвонке — сделка автоматически сменит этап на «Подтвердил ВУ»
+            </p>
+          </div>
+        </article>
+
+        <article class="guide-amo-row">
+          <figure class="guide-amo-row__stage">
+            <img src="autocall-6.png" alt="Этап в amoCRM: Отказ ВУ" width="568" loading="lazy">
+          </figure>
+          <div class="guide-amo-row__body">
+            <p class="guide-amo-row__text">
+              Если студент <strong>отменил</strong> ВУ в автозвонке — сделка автоматически сменит этап на «Отказ ВУ» и <strong>поставится задача</strong>
+            </p>
+            <figure class="guide-amo-row__task">
+              <img src="autocall-8.png" alt="Задача: ВУ — отменил урок, подтвердить отчёт" width="1578" loading="lazy">
+            </figure>
+          </div>
+        </article>
+
+        <article class="guide-amo-row">
+          <figure class="guide-amo-row__stage">
+            <img src="autocall-7.png" alt="Этап в amoCRM: Записан на ВУ" width="574" loading="lazy">
+          </figure>
+          <div class="guide-amo-row__body">
+            <p class="guide-amo-row__text">
+              Если студент <strong>не принял звонок</strong> или бот <strong>не смог разобрать</strong>, что ответил клиент — сделка остаётся в этапе «Записан на ВУ» и <strong>вам ставится задача</strong>
+            </p>
+            <figure class="guide-amo-row__task">
+              <img src="autocall-9.png" alt="Задача: ВУ — не подтвердил присутствие" width="1574" loading="lazy">
+            </figure>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-block guide-checklist-block">
+      <h2 class="guide-section__title">Что делать менеджеру подбора</h2>
+      <p class="guide-section__lead">При уведомлении об отмене или отсутствии подтверждения:</p>
+      <ul class="guide-checklist">
+        <li>оперативно связаться с клиентом;</li>
+        <li>уточнить причину отмены;</li>
+        <li>согласовать новое время ВУ.</li>
+      </ul>
+    </section>
+
+    <aside class="guide-alert content-block guide-alert--info">
+      <div class="guide-alert__icon" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/>
+        </svg>
+      </div>
+      <div class="guide-alert__body">
+        <h2 class="guide-alert__title">Зачем это сделано</h2>
+        <ul class="guide-alert__list">
+          <li>чтобы студент мог легко отказаться от урока, если передумал;</li>
+          <li>чтобы преподаватель не тратил время в ожидании.</li>
+        </ul>
+      </div>
+    </aside>
+
+    <div class="tip">
+      <svg class="tip__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="9" y1="18" x2="15" y2="18"/><line x1="10" y1="22" x2="14" y2="22"/>
+        <path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/>
+      </svg>
+      <p class="tip__text">
+        <strong>Совет:</strong> Следите за иконками автозвонка в листинге вводных и за задачами в ЛКМ — так вы успеете отреагировать до начала урока.
+      </p>
+    </div>
+  </main>
+</body>
+</html>
