@@ -1228,6 +1228,39 @@ body {
   color: var(--gray-800);
 }
 
+/* Methodologists: overrides inside white content-block sections */
+.content-page--training .content-block .op-section__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.content-page--training .content-block .op-types {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.content-page--training .content-block ol.op-resources {
+  list-style: none;
+  padding: 0;
+  margin-left: 0;
+}
+
+.content-page--training .content-block .op-resources > li.op-resource {
+  display: flex;
+  list-style: none;
+  margin-bottom: 0;
+  background: var(--gray-50);
+}
+
+.content-page--training .content-block .op-resources > li.op-resource::marker {
+  content: none;
+}
+
 /* Methodologists training page */
 .op-toc__title {
   font-size: 18px;
@@ -1311,6 +1344,10 @@ body {
   margin: 24px 0 14px;
 }
 
+.op-section > .op-subtitle:first-of-type {
+  margin-top: 16px;
+}
+
 .op-label {
   font-size: 15px;
   font-weight: 700;
@@ -1356,6 +1393,28 @@ body {
   border-left-color: var(--blue);
 }
 
+.op-callout--standalone {
+  margin-bottom: 24px;
+}
+
+.content-page--training .content-page__header.content-block p {
+  margin-bottom: 0;
+}
+
+.content-block .op-principles {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.content-block .op-principles > li {
+  list-style: none;
+}
+
+.content-block .op-principles > li::marker {
+  content: none;
+}
+
 .op-callout--important {
   background: #fff9db;
   border-left-color: var(--amber);
@@ -1371,7 +1430,7 @@ body {
 .op-principle {
   display: flex;
   gap: 14px;
-  align-items: flex-start;
+  align-items: center;
   padding: 14px 16px;
   background: var(--white);
   border: 2px solid var(--gray-200);
@@ -1430,11 +1489,11 @@ body {
 
 .op-resources {
   list-style: none;
-  counter-reset: resource;
   display: flex;
   flex-direction: column;
   gap: 10px;
   margin-bottom: 8px;
+  padding: 0;
 }
 
 .op-resource {
@@ -1646,7 +1705,8 @@ body {
 }
 
 @media (max-width: 900px) {
-  .op-types {
+  .op-types,
+  .content-page--training .content-block .op-types {
     grid-template-columns: 1fr;
   }
 
