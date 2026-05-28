@@ -4836,3 +4836,257 @@ body.image-modal-open {
     grid-template-columns: 1fr;
   }
 }
+
+/* SHVU page */
+.shvu-section-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--gray-200);
+}
+
+.shvu-section-head--plain {
+  border: none;
+  box-shadow: none;
+  background: transparent;
+  padding: 0 0 16px;
+  margin-bottom: 0;
+}
+
+.shvu-section-head .guide-section__title {
+  margin: 0;
+}
+
+.shvu-badge {
+  font-size: 13px;
+  font-weight: 600;
+  color: #6d4fc7;
+  background: #f3f0ff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.shvu-shoppers {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.shvu-shopper {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px 18px;
+  background: var(--white);
+  border: 2px solid var(--gray-200);
+  border-radius: 12px;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.shvu-shopper:nth-child(4) {
+  grid-column: 2 / span 2;
+}
+
+.shvu-shopper:nth-child(5) {
+  grid-column: 4 / span 2;
+}
+
+.shvu-shopper:hover {
+  border-color: #c4b5fd;
+  box-shadow: 0 4px 16px rgba(109, 79, 199, 0.1);
+}
+
+.shvu-shopper__label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--gray-500);
+}
+
+.shvu-shopper__student {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--gray-800);
+  margin: 0;
+}
+
+.shvu-shopper__link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--gray-500);
+}
+
+.shvu-shopper__link svg {
+  flex-shrink: 0;
+  color: #9ca3af;
+}
+
+.shvu-shopper__employee {
+  font-size: 14px;
+  font-weight: 600;
+  color: #6d4fc7;
+  margin: 0;
+}
+
+.shvu-shoppers-figure {
+  margin: 0 auto 24px;
+  max-width: 860px;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 2px solid var(--gray-200);
+  background: var(--white);
+  box-shadow: 0 4px 16px rgba(33, 37, 41, 0.08);
+}
+
+.shvu-shoppers-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.shvu-shoppers-figure figcaption {
+  padding: 10px 14px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--gray-500);
+  background: var(--white);
+  border-top: 1px solid var(--gray-200);
+  text-align: center;
+}
+
+.shvu-figures {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.guide-step--accent {
+  border-left: 4px solid #6d4fc7;
+}
+
+.guide-step--warn {
+  border-left: 4px solid #ef5350;
+}
+
+.guide-step__num--purple {
+  background: #6d4fc7;
+}
+
+.guide-step__num--red {
+  background: #ef5350;
+}
+
+.shvu-ile-panel {
+  border: 2px solid #ef9a9a;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #ffebee;
+}
+
+.shvu-ile-panel__warn {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 18px 20px;
+}
+
+.shvu-ile-panel__text {
+  min-width: 0;
+}
+
+.shvu-ile-panel__tag {
+  margin: 0 0 10px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #c62828;
+}
+
+.shvu-ile-panel__text p {
+  margin: 0 0 8px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--gray-700);
+}
+
+.shvu-ile-panel__text p:last-child {
+  margin-bottom: 0;
+}
+
+.shvu-ile-panel__figure {
+  margin: 0 auto;
+  max-width: 860px;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 2px solid #efb4bc;
+  background: var(--white);
+  box-shadow: 0 4px 16px rgba(198, 40, 40, 0.08);
+}
+
+.shvu-ile-panel__figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.shvu-ile-panel__figure figcaption {
+  padding: 10px 14px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--gray-500);
+  background: var(--white);
+  border-top: 1px solid #f5d5d8;
+  text-align: center;
+}
+
+.shvu-ile-panel__rule {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 20px;
+  background: #e8f5e9;
+  border-top: 2px solid #81c784;
+}
+
+.shvu-ile-panel__icon {
+  flex-shrink: 0;
+  color: #2e7d32;
+}
+
+.shvu-ile-panel__rule p {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.45;
+  color: #1b5e20;
+}
+
+@media (max-width: 768px) {
+  .shvu-shoppers {
+    grid-template-columns: 1fr;
+  }
+
+  .shvu-shopper,
+  .shvu-shopper:nth-child(4),
+  .shvu-shopper:nth-child(5) {
+    grid-column: auto;
+  }
+
+  .shvu-figures {
+    grid-template-columns: 1fr;
+  }
+}
