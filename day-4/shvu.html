@@ -20,8 +20,18 @@
       <p>Проверка работы и лояльности преподавателей через тайных покупателей</p>
     </header>
 
-    <section class="content-block guide-intro" id="about">
-      <h2 class="guide-section__title">Что такое ШВУ</h2>
+    <section class="help-panel shvu-accordion" id="about">
+      <button type="button" class="help-entry shvu-accordion__trigger" aria-expanded="false" aria-controls="about-content">
+        <span class="help-entry__emoji" aria-hidden="true">🕵️</span>
+        <span class="help-entry__text">Что такое ШВУ</span>
+        <span class="help-entry__chevron" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"/>
+          </svg>
+        </span>
+      </button>
+      <div class="help-panel__expand" id="about-content">
+        <div class="help-panel__content content-block guide-intro">
       <p class="guide-intro__text">Шпионские вводные уроки (ШВУ) — это проверка работы и лояльности преподавателей, в качестве клиента выступает наш тайный покупатель. Тайные покупатели записываются на вводные уроки, а методисты потом отсматривают записи и оценивают, насколько правильно и хорошо преподаватель проводит ВУ.</p>
 
       <div class="guide-outcomes">
@@ -37,6 +47,8 @@
           <h3 class="guide-outcome__title">Контроль</h3>
           <p class="guide-outcome__text">На ВУ студент намекает на частные занятия — так выявляем тех, кто уводит студентов.</p>
         </article>
+      </div>
+        </div>
       </div>
     </section>
 
@@ -59,11 +71,19 @@
       </a>
     </section>
 
-    <section class="content-block" id="shoppers">
-      <div class="shvu-section-head">
-        <h2 class="guide-section__title">Тайные покупатели</h2>
-        <span class="shvu-badge">5 профилей в ЛК</span>
-      </div>
+    <section class="help-panel shvu-accordion" id="shoppers">
+      <button type="button" class="help-entry shvu-accordion__trigger" aria-expanded="false" aria-controls="shoppers-content">
+        <span class="help-entry__emoji" aria-hidden="true">🎭</span>
+        <span class="help-entry__text">Тайные покупатели</span>
+        <span class="shvu-badge shvu-accordion__badge">5 профилей в ЛК</span>
+        <span class="help-entry__chevron" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"/>
+          </svg>
+        </span>
+      </button>
+      <div class="help-panel__expand" id="shoppers-content">
+        <div class="help-panel__content content-block">
 
       <p class="guide-section__lead">Профили тайных покупателей есть в ЛК. Каждый «студент» — это наш сотрудник под другим именем:</p>
 
@@ -130,6 +150,11 @@
         <figcaption>Комментарий в заявке: «Шпион, наш сотрудник …»</figcaption>
       </figure>
 
+      <figure class="shvu-shoppers-figure">
+        <img src="../ШВУ2.png" alt="Консоль студента: вкладка «Шпион вводных уроков»" loading="lazy">
+        <figcaption>Вкладка «Шпион вводных уроков» в консоли студента</figcaption>
+      </figure>
+
       <div class="tip">
         <svg class="tip__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <line x1="9" y1="18" x2="15" y2="18"/><line x1="10" y1="22" x2="14" y2="22"/>
@@ -137,86 +162,162 @@
         </svg>
         <p class="tip__text">Имена тайных покупателей могут меняться — следите за новостями от методиста <strong>Кати Валягиной</strong>.</p>
       </div>
+        </div>
+      </div>
     </section>
 
-    <section id="algorithm">
-      <div class="shvu-section-head shvu-section-head--plain">
-        <h2 class="guide-section__title">Алгоритм работы</h2>
-        <span class="shvu-badge">7 шагов</span>
+    <section class="help-panel shvu-accordion" id="algorithm">
+      <button type="button" class="help-entry shvu-accordion__trigger" aria-expanded="false" aria-controls="algorithm-content">
+        <span class="help-entry__emoji" aria-hidden="true">📋</span>
+        <span class="help-entry__text">Алгоритм работы</span>
+        <span class="shvu-badge shvu-accordion__badge">7 шагов</span>
+        <span class="help-entry__chevron" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"/>
+          </svg>
+        </span>
+      </button>
+      <div class="help-panel__expand" id="algorithm-content">
+        <div class="help-panel__content">
+
+      <div class="help-browser app-subblocks-browser shvu-algorithm-browser content-block" id="shvu-algorithm-browser">
+        <div class="help-browser__grid-wrap" id="shvu-algorithm-grid-wrap">
+          <p class="help-browser__hint">Нажмите на шаг, чтобы открыть инструкцию</p>
+          <ul class="help-topics__grid shvu-algorithm-browser__grid" id="shvu-algorithm-grid"></ul>
+        </div>
+
+        <div class="help-browser__detail" id="shvu-algorithm-detail">
+          <aside class="help-sidebar" aria-label="Шаги алгоритма">
+            <button type="button" class="help-sidebar__back" id="shvu-algorithm-back-grid">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="15 18 9 12 15 6"/>
+              </svg>
+              Все шаги
+            </button>
+            <ul class="help-sidebar__list" id="shvu-algorithm-sidebar"></ul>
+          </aside>
+
+          <article class="help-detail app-subblocks-browser__content" aria-live="polite">
+            <h3 class="help-detail__title" id="shvu-algorithm-detail-title"></h3>
+            <div class="help-detail__body" id="shvu-algorithm-detail-body"></div>
+          </article>
+        </div>
       </div>
 
-      <ol class="guide-steps">
-        <li class="guide-step content-block guide-step--accent">
-          <div class="guide-step__head">
-            <span class="guide-step__num guide-step__num--purple" aria-hidden="true">1</span>
-            <h3 class="guide-step__title">Ставим статус «потенциальный»</h3>
-          </div>
+      <template id="shvu-algorithm-step-1">
+        <div class="shvu-algorithm-step">
           <p class="guide-step__text">Когда методист просит согласовать «шпионский ВУ» с определённым тайным покупателем, в его профиле нужно поставить статус <strong>«потенциальный»</strong> — это важно!</p>
-          <figure class="guide-step__figure">
-            <img src="../ШВУ3.png" alt="Общие сведения о студенте: статус «Потенциальный» и уровень пособия Elementary" loading="lazy">
-            <figcaption>Статус «Потенциальный» в профиле тайного покупателя</figcaption>
+          <figure class="guide-step__figure shvu-step-figure-single">
+            <img src="../СменаСтатусаШВУ.png" alt="Профиль студента: вкладка «Профиль» и поле «Статус» — «Потенциальный»" loading="lazy">
+            <figcaption>Смена статуса на «Потенциальный» во вкладке «Профиль»</figcaption>
           </figure>
-        </li>
+        </div>
+      </template>
 
-        <li class="guide-step content-block">
-          <div class="guide-step__head">
-            <span class="guide-step__num" aria-hidden="true">2</span>
-            <h3 class="guide-step__title">Создаём новую заявку</h3>
-          </div>
+      <template id="shvu-algorithm-step-2">
+        <div class="shvu-algorithm-step">
           <p class="guide-step__text">Обязательно создайте новую заявку и переведите в подбор — так задача не потеряется в процессе работы.</p>
-        </li>
-
-        <li class="guide-step content-block">
-          <div class="guide-step__head">
-            <span class="guide-step__num" aria-hidden="true">3</span>
-            <h3 class="guide-step__title">Подбираем слоты и предлагаем студента</h3>
-          </div>
-          <p class="guide-step__text">Найдите свободные слоты в расписании преподавателя, на которые он точно возьмёт, и на них предложите студента-тайного покупателя с курсом, который указала методист, и историей из профиля этого тайного покупателя, если указали.</p>
           <figure class="guide-step__figure">
-            <img src="../ШВУ2.png" alt="Консоль студента: вкладка «Шпион вводных уроков»" loading="lazy">
-            <figcaption>Вкладка «Шпион вводных уроков» в консоли студента</figcaption>
+            <img src="../СозданиеЗаявкиШВУ.png" alt="Консоль студента: кнопка «Создать заявку»" loading="lazy">
+            <figcaption>Кнопка «Создать заявку» в консоли тайного покупателя</figcaption>
           </figure>
-        </li>
+          <figure class="guide-step__figure shvu-step-figure-single">
+            <img src="../ШВУпереводВподбор.png" alt="Заявка на вводный урок: кнопка «Перевести в подбор»" loading="lazy">
+            <figcaption>После создания заявки нажмите «Перевести в подбор»</figcaption>
+          </figure>
+        </div>
+      </template>
 
-        <li class="guide-step content-block">
-          <div class="guide-step__head">
-            <span class="guide-step__num" aria-hidden="true">4</span>
-            <h3 class="guide-step__title">Не раскрываем, что это шпион</h3>
+      <template id="shvu-algorithm-step-3">
+        <div class="shvu-algorithm-step">
+          <p class="guide-step__text">Найдите свободные слоты в расписании преподавателя, на которые он точно возьмёт, и на них предложите студента-тайного покупателя с курсом, который указала методист, и историей из профиля этого тайного покупателя, если указали.</p>
+          <p class="guide-step__text">Сначала пишем шпиону, кидаем часы из ЛК какие есть, выбираем часы, прикрепляем, и либо ставим через ПСП, либо напрямую от препода.</p>
+          <div class="shvu-slots-figures">
+            <div class="shvu-slots-figures__pair">
+              <figure class="guide-step__figure shvu-step-figure-single">
+                <img src="../ШВУслоты1.png" alt="Сообщение шпиону: доступные часы преподавателей для ШВУ 360" loading="lazy">
+                <figcaption>Отправляем шпиону доступные часы из ЛК</figcaption>
+              </figure>
+              <figure class="guide-step__figure shvu-step-figure-single">
+                <img src="../ШВУслоты2.png" alt="Ответ шпиона: выбранные слоты для Виктории Т. и Марии М." loading="lazy">
+                <figcaption>Шпион отвечает выбранными слотами</figcaption>
+              </figure>
+            </div>
+            <div class="shvu-reveal">
+              <button type="button" class="shvu-reveal__trigger" aria-expanded="false">
+                Пример предложения студента НЕ через ПСП
+                <svg class="shvu-reveal__chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="6 9 12 15 18 9"/>
+                </svg>
+              </button>
+              <div class="shvu-reveal__expand">
+                <figure class="guide-step__figure shvu-step-figure-single shvu-reveal__figure">
+                  <img src="../ШВУпредложСтудента.png" alt="Переписка с преподавателем: предложение студента Афанасьевой Полины напрямую, не через ПСП" loading="lazy">
+                </figure>
+              </div>
+            </div>
           </div>
+        </div>
+      </template>
+
+      <template id="shvu-algorithm-step-4">
+        <div class="shvu-algorithm-step">
           <p class="guide-step__text">Подаём студента как реального — о том, что он тайный покупатель, преподавателю <strong>не сообщаем</strong>.</p>
-        </li>
+        </div>
+      </template>
 
-        <li class="guide-step content-block">
-          <div class="guide-step__head">
-            <span class="guide-step__num" aria-hidden="true">5</span>
-            <h3 class="guide-step__title">Назначаем ВУ и пишем методисту</h3>
-          </div>
+      <template id="shvu-algorithm-step-5">
+        <div class="shvu-algorithm-step">
           <p class="guide-step__text">Когда преподаватель и студент-тайный покупатель подтвердят дату ВУ, назначьте ВУ в ЛК и напишите ответственному методисту.</p>
-        </li>
+          <figure class="guide-step__figure shvu-step-figure-single shvu-step-figure-single--compact">
+            <img src="../примерШВУ.png" alt="Пример сообщения в чате ШВУ: согласование даты и времени вводного урока" loading="lazy">
+            <figcaption>Пример сообщения методисту после назначения ВУ</figcaption>
+          </figure>
+        </div>
+      </template>
 
-        <li class="guide-step content-block">
-          <div class="guide-step__head">
-            <span class="guide-step__num" aria-hidden="true">6</span>
-            <h3 class="guide-step__title">После ВУ — отчёт и напоминание</h3>
-          </div>
+      <template id="shvu-algorithm-step-6">
+        <div class="shvu-algorithm-step">
           <p class="guide-step__text">Подтвердите отчёт и поставьте напоминание через сутки: удалить расписание и написать преподавателю, что студент пока не готов приступить к обучению (причину не уточняли).</p>
-        </li>
-
-        <li class="guide-step content-block guide-step--warn">
-          <div class="guide-step__head">
-            <span class="guide-step__num guide-step__num--red" aria-hidden="true">7</span>
-            <h3 class="guide-step__title">Статус всегда «потенциальный»</h3>
+          <div class="shvu-report-figures">
+            <figure class="guide-step__figure shvu-step-figure-single">
+              <img src="../ОтчетШВУ1.png" alt="Отчёты о вводных: вкладка «Состоявшиеся»" loading="lazy">
+              <figcaption>Откройте вкладку «Состоявшиеся» в разделе отчётов о вводных</figcaption>
+            </figure>
+            <figure class="guide-step__figure shvu-step-figure-single">
+              <img src="../ОтчетШВУ2.png" alt="Список состоявшихся вводных: кнопка «Проверить»" loading="lazy">
+              <figcaption>Нажмите «Проверить» у нужного вводного урока</figcaption>
+            </figure>
+            <figure class="guide-step__figure shvu-step-figure-single">
+              <img src="../ОтчетШВУ3.png" alt="Просмотр отчёта: кнопка «Подтвердить»" loading="lazy">
+              <figcaption>Подтвердите отчёт</figcaption>
+            </figure>
           </div>
+        </div>
+      </template>
+
+      <template id="shvu-algorithm-step-7">
+        <div class="shvu-algorithm-step shvu-algorithm-step--warn">
           <p class="guide-step__text">Не меняйте статус шпиона на «архивный» — всегда оставляйте <strong>«потенциальный»</strong>, даже если больше расписаний нет.</p>
-        </li>
-      </ol>
+        </div>
+      </template>
+        </div>
+      </div>
     </section>
 
-    <section class="content-block" id="ile">
-      <div class="shvu-section-head">
-        <h2 class="guide-section__title">ШВУ и ILE</h2>
-        <span class="shvu-badge">Intro Lesson Efficiency</span>
-      </div>
+    <section class="help-panel shvu-accordion" id="ile">
+      <button type="button" class="help-entry shvu-accordion__trigger" aria-expanded="false" aria-controls="ile-content">
+        <span class="help-entry__emoji" aria-hidden="true">📊</span>
+        <span class="help-entry__text">ШВУ и ILE</span>
+        <span class="shvu-badge shvu-accordion__badge">Intro Lesson Efficiency</span>
+        <span class="help-entry__chevron" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"/>
+          </svg>
+        </span>
+      </button>
+      <div class="help-panel__expand" id="ile-content">
+        <div class="help-panel__content content-block">
 
       <div class="shvu-ile-panel">
         <div class="shvu-ile-panel__warn">
@@ -237,6 +338,8 @@
           <p>После ШВУ всегда оставляйте статус «потенциальный»</p>
         </div>
       </div>
+        </div>
+      </div>
     </section>
   </main>
 
@@ -254,5 +357,7 @@
     </figure>
   </div>
   <script src="../day-5/image-modal.js"></script>
+  <script src="shvu-accordion.js"></script>
+  <script src="shvu-algorithm-browser.js"></script>
 </body>
 </html>
