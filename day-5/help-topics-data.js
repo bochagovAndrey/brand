@@ -29,6 +29,7 @@ var PACHCA_CHATS = {
   deals: 'https://app.pachca.com/chats/24553799',
   group: 'https://app.pachca.com/chats/22273273',
   skills: 'https://app.pachca.com/chats/22260436',
+  techSupport: 'https://app.pachca.com/chats/22263981',
 };
 
 var HELP_TOPICS = [
@@ -64,6 +65,13 @@ var HELP_TOPICS = [
       '<td>Никого тегать не надо — ребята сами подхватят свой вопрос</td>' +
       '<td>В чат<br>' +
       helpChatBtn('Координаторы — IT', PACHCA_CHATS.it) +
+      '</td>' +
+      '</tr>' +
+      '<tr>' +
+      '<td>У студента не получается подключиться к ВУ</td>' +
+      '<td>Никого тегать не надо — ребята сами подхватят свой вопрос</td>' +
+      '<td>В чат<br>' +
+      helpChatBtn('Tech Support Englex', PACHCA_CHATS.techSupport) +
       '</td>' +
       '</tr>' +
       '</tbody></table></div>',
