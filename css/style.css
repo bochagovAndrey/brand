@@ -4935,8 +4935,14 @@ body.image-modal-open {
   background: #e05252;
 }
 
-.shvu-algorithm-browser .help-browser__detail {
-  min-height: 360px;
+.shvu-algorithm-browser:not(.help-browser--open) .help-browser__detail {
+  min-height: 0;
+  height: 0;
+}
+
+.shvu-algorithm-browser.help-browser--open .help-browser__detail {
+  min-height: 0;
+  height: auto;
 }
 
 .shvu-algorithm-browser .help-sidebar__list {
@@ -4945,7 +4951,13 @@ body.image-modal-open {
 }
 
 .shvu-algorithm-browser .help-detail {
-  max-height: 640px;
+  max-height: none;
+  overflow: visible;
+  overflow-y: visible;
+}
+
+.shvu-algorithm-browser.help-browser--open .help-detail {
+  max-height: none;
 }
 
 .shvu-algorithm-step--warn .guide-step__text {

@@ -71,7 +71,16 @@
     if (!panel || !panel.classList.contains('help-panel--expanded')) return;
 
     var expandEl = panel.querySelector('.help-panel__expand');
-    if (expandEl) expandEl.style.height = 'auto';
+    if (!expandEl) return;
+
+    expandEl.style.height = 'auto';
+  }
+
+  function watchImages(root) {
+    root.querySelectorAll('img').forEach(function (img) {
+      if (img.complete) return;
+      img.addEventListener('load', refreshAccordionHeight, { once: true });
+    });
   }
 
   function bindReveal(reveal) {
@@ -120,6 +129,8 @@
   function mountTopicContent(topic) {
     bodyEl.innerHTML = getTopicHtml(topic);
     initReveals(bodyEl);
+    watchImages(bodyEl);
+    refreshAccordionHeight();
   }
 
   function buildGrid() {
