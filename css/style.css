@@ -2590,6 +2590,11 @@ body {
   min-height: 360px;
 }
 
+.app-subblocks-browser .help-sidebar__list {
+  max-height: none;
+  overflow-y: visible;
+}
+
 .app-subblocks-browser .help-detail {
   max-height: 640px;
 }
@@ -4457,6 +4462,11 @@ body.image-modal-open {
 
   .app-subblocks-browser {
     padding: 18px;
+  }
+
+  .app-subblocks-browser .help-sidebar__list {
+    max-height: none;
+    overflow-y: visible;
   }
 
   .image-modal {
