@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Работа с заявками — День 5</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <main class="content-page content-page--guide">
+    <div class="content-page__back">
+      <a href="index.html" class="btn btn--ghost">&larr; Назад к материалам дня</a>
+    </div>
+
+    <header class="content-page__header">
+      <h1>Работа с заявками</h1>
+    </header>
+
+    <div class="tip content-block">
+      <svg class="tip__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="9" y1="18" x2="15" y2="18"/><line x1="10" y1="22" x2="14" y2="22"/>
+        <path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/>
+      </svg>
+      <div class="tip__text">
+        <p><strong>Базовые правила перед началом:</strong></p>
+        <ul class="guide-bullets">
+          <li>Не пишем преподавателям аббревиатуры «ПУ», «СВУ», «ОРК». Термин «ВУ» использовать можно.</li>
+          <li>Для русскоязычного преподавателя и носителя языка не нужно создавать разные ЛК.</li>
+          <li>Если нет подходящего преподавателя, используем дополнительные каналы, чтобы ускорить подбор.</li>
+        </ul>
+      </div>
+    </div>
+
+    <details class="content-block guide-accordion app-accordion">
+      <summary class="guide-accordion__summary">Нет подходящего преподавателя</summary>
+      <div class="guide-accordion__body">
+        <div class="guide-accordion__content app-need-teacher">
+          <div class="app-need-teacher__intro">
+            <p>Гайд для ситуаций, когда подходящего преподавателя нет и подбор затягивается.</p>
+            <ul class="app-need-teacher__intro-list">
+              <li>В сложных кейсах можно писать преподавателям с закрытым набором, если нет запрещающих тегов.</li>
+              <li>Основной канал для таких запросов - чат с методистами.</li>
+            </ul>
+            <a class="btn btn--outline app-need-teacher__chat-btn" href="https://app.pachca.com/chats/22257559" target="_blank" rel="noopener noreferrer">Менеджер спрашивает - Методист отвечает</a>
+          </div>
+          <ul class="app-need-teacher__list">
+            <li class="app-need-teacher__item">
+              <p>Если преподаватель подходит по расписанию, но не относится к Select Plus, уточните у его методиста, можно ли предложить этого преподавателя студенту.</p>
+              <p>Методист подскажет, готов ли преподаватель к переходу в Select Plus или насколько он подходит под запрос. Даже если категория Select, при рекомендации методиста можно прозрачно предложить этот вариант студенту и дать ему выбрать.</p>
+            </li>
+            <li class="app-need-teacher__item">
+              <p>Если идеального варианта нет, но есть частично подходящие кандидаты (не тот уровень, не та категория и т.д.), также пишите в этот чат. Методисты помогут с решением или предложат альтернативу, чтобы клиент не ждал слишком долго.</p>
+            </li>
+            <li class="app-need-teacher__item app-need-teacher__item--detective">
+              <p>В чате «Менеджер спрашивает-методист отвечает» сообщение видят несколько методистов, поэтому шанс быстро получить ответ и дополнительные варианты выше.</p>
+              <p class="app-need-teacher__sublead">А также подхватят вопрос, если методист нужного вам преподавателя:</p>
+              <ul class="app-need-teacher__sublist">
+                <li>в отпуске, на больничном или временно недоступен;</li>
+                <li>не увидел сообщение вовремя — другой методист сможет предложить замену или альтернативу.</li>
+              </ul>
+            </li>
+          </ul>
+          <p class="app-need-teacher__result">Это помогает заметно ускорить подбор для студентов, которым сразу сложно предложить подходящего преподавателя.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="content-block guide-accordion app-accordion">
+      <summary class="guide-accordion__summary">Новые студенты без истории занятий</summary>
+      <div class="guide-accordion__body">
+        <div class="guide-accordion__content">
+          <div class="help-browser app-subblocks-browser" id="students-browser">
+            <div class="help-browser__grid-wrap" id="students-grid-wrap">
+              <p class="help-browser__hint">Нажмите на подблок, чтобы открыть содержание</p>
+              <ul class="help-topics__grid app-subblocks-browser__grid" id="students-grid"></ul>
+            </div>
+
+            <div class="help-browser__detail" id="students-detail">
+              <aside class="help-sidebar" aria-label="Подблоки">
+                <button type="button" class="help-sidebar__back" id="students-back-grid">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="15 18 9 12 15 6"/>
+                  </svg>
+                  Все подблоки
+                </button>
+                <ul class="help-sidebar__list" id="students-sidebar"></ul>
+              </aside>
+
+              <article class="help-detail app-subblocks-browser__content" aria-live="polite">
+                <h3 class="help-detail__title" id="students-detail-title"></h3>
+                <div class="help-detail__body" id="students-detail-body"></div>
+              </article>
+            </div>
+          </div>
+
+          <template id="students-topic-lk">
+            <section class="content-block">
+              <p class="guide-section__lead">Сначала проверяем в заявке все поля и приводим их в порядок, если что-то не так заполнено.</p>
+              <ul class="guide-checklist">
+                <li>ФИ студента в отдельном поле своем прописываем.</li>
+                <li>Латиницу меняем на кириллицу (т.е. англ. буквы на русские).</li>
+                <li>Букву Ё меняем на Е.</li>
+                <li>Ставим верный часовой пояс.</li>
+                <li>Города нужно прописывать полностью. Варианты: СПБ, МСК, МО, Питер и т.д. - категорически не подходят, меняем.</li>
+                <li>Если странно указан возраст, например, "-1", то убираем это, ставим "-", если нет у нас информации.</li>
+              </ul>
+              <figure class="guide-figure guide-figure--compact app-figure-captioned">
+                <img src="../РаботаСЗаявками2.png" alt="Пример некорректного возраста в сообщении: значение -1" loading="lazy">
+                <figcaption>Пример некорректного заполнения: возраст "-1".</figcaption>
+              </figure>
+            </section>
+          </template>
+
+          <template id="students-topic-tariff">
+            <section class="content-block">
+              <ul class="guide-checklist">
+                <li>Сверяемся с информацией, которую указывают координаторы в заявке, а также по запросу студента. Например, 1 раз в неделю, 60 минут или сменный график нельзя поставить на курсе Английский 360.</li>
+              </ul>
+              <div class="app-figure-pair">
+                <figure class="guide-figure">
+                  <img src="../РаботаСЗаявками3.png" alt="Данные из amoCRM о заявке: где проверяется тариф и программа" loading="lazy">
+                </figure>
+                <figure class="guide-figure">
+                  <img src="../РаботаСЗаявками6.png" alt="Пример тарифа студента в карточке заявки" loading="lazy">
+                </figure>
+              </div>
+              <ul class="guide-checklist">
+                <li>При предложении ученика нового или старого, преподавателю обязательно сообщайте тариф (без уточнений архивности и даты тарифа):</li>
+              </ul>
+              <ul class="app-tariff-list">
+                <li>Выгодный.</li>
+                <li>Комфортный (или для своих, условия как на Комфортном).</li>
+                <li>Усиленный.</li>
+                <li>НСК.</li>
+                <li>Премиум тариф.</li>
+              </ul>
+              <div class="tip">
+                <svg class="tip__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="9" y1="18" x2="15" y2="18"/><line x1="10" y1="22" x2="14" y2="22"/>
+                  <path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/>
+                </svg>
+                <p class="tip__text">Это поможет преподавателю ориентироваться, какой вариант ВУ брать для студента и какой заполнять отчет ВУ: старого или нового формата.</p>
+              </div>
+            </section>
+          </template>
+
+          <template id="students-topic-course">
+            <section class="content-block">
+              <ul class="guide-checklist">
+                <li>Общий английский (адаптивный) и курс-система 360 — только от 18 лет.</li>
+                <li>8-17 лет — это курс для детей и подростков.</li>
+                <li>Английский для менеджеров — только на тарифах НСК и Премиум.</li>
+                <li>Бизнес-английский — только на тарифах Выгодный, Комфортный, Усиленный (чаще для старых студентов).</li>
+              </ul>
+              <p class="guide-section__lead"><strong>И только так:</strong> сочетать эти курсы и тарифы по-другому нельзя.</p>
+
+              <p class="guide-section__lead"><strong>Курсы, которые больше не используются:</strong></p>
+              <ul class="app-cross-list">
+                <li>Персонального курса больше нет.</li>
+                <li>Практической грамматики больше нет.</li>
+                <li>Постановки произношения больше нет.</li>
+              </ul>
+              <div class="tip">
+                <svg class="tip__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="9" y1="18" x2="15" y2="18"/><line x1="10" y1="22" x2="14" y2="22"/>
+                  <path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/>
+                </svg>
+                <p class="tip__text">Эти курсы остались только у студентов, которые уже занимались по ним до 14.08.24.</p>
+              </div>
+            </section>
+          </template>
+
+          <template id="students-topic-no-level">
+            <section class="content-block">
+              <p class="guide-section__lead">Это условие методистов: преподаватели должны сами определить уровень студента.</p>
+              <div class="guide-alert guide-alert--info">
+                <div class="guide-alert__icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/>
+                  </svg>
+                </div>
+                <div class="guide-alert__body">
+                  <h3 class="guide-alert__title">Исключение</h3>
+                  <p>Если студент никогда не учил английский, ничего не знает и не может говорить, тогда об этом преподавателю сообщаем.</p>
+                </div>
+              </div>
+              <p class="guide-section__lead"><strong>Неверные варианты на скриншотах:</strong></p>
+              <div class="app-figure-pair app-figure-pair--2cols">
+                <figure class="guide-figure">
+                  <img src="../РаботаСЗаявками7.png" alt="Неверный пример: в сообщении преподавателю указан уровень нового студента" loading="lazy">
+                </figure>
+                <figure class="guide-figure">
+                  <img src="../РаботаСЗаявками8.png" alt="Неверный пример: передана информация об уровне нового студента преподавателю" loading="lazy">
+                </figure>
+              </div>
+            </section>
+          </template>
+
+          <template id="students-topic-qualifiers-comment">
+            <section class="content-block">
+              <ul class="guide-checklist">
+                <li>ВСЕГДА полностью копируем комментарий от координаторов в поле заявки "Пожелания по обучению", кроме уровня со слов студента.</li>
+                <li>И передаем преподавателю, если там есть дополнительная информация, которая касается студента и пригодится преподавателю.</li>
+                <li>Просто добавляем это к стандартному шаблону при предложении преподавателя.</li>
+                <li>Если есть дополнительная информация по курсу (например, студент склоняется к 360, но может попросить Общий английский адаптивный), обязательно указываем это в разделе «Курс».</li>
+                <li>Сообщение можно редактировать перед отправкой.</li>
+                <li>Так преподаватель сразу понимает, что может поменять курс при необходимости и оставить комментарий в отчете, почему курс был изменен.</li>
+              </ul>
+
+              <p class="guide-section__lead"><strong>Например, в таком ключе:</strong></p>
+              <div class="guide-message-template">
+                <p class="guide-message-template__line">Для вас есть новый студент:</p>
+                <p class="guide-message-template__line"><span class="guide-message-template__key">Ф.И:</span> Иван Иванов</p>
+                <p class="guide-message-template__line"><span class="guide-message-template__key">Возраст:</span> 23</p>
+                <p class="guide-message-template__line"><span class="guide-message-template__key">Предварительный тариф:</span> Тариф НСК</p>
+                <p class="guide-message-template__line"><span class="guide-message-template__key">Курс:</span> Английский 360 (студент склоняется к курсу-системе 360, но, возможно, захочет перейти и на Общий английский (адаптивный), передаем вам информацию об этом)</p>
+              </div>
+            </section>
+
+            <section class="app-proof-section">
+              <div class="guide-callout-grid app-proof-callout-grid">
+                <article class="guide-callout guide-callout--good">
+                  <p class="guide-callout__tag">Так правильно</p>
+                  <div class="app-proof-grid">
+                    <figure class="guide-figure">
+                      <img src="../РаботаСЗаявками9.png" alt="Пример корректной передачи комментария в поле пожеланий" loading="lazy">
+                    </figure>
+                    <figure class="guide-figure">
+                      <img src="../РаботаСЗаявками10.png" alt="Пример корректного сообщения преподавателю с дополнительными комментариями" loading="lazy">
+                    </figure>
+                  </div>
+                </article>
+
+                <article class="guide-callout guide-callout--bad">
+                  <p class="guide-callout__tag">Так не делаем</p>
+                  <div class="app-proof-grid">
+                    <figure class="guide-figure">
+                      <img src="../РаботаСЗаявками13.png" alt="Неверный пример передачи комментария преподавателю" loading="lazy">
+                    </figure>
+                    <figure class="guide-figure">
+                      <img src="../РаботаСЗаявками14.png" alt="Неверный пример заполнения сообщения без нужного комментария" loading="lazy">
+                    </figure>
+                  </div>
+                </article>
+              </div>
+            </section>
+          </template>
+
+          <template id="students-topic-vu-passed">
+            <section class="content-block app-compact-block">
+              <ul class="guide-checklist">
+                <li>Сообщаем, сколько ВУ до этого прошел студент с другими преподавателями.</li>
+                <li>Считаем за последний месяц, прошлые периоды и годы не учитываем.</li>
+                <li>Сейчас есть 3 варианта ВУ (тестовых заданий на определение уровня), поэтому важно, чтобы с каждым новым преподавателем студент проходил разные варианты, а не один и тот же.</li>
+              </ul>
+            </section>
+
+            <section class="app-proof-section">
+              <article class="guide-callout guide-callout--good">
+                <p class="guide-callout__tag">Так правильно</p>
+                <div class="app-proof-grid app-proof-grid--good">
+                  <figure class="guide-figure">
+                    <img src="../РаботаСЗаявками15.png" alt="Правильный пример: в сообщении преподавателю указано, что студент уже проходил ВУ" loading="lazy">
+                  </figure>
+                  <figure class="guide-figure">
+                    <img src="../РаботаСЗаявками16.png" alt="Правильный пример: корректно передана информация о ранее пройденном ВУ" loading="lazy">
+                  </figure>
+                </div>
+              </article>
+            </section>
+          </template>
+
+          <template id="students-topic-remind-student">
+            <section class="content-block">
+              <p class="guide-section__lead">Если нашли преподавателя в этот же день:</p>
+              <ol class="guide-numbered">
+                <li>
+                  <p>Позвонить клиенту, чтобы предложить преподавателя, график и дату ВУ.</p>
+                </li>
+                <li>
+                  <div class="app-remind-step">
+                    <p>Если нет ответа на звонок, проверить указанный в заявке удобный способ связи и отправить предложение в выбранный канал (например, WhatsApp или Telegram). Дополнительно можно продублировать на e-mail и заложить срок на подтверждение графика 2 дня.</p>
+                    <ul class="app-remind-sublist">
+                      <li>На второй день после предложения преподавателя, расписания и даты ВУ обязательно позвонить. Если ответа нет, написать в тот же источник: сообщение в мессенджер или письмо на почту.</li>
+                      <li>На третий день (вторые сутки от предложения преподавателя) сделать контрольный звонок. Если нет ответа на звонок и на сообщения/письма, отправить клиенту финальное сообщение и отклонить заявку.</li>
+                    </ul>
+                  </div>
+                </li>
+              </ol>
+            </section>
+          </template>
+
+          <template id="students-topic-amo-notes">
+            <section class="content-block">
+              <p class="guide-section__lead">Чтобы всем проще было работать с вашими заявками, когда вы на выходном 🙂</p>
+            </section>
+          </template>
+
+          <template id="students-topic-check-own">
+            <section class="content-block">
+              <p class="guide-section__lead">Чтобы не “провисали” и не копились с неактуальными статусами 🙂</p>
+            </section>
+          </template>
+
+          <template id="students-topic-archive-right">
+            <section class="content-block">
+              <p class="guide-section__lead">Если не выходит на связь студент с вами и закрываете заявку, то не забывайте:</p>
+              <ul class="guide-checklist">
+                <li>менять статус на “архивный”.</li>
+                <li>отклонять саму заявку.</li>
+              </ul>
+            </section>
+          </template>
+        </div>
+      </div>
+    </details>
+  </main>
+  <div class="image-modal" id="image-modal" aria-hidden="true">
+    <button type="button" class="image-modal__close" id="image-modal-close" aria-label="Закрыть изображение">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+        <line x1="18" y1="6" x2="6" y2="18"/>
+        <line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+    <div class="image-modal__backdrop" id="image-modal-backdrop"></div>
+    <figure class="image-modal__figure">
+      <img class="image-modal__img" id="image-modal-img" src="" alt="">
+      <figcaption class="image-modal__caption" id="image-modal-caption"></figcaption>
+    </figure>
+  </div>
+  <script src="students-subblocks-browser.js"></script>
+  <script src="image-modal.js"></script>
+</body>
+</html>
