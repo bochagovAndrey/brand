@@ -3229,13 +3229,14 @@ body.image-modal-open {
 .guide-amo-row {
   display: grid;
   grid-template-columns: minmax(0, 300px) minmax(0, 1fr);
-  gap: 32px 40px;
-  align-items: start;
+  gap: 40px;
+  align-items: center;
 }
 
 .guide-amo-row__stage {
   margin: 0;
   padding: 0;
+  align-self: center;
 }
 
 .guide-amo-row__stage img {
@@ -3248,8 +3249,14 @@ body.image-modal-open {
 .guide-amo-row__body {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  justify-content: center;
+  gap: 8px;
   min-width: 0;
+  align-self: center;
+}
+
+.guide-amo-row__body:has(.guide-amo-row__task) {
+  gap: 4px;
 }
 
 .guide-amo-row__text {
@@ -3695,6 +3702,12 @@ body.image-modal-open {
   .guide-amo-row {
     grid-template-columns: 1fr;
     gap: 16px;
+    align-items: start;
+  }
+
+  .guide-amo-row__stage,
+  .guide-amo-row__body {
+    align-self: stretch;
   }
 
   .guide-amo-row__stage img {
