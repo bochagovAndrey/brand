@@ -1,5 +1,5 @@
 (function () {
-  var panels = Array.prototype.slice.call(document.querySelectorAll('.shvu-accordion'));
+  var panels = Array.prototype.slice.call(document.querySelectorAll('.shvu-accordion, .svu-accordion'));
   if (!panels.length) return;
 
   var openPanel = null;
@@ -11,7 +11,7 @@
   }
 
   function triggerEl(panel) {
-    return panel.querySelector('.shvu-accordion__trigger');
+    return panel.querySelector('.shvu-accordion__trigger, .svu-accordion__trigger');
   }
 
   function setExpanded(panel, expanded) {
