@@ -13,6 +13,12 @@
   --blue-soft: #dbe4ff;
   --green-light: #e6fcf5;
   --green: #12b886;
+  --teal-light: #ccfbf1;
+  --teal: #0d9488;
+  --violet-light: #f3f0ff;
+  --violet: #7048e8;
+  --rose-light: #fff0f6;
+  --rose: #e64980;
   --amber-light: #fff9db;
   --amber: #f59f00;
   --gray-50: #f8f9fb;
@@ -643,7 +649,7 @@ body {
 .preview-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
+  gap: 16px;
 }
 
 .preview-cards--single {
@@ -655,48 +661,107 @@ body {
 }
 
 .preview-cards--quad {
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .preview-cards--five {
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.preview-cards--triple {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.preview-cards--six {
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .preview-card {
   background: var(--white);
   border: 1px solid var(--gray-200);
   border-radius: var(--radius-sm);
-  padding: 16px;
+  padding: 20px;
   box-shadow: var(--shadow);
 }
 
 .preview-card--link {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   text-decoration: none;
   color: inherit;
-  transition: border-color 0.15s, box-shadow 0.15s;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.preview-card--link::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--blue) 0%, #748ffc 100%);
+  opacity: 0;
+  transition: opacity 0.2s ease;
 }
 
 .preview-card--link:hover {
   border-color: var(--blue-soft);
-  box-shadow: 0 4px 12px rgba(76, 110, 245, 0.12);
+  box-shadow: 0 10px 28px rgba(76, 110, 245, 0.12);
+  transform: translateY(-3px);
+}
+
+.preview-card--link:hover::after {
+  opacity: 1;
+}
+
+.preview-card--link:hover .preview-card__title {
+  color: var(--blue);
+}
+
+.preview-card--link:hover .preview-card__icon {
+  transform: scale(1.05);
 }
 
 .preview-card__icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
   background: var(--blue-light);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
   color: var(--blue);
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
 }
 
 .preview-card__icon--green {
   background: var(--green-light);
   color: var(--green);
+}
+
+.preview-card__icon--blue {
+  background: var(--blue-light);
+  color: var(--blue);
+}
+
+.preview-card__icon--teal {
+  background: var(--teal-light);
+  color: var(--teal);
+}
+
+.preview-card__icon--violet {
+  background: var(--violet-light);
+  color: var(--violet);
+}
+
+.preview-card__icon--rose {
+  background: var(--rose-light);
+  color: var(--rose);
 }
 
 .preview-card__icon--test,
@@ -708,14 +773,17 @@ body {
 .preview-card__title {
   font-size: 14px;
   font-weight: 600;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
   color: var(--gray-800);
+  line-height: 1.35;
+  transition: color 0.2s ease;
 }
 
 .preview-card__desc {
   font-size: 12px;
   color: var(--gray-500);
-  line-height: 1.4;
+  line-height: 1.45;
+  margin-top: auto;
 }
 
 .btn {
@@ -852,6 +920,21 @@ body {
 .material-item__icon--amber {
   background: var(--amber-light);
   color: var(--amber);
+}
+
+.material-item__icon--teal {
+  background: var(--teal-light);
+  color: var(--teal);
+}
+
+.material-item__icon--violet {
+  background: var(--violet-light);
+  color: var(--violet);
+}
+
+.material-item__icon--rose {
+  background: var(--rose-light);
+  color: var(--rose);
 }
 
 .material-item__content {
@@ -1631,6 +1714,7 @@ body {
 .page--day .material-item__icon {
   width: 48px;
   height: 48px;
+  border-radius: 12px;
 }
 
 .page--day .material-item__title {
@@ -3972,8 +4056,14 @@ body.image-modal-open {
     grid-template-columns: 1fr;
   }
 
-  .preview-cards--five {
-    grid-template-columns: 1fr;
+  .preview-cards--quad {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .preview-cards--triple,
+  .preview-cards--five,
+  .preview-cards--six {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .guide-subaccordion__summary {
