@@ -59,7 +59,7 @@
 
     <section class="top-section">
       <h2 class="section-title">Что вас ждёт сегодня</h2>
-      <div class="preview-cards">
+      <div class="preview-cards preview-cards--quad">
           <article class="preview-card">
             <div class="preview-card__icon">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -78,6 +78,15 @@
             <h3 class="preview-card__title">32 базовых вопроса</h3>
             <p class="preview-card__desc">Ответы на самые частые вопросы клиентов</p>
           </article>
+          <a href="#abbreviations" class="preview-card preview-card--link">
+            <div class="preview-card__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><line x1="8" y1="7" x2="16" y2="7"/><line x1="8" y1="11" x2="14" y2="11"/>
+              </svg>
+            </div>
+            <h3 class="preview-card__title">Сокращения</h3>
+            <p class="preview-card__desc">Расшифровка частых аббревиатур и сокращений</p>
+          </a>
           <a href="https://docs.google.com/forms/d/e/1FAIpQLScgWoBt2gf4YQxx6piP4OeEyqNx0bYXKJWhOuNBMdDDCKGm_g/viewform" class="preview-card preview-card--link" target="_blank" rel="noopener noreferrer">
             <div class="preview-card__icon preview-card__icon--test">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -93,7 +102,7 @@
     <section class="materials">
       <div class="materials__header">
         <h2>Материалы дня</h2>
-        <span class="badge">3 этапа</span>
+        <span class="badge">4 этапа</span>
       </div>
 
       <article class="material-item">
@@ -136,8 +145,82 @@
         <a href="questions.html" class="btn btn--outline">Изучить</a>
       </article>
 
+      <div class="material-expand" id="abbreviations">
+        <article class="material-item">
+          <span class="material-item__num">3</span>
+          <div class="material-item__icon material-item__icon--blue">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><line x1="8" y1="7" x2="16" y2="7"/><line x1="8" y1="11" x2="14" y2="11"/>
+            </svg>
+          </div>
+          <div class="material-item__content">
+            <h3 class="material-item__title">Сокращения</h3>
+            <p class="material-item__desc">Расшифровка частых аббревиатур и сокращений, которые встречаются в работе</p>
+          </div>
+          <span class="material-item__tag">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/>
+            </svg>
+            Справочник
+          </span>
+          <button type="button" class="btn btn--outline material-expand__toggle" aria-expanded="false" aria-controls="abbreviations-panel">Посмотреть</button>
+        </article>
+        <div class="material-expand__body" id="abbreviations-panel">
+          <div class="material-expand__inner">
+            <div class="material-expand__content">
+              <dl class="abbrev-list">
+                <div class="abbrev-list__row">
+                  <dt class="abbrev-list__term">ЛК</dt>
+                  <dd class="abbrev-list__desc">Личный кабинет</dd>
+                </div>
+                <div class="abbrev-list__row">
+                  <dt class="abbrev-list__term">КМ</dt>
+                  <dd class="abbrev-list__desc">клиент-менеджер</dd>
+                </div>
+                <div class="abbrev-list__row">
+                  <dt class="abbrev-list__term">ОК</dt>
+                  <dd class="abbrev-list__desc">Онлайн-класс (наша платформа)</dd>
+                </div>
+                <div class="abbrev-list__row">
+                  <dt class="abbrev-list__term">ВУ</dt>
+                  <dd class="abbrev-list__desc">вводный урок</dd>
+                </div>
+                <div class="abbrev-list__row">
+                  <dt class="abbrev-list__term">ПУ</dt>
+                  <dd class="abbrev-list__desc">первый урок (имеется в виду оплаченный)</dd>
+                </div>
+                <div class="abbrev-list__row">
+                  <dt class="abbrev-list__term">СВУ</dt>
+                  <dd class="abbrev-list__desc">срочный вводный урок</dd>
+                </div>
+                <div class="abbrev-list__row">
+                  <dt class="abbrev-list__term">ШВУ</dt>
+                  <dd class="abbrev-list__desc">шпионский вводный урок (согласование с тайным покупателем)</dd>
+                </div>
+                <div class="abbrev-list__row">
+                  <dt class="abbrev-list__term">ТМ</dt>
+                  <dd class="abbrev-list__desc">TalkME — онлайн-чат на сайте и в ЛК студента</dd>
+                </div>
+                <div class="abbrev-list__row">
+                  <dt class="abbrev-list__term">Телега (или ТГ)</dt>
+                  <dd class="abbrev-list__desc">Телеграм</dd>
+                </div>
+                <div class="abbrev-list__row">
+                  <dt class="abbrev-list__term">ВА (или WA)</dt>
+                  <dd class="abbrev-list__desc">WhatsApp</dd>
+                </div>
+                <div class="abbrev-list__row">
+                  <dt class="abbrev-list__term">МП</dt>
+                  <dd class="abbrev-list__desc">менеджер продаж</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <article class="material-item">
-        <span class="material-item__num">3</span>
+        <span class="material-item__num">4</span>
         <div class="material-item__icon material-item__icon--amber">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
@@ -167,5 +250,6 @@
       </div>
     </section>
   </main>
+  <script src="material-expand.js"></script>
 </body>
 </html>
