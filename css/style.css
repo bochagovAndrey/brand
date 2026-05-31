@@ -1274,6 +1274,32 @@ body {
   margin-bottom: 32px;
 }
 
+.content-page__header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.content-page__header-row h1 {
+  margin-bottom: 0;
+}
+
+.content-page__header-action {
+  flex-shrink: 0;
+  gap: 10px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 12px;
+}
+
+.content-page__header-action .btn__icon {
+  flex-shrink: 0;
+}
+
 .content-page__header h1 {
   font-size: 28px;
   font-weight: 700;
@@ -2396,10 +2422,11 @@ body {
 }
 
 .guide-checklist--figures li {
-  position: relative;
+  display: flex;
   flex-direction: column;
   align-items: stretch;
   gap: 0;
+  position: relative;
   padding-left: 26px;
 }
 
@@ -3776,9 +3803,9 @@ body.image-modal-open {
 }
 
 .guide-checklist li {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
+  display: block;
+  position: relative;
+  padding-left: 26px;
   font-size: 15px;
   line-height: 1.5;
   color: var(--gray-700);
@@ -3786,9 +3813,15 @@ body.image-modal-open {
 
 .guide-checklist li::before {
   content: "✔";
-  flex-shrink: 0;
+  position: absolute;
+  left: 0;
+  top: 0.15em;
   color: var(--green);
   font-weight: 700;
+}
+
+.guide-checklist__text {
+  display: inline;
 }
 
 .guide-checklist--plain li {
@@ -6752,8 +6785,61 @@ body.image-modal-open {
   margin-top: 6px;
 }
 
+.amo-stages__roles--three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.amo-stages__roles--four {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media (min-width: 900px) {
+  .amo-stages__roles--four {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.vu-tabs {
+  margin-bottom: 24px;
+}
+
+.vu-tabs__panel {
+  margin-top: 0;
+}
+
+.vu-psp-sections {
+  margin-top: 24px;
+}
+
+.vu-psp-sections__panel {
+  margin-top: 20px;
+}
+
+.vu-psp-sections__panel .guide-section__lead:first-child {
+  margin-top: 0;
+}
+
+.content-block .vu-comment-accordion {
+  margin-top: 24px;
+  margin-bottom: 32px;
+  border: 1px solid var(--gray-200);
+  border-radius: 10px;
+  background: var(--white);
+}
+
+.content-block .vu-comment-accordion .guide-accordion__summary {
+  font-size: 16px;
+  padding: 16px 20px;
+}
+
+.content-block .vu-comment-accordion .guide-accordion__body {
+  padding: 0 20px 20px;
+}
+
 @media (max-width: 520px) {
   .amo-stages__roles,
+  .amo-stages__roles--three,
+  .amo-stages__roles--four,
   .amo-stages-browser__grid,
   .amo-deals-browser__grid,
   .amo-tasks-browser__grid {

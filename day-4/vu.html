@@ -14,10 +14,505 @@
     <div class="content-page__back">
       <a href="index.html" class="btn btn--ghost">&larr; Назад к материалам дня</a>
     </div>
+
     <header class="content-page__header">
-      <h1>Вводные уроки (ВУ)</h1>
-      <p>Материалы по этому разделу будут добавлены на следующем шаге.</p>
+      <div class="content-page__header-row">
+        <h1>Вводные уроки (ВУ)</h1>
+        <a href="https://drive.google.com/file/d/1nNXVezI9n7v5OKB0drdz4lLAaGA6hwM1/view?usp=sharing" class="btn btn--outline content-page__header-action" target="_blank" rel="noopener noreferrer">
+          <svg class="btn__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polygon points="5 3 19 12 5 21 5 3"/>
+          </svg>
+          Рабочие часы 2.0
+        </a>
+      </div>
+      <p>Подбор преподавателя, предложение студента, SMS-уведомления и правила брони расписания</p>
     </header>
+
+    <nav class="content-block vu-tabs" id="vu-tabs" aria-label="Разделы ВУ" data-tab-group="vu">
+      <div class="amo-stages__roles amo-stages__roles--four" role="tablist">
+        <button type="button" class="amo-stages__role amo-stages__role--active" role="tab" data-section="ls" aria-selected="true" id="vu-tab-btn-ls" aria-controls="vu-panel-ls">Предложение через ЛС</button>
+        <button type="button" class="amo-stages__role" role="tab" data-section="psp" aria-selected="false" id="vu-tab-btn-psp" aria-controls="vu-panel-psp">ПСП</button>
+        <button type="button" class="amo-stages__role" role="tab" data-section="reminders" aria-selected="false" id="vu-tab-btn-reminders" aria-controls="vu-panel-reminders">Напоминания о ВУ</button>
+        <button type="button" class="amo-stages__role" role="tab" data-section="booking" aria-selected="false" id="vu-tab-btn-booking" aria-controls="vu-panel-booking">Сроки брони</button>
+      </div>
+    </nav>
+
+    <div class="vu-tabs__panel" id="vu-panel-ls" data-tab-group="vu" data-tab-panel="ls" role="tabpanel" aria-labelledby="vu-tab-btn-ls">
+
+    <section class="content-block lk-panel" id="vu-step-1">
+      <div class="lk-panel__head">
+        <button type="button" class="lk-panel__trigger" aria-expanded="false" aria-controls="vu-step-1-content">
+          <span class="guide-section__title lk-panel__title">Проверьте заявку на подбор</span>
+          <span class="lk-panel__chevron" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </span>
+        </button>
+      </div>
+      <div class="lk-panel__expand" id="vu-step-1-content">
+        <div class="lk-panel__content">
+        <p class="guide-step__text">После получения заявки на подбор внимательно просмотрите все поля, заполненные координатором. Если что-то не указано или есть неточности — обязательно проясните все моменты в Пачке в чате:</p>
+        <figure class="guide-step__figure svu-intro-figure svu-intro-figure--compact">
+          <img src="vu-pachca-chat.png" alt="Чат «Вопросы по заявкам/сделкам: КМ и координаторы» в Пачке" loading="lazy">
+          <figcaption>Чат «Вопросы по заявкам/сделкам: КМ и координаторы»</figcaption>
+        </figure>
+        <ul class="guide-checklist">
+          <li>Выставить в ЛК в заявке тариф, который указал координатор.</li>
+          <li>Учесть все указанные в заявке пожелания студента и постараться найти подходящего преподавателя в этот же день.</li>
+        </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-block lk-panel" id="vu-step-2">
+      <div class="lk-panel__head">
+        <button type="button" class="lk-panel__trigger" aria-expanded="false" aria-controls="vu-step-2-content">
+          <span class="guide-section__title lk-panel__title">Найдите преподавателя и забронируйте график</span>
+          <span class="lk-panel__chevron" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </span>
+        </button>
+      </div>
+      <div class="lk-panel__expand" id="vu-step-2-content">
+        <div class="lk-panel__content">
+        <p class="guide-step__text">Найдите подходящего преподавателя по фильтрам в разделе «Доступные часы 2.0», сразу забронируйте подходящий график у подходящего преподавателя — создайте расписание с этим преподавателем, расписанием и нужным курсом.</p>
+        <a href="https://drive.google.com/file/d/1nNXVezI9n7v5OKB0drdz4lLAaGA6hwM1/view?usp=sharing" class="btn btn--outline" target="_blank" rel="noopener noreferrer">Видео-гайд: Доступные часы 2.0</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-block lk-panel" id="vu-step-3">
+      <div class="lk-panel__head">
+        <button type="button" class="lk-panel__trigger" aria-expanded="false" aria-controls="vu-step-3-content">
+          <span class="guide-section__title lk-panel__title">Отправьте предложение преподавателю</span>
+          <span class="lk-panel__chevron" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </span>
+        </button>
+      </div>
+      <div class="lk-panel__expand" id="vu-step-3-content">
+        <div class="lk-panel__content">
+        <p class="guide-step__text">Отправьте выбранному преподавателю в Пачке предложение студента. Текст можно взять в ЛК при нажатии на иконку «дискета» в разделе «Расписание» конкретного студента.</p>
+
+        <h3 class="guide-subsection__title">Автогенерация текста-предложения преподавателю нового студента</h3>
+        <ul class="guide-checklist">
+          <li>Выберите нужного студента.</li>
+          <li>Перейдите в раздел «Расписание».</li>
+          <li>В списке расписаний студента нажмите на кнопку «Скопировать текст предложения студента преподавателю». На основании доступной из профиля студента информации в буфер обмена скопируется сообщение преподавателю о предложении ему нового студента.</li>
+        </ul>
+
+        <figure class="guide-step__figure svu-intro-figure">
+          <img src="vu-copy-proposal.png" alt="Раздел «Расписание»: кнопка «Скопировать текст предложения студента преподавателю»" loading="lazy">
+          <figcaption>Кнопка «Скопировать текст предложения студента преподавателю»</figcaption>
+        </figure>
+
+        <ul class="guide-checklist">
+          <li>Недостающую информацию в тексте сообщения нужно заполнить самостоятельно (это значит, что в системе её нет). Будьте внимательны! В шаблон текста для нейтивов нужно вносить почти всю информацию по графику, курсу, уровню.</li>
+        </ul>
+
+        <p class="guide-step__text">Если активному студенту или вернувшемуся из архива нужен новый преподаватель на постоянной основе или на замену, то при предложении этого студента новому преподавателю нужно <strong>обязательно</strong> сообщить:</p>
+        <ul class="guide-checklist">
+          <li>клиент занимается в нашей школе, но основной преподаватель в отпуске/болеет, нужна замена на 1–2… уроков;</li>
+          <li>клиент ранее занимался с другим преподавателем, перерыв был … (год, месяц, неделя и пр.);</li>
+          <li>указать причину, почему сейчас новый подбор (например, «делал перерыв, теперь ищем новое расписание»; негативные ситуации завуалируем, вроде «ищет своего преподавателя», «хочет попробовать с другим преподавателем» и т.п.);</li>
+          <li>по какому курсу и учебнику занимается/занимался с предыдущим преподавателем.</li>
+        </ul>
+        <p class="guide-step__text">Эта информация очень важна — нужно всегда её указывать. Для студентов, которые уже обучались у нас, преподаватель проводит другой формат вводного урока.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-block lk-panel" id="vu-step-4">
+      <div class="lk-panel__head">
+        <button type="button" class="lk-panel__trigger" aria-expanded="false" aria-controls="vu-step-4-content">
+          <span class="guide-section__title lk-panel__title">Отправьте SMS преподавателю</span>
+          <span class="lk-panel__chevron" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </span>
+        </button>
+      </div>
+      <div class="lk-panel__expand" id="vu-step-4-content">
+        <div class="lk-panel__content">
+        <p class="guide-step__text">После того как вы отправите преподавателю предложение нового студента в Пачке, преподавателю надо об этом дополнительно сообщить посредством SMS, чтобы привлечь больше внимания и ускорить процесс подбора.</p>
+        <ul class="guide-checklist">
+          <li>Выберите нужного студента.</li>
+          <li>Перейдите в раздел «Расписание».</li>
+          <li>В списке расписаний студента нажмите на кнопку «Отправить преподавателю SMS о предложении ему нового студента».</li>
+        </ul>
+
+        <figure class="guide-step__figure svu-intro-figure">
+          <img src="vu-sms-button.png" alt="Кнопка «Отправить преподавателю SMS о предложении ему нового студента»" loading="lazy">
+          <figcaption>Кнопка отправки SMS преподавателю</figcaption>
+        </figure>
+
+        <p class="guide-step__text">Подтвердите отправку SMS:</p>
+        <figure class="guide-step__figure svu-intro-figure svu-intro-figure--compact">
+          <img src="vu-sms-confirm.png" alt="Окно подтверждения отправки SMS преподавателю" loading="lazy">
+          <figcaption>Подтверждение отправки SMS</figcaption>
+        </figure>
+
+        <p class="guide-step__text">Преподавателю отправится SMS со следующим содержанием:</p>
+        <p class="guide-step__text"><em>«Предложение нового студента от Инглекс. Проверьте, пожалуйста, Skype.»</em></p>
+
+        <p class="guide-step__text">Если SMS уже отправлено, при наведении мышкой на иконку этой функции будет соответствующее уведомление:</p>
+        <figure class="guide-step__figure svu-intro-figure">
+          <img src="vu-sms-sent.png" alt="Подсказка: SMS-уведомление уже было отправлено" loading="lazy">
+          <figcaption>SMS уже отправлено — уведомление при наведении</figcaption>
+        </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-block lk-panel" id="vu-step-5">
+      <div class="lk-panel__head">
+        <button type="button" class="lk-panel__trigger" aria-expanded="false" aria-controls="vu-step-5-content">
+          <span class="guide-section__title lk-panel__title">Дождитесь подтверждения и свяжитесь со студентом</span>
+          <span class="lk-panel__chevron" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </span>
+        </button>
+      </div>
+      <div class="lk-panel__expand" id="vu-step-5-content">
+        <div class="lk-panel__content">
+        <p class="guide-step__text">Дождитесь от преподавателя подтверждения, что может взять на обучение данного студента по всем указанным параметрам, затем свяжитесь со студентом.</p>
+        </div>
+      </div>
+    </section>
+    </div>
+
+    <div class="vu-tabs__panel" id="vu-panel-psp" data-tab-group="vu" data-tab-panel="psp" role="tabpanel" aria-labelledby="vu-tab-btn-psp" hidden>
+
+    <section class="content-block">
+      <h2 class="guide-section__title">ЛКМ: автоматизация предложения студента преподавателю</h2>
+      <p class="guide-section__lead">Это обновление сделано, чтобы вам было проще вести студента. Вся важная информация для преподавателя теперь в одном комментарии, прямо в карточке студента. Назначение вводного урока или первого урока (если без ВУ) можно делать без согласования с преподавателем — преподаватель получит предложение, отреагирует на него, а система зафиксирует результат и при необходимости уведомит вас.</p>
+      <p class="guide-section__lead">Обновятся и уведомления для КМ, преподавателя и студента — чтобы все были в курсе, что происходит.</p>
+
+      <div class="tip">
+        <svg class="tip__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="9" y1="18" x2="15" y2="18"/><line x1="10" y1="22" x2="14" y2="22"/>
+          <path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/>
+        </svg>
+        <div class="tip__content">
+          <p class="tip__text"><strong>Только для русскоязычных преподавателей.</strong> С нейтивами по-старому через Пачку — при назначении ВУ или первого урока (если без ВУ) снимайте галочку с отправки предложения.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-block lk-panel" id="vu-comment">
+      <div class="lk-panel__head">
+        <button type="button" class="lk-panel__trigger" aria-expanded="false" aria-controls="vu-comment-content">
+          <span class="guide-section__title lk-panel__title">Комментарий преподавателю</span>
+          <span class="lk-panel__chevron" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </span>
+        </button>
+      </div>
+      <div class="lk-panel__expand" id="vu-comment-content">
+        <div class="lk-panel__content">
+      <p class="guide-section__lead">Мы добавили «Комментарий преподавателю» — это отдельный комментарий о студенте, который видит преподаватель. Он нужен, чтобы передать ключевые детали перед стартом занятий: что учесть на уроках, на что обратить внимание, как лучше выстроить коммуникацию.</p>
+
+      <p class="guide-section__lead">Увидеть этот комментарий можно:</p>
+      <ul class="guide-checklist">
+        <li>в консоли студента;</li>
+        <li>в профиле студента;</li>
+        <li>в карточке студента в общем списке студентов;</li>
+        <li>в списке студентов преподавателя.</li>
+      </ul>
+      <p class="guide-section__lead">Для одного студента доступен только один комментарий такого типа — он общий и всегда актуальный.</p>
+
+      <details class="guide-accordion vu-comment-accordion">
+        <summary class="guide-accordion__summary">Как добавить или изменить комментарий в карточке студента в ЛКМ</summary>
+        <div class="guide-accordion__body">
+          <ul class="guide-checklist">
+            <li>Откройте ЛКМ → найдите студента → зайдите в консоль или профиль студента.</li>
+            <li>На странице найдите блок «Комментарий преподавателю».</li>
+            <li>Если комментария нет — увидите плейсхолдер «Комментария пока нет».</li>
+            <li>Для редактирования нажмите на иконку «Отредактировать комментарий», введите текст и нажмите «Сохранить».</li>
+            <li>Кнопка с иконкой «глаз» разворачивает и сворачивает длинный текст.</li>
+          </ul>
+
+          <figure class="guide-step__figure svu-intro-figure">
+            <img src="vu-psp-comment-lkm.png" alt="Блок «Комментарий преподавателю» в карточке студента в ЛКМ" loading="lazy">
+            <figcaption>Комментарий преподавателю в ЛКМ</figcaption>
+          </figure>
+
+          <p class="guide-section__lead">Преподаватель увидит этот комментарий в личном кабинете на странице «Студенты» → карточка студента — без информации о менеджере, который оставил комментарий.</p>
+
+          <figure class="guide-step__figure svu-intro-figure">
+            <img src="vu-psp-comment-lkp.png" alt="Как преподаватель видит комментарий в ЛКП" loading="lazy">
+            <figcaption>Как видит преподаватель в ЛКП</figcaption>
+          </figure>
+        </div>
+      </details>
+
+      <div class="tip">
+        <svg class="tip__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="9" y1="18" x2="15" y2="18"/><line x1="10" y1="22" x2="14" y2="22"/>
+          <path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/>
+        </svg>
+        <p class="tip__text">«Комментарий преподавателю» — это то, на что преподаватель реально опирается. Пишите коротко и по делу. Если нужно свериться, что и когда меняли, историю работы с комментарием можно посмотреть на странице «Комментарии».</p>
+      </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-block lk-panel" id="vu-psp">
+      <div class="lk-panel__head">
+        <button type="button" class="lk-panel__trigger" aria-expanded="false" aria-controls="vu-psp-content">
+          <span class="guide-section__title lk-panel__title">Предложение студента преподавателю (ПСП)</span>
+          <span class="lk-panel__chevron" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </span>
+        </button>
+      </div>
+      <div class="lk-panel__expand" id="vu-psp-content">
+        <div class="lk-panel__content">
+      <p class="guide-section__lead">ПСП помогает назначить ВУ или первый урок (если без ВУ) без необходимости звонить или писать преподавателю в Пачку и запрашивать подтверждение. Вы ставите дату, а преподавателю приходит предложение в личном кабинете в виде большого модального окна, где он должен взять студента или отказаться.</p>
+
+      <div class="guide-alert">
+        <div class="guide-alert__icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>
+          </svg>
+        </div>
+        <div class="guide-alert__body">
+          <h4 class="guide-alert__title">Важно</h4>
+          <p>ВУ назначаются таким автоматизированным способом только на даты и время по основному расписанию студента.</p>
+        </div>
+      </div>
+
+      <div class="amo-stages vu-psp-sections" data-tab-scope id="psp-sections">
+        <div class="amo-stages__roles amo-stages__roles--three" role="tablist" aria-label="Подразделы ПСП" id="psp-tabs" data-tab-group="psp">
+          <button type="button" class="amo-stages__role amo-stages__role--active" role="tab" data-section="algorithm" aria-selected="true" id="psp-tab-btn-algorithm" aria-controls="psp-panel-algorithm">Алгоритм назначения</button>
+          <button type="button" class="amo-stages__role" role="tab" data-section="send" aria-selected="false" id="psp-tab-btn-send" aria-controls="psp-panel-send">Как отправить предложение</button>
+          <button type="button" class="amo-stages__role" role="tab" data-section="checkbox" aria-selected="false" id="psp-tab-btn-checkbox" aria-controls="psp-panel-checkbox">Когда оставлять или снимать галочку</button>
+        </div>
+
+        <div class="vu-psp-sections__panel" id="psp-panel-algorithm" data-tab-group="psp" data-tab-panel="algorithm" role="tabpanel" aria-labelledby="psp-tab-btn-algorithm">
+          <ul class="guide-checklist">
+            <li>Квалификатор выясняет у студента желаемые дни для занятий и дату для ВУ.</li>
+            <li>Координатор ищет преподавателя, у которого в графике есть окна под такое расписание.</li>
+            <li>Координатор создаёт расписание для студента с таким преподавателем в запрашиваемые дни.</li>
+            <li>Координатор уточняет у студента, подходит ли ему преподаватель, расписание и дата ВУ.</li>
+            <li><span class="guide-checklist__text">Получив подтверждение студента, <strong>без</strong> согласования с преподавателем Координатор назначает ВУ в ЛК в поле «Дата и время следующего урока».</span></li>
+            <li>Преподавателю автоматически пойдёт предложение студента и запрос на подтверждение ВУ.</li>
+          </ul>
+        </div>
+
+        <div class="vu-psp-sections__panel" id="psp-panel-send" data-tab-group="psp" data-tab-panel="send" role="tabpanel" aria-labelledby="psp-tab-btn-send" hidden>
+          <p class="guide-section__lead">В карточке студента откройте модальное окно изменения даты вводного урока и первого занятия. Найдите чекбокс «Отправить преподавателю … предложение студента».</p>
+          <p class="guide-section__lead">Предложение можно отправлять, если до урока есть минимум 24 часа. После отправки у преподавателя есть около 3 часов, чтобы принять или отказаться. Эти сроки могут со временем измениться.</p>
+
+          <figure class="guide-step__figure svu-intro-figure">
+            <img src="vu-psp-assign-modal.png" alt="Модальное окно «Изменение даты» с чекбоксом отправки предложения преподавателю" loading="lazy">
+            <figcaption>Назначение ВУ с отправкой предложения преподавателю</figcaption>
+          </figure>
+
+          <figure class="guide-step__figure svu-intro-figure">
+            <img src="vu-psp-24h-error.png" alt="Ошибка: невозможно отправить предложение менее чем за 24 часа до начала события" loading="lazy">
+            <figcaption>Ошибка при отправке менее чем за 24 часа до урока</figcaption>
+          </figure>
+        </div>
+
+        <div class="vu-psp-sections__panel" id="psp-panel-checkbox" data-tab-group="psp" data-tab-panel="checkbox" role="tabpanel" aria-labelledby="psp-tab-btn-checkbox" hidden>
+          <p class="guide-section__lead"><strong>Галочку оставляем, когда:</strong></p>
+          <ul class="guide-checklist">
+            <li>назначаем без согласования и хотим, чтобы преподаватель подтвердил готовность в ЛКП.</li>
+          </ul>
+          <p class="guide-section__lead"><strong>Галочку снимаем, когда:</strong></p>
+          <ul class="guide-checklist">
+            <li>вы уже договорились с преподавателем заранее;</li>
+            <li>система подсказывает, что до урока осталось слишком мало времени для предложения;</li>
+            <li>вы открыли уже существующую дату, назначенную раньше — галочка может быть не включена, и обычно так и нужно, если всё было согласовано вручную.</li>
+          </ul>
+        </div>
+      </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-block lk-panel" id="vu-after-save">
+      <div class="lk-panel__head">
+        <button type="button" class="lk-panel__trigger" aria-expanded="false" aria-controls="vu-after-save-content">
+          <span class="guide-section__title lk-panel__title">Что происходит после сохранения даты</span>
+          <span class="lk-panel__chevron" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </span>
+        </button>
+      </div>
+      <div class="lk-panel__expand" id="vu-after-save-content">
+        <div class="lk-panel__content">
+
+      <div class="amo-stages vu-psp-sections">
+        <div class="amo-stages__roles" role="tablist" aria-label="Подразделы после сохранения даты" id="after-save-tabs" data-tab-group="after-save">
+          <button type="button" class="amo-stages__role amo-stages__role--active" role="tab" data-section="student" aria-selected="true" id="after-save-tab-btn-student" aria-controls="after-save-panel-student">Студенту автоматически отправится</button>
+          <button type="button" class="amo-stages__role" role="tab" data-section="teacher" aria-selected="false" id="after-save-tab-btn-teacher" aria-controls="after-save-panel-teacher">Преподавателю автоматически отправится</button>
+        </div>
+
+        <div class="vu-psp-sections__panel" id="after-save-panel-student" data-tab-group="after-save" data-tab-panel="student" role="tabpanel" aria-labelledby="after-save-tab-btn-student">
+          <ul class="guide-checklist">
+            <li>E-mail и уведомление в ЛК: «Назначен вводный/первый урок» — «Вам назначен вводный/первый урок с преподавателем %имя% на %датаВремя%. Пришлём SMS, когда преподаватель подтвердит урок, или свяжемся с вами и согласуем новую дату».</li>
+          </ul>
+        </div>
+
+        <div class="vu-psp-sections__panel" id="after-save-panel-teacher" data-tab-group="after-save" data-tab-panel="teacher" role="tabpanel" aria-labelledby="after-save-tab-btn-teacher" hidden>
+          <ul class="guide-checklist">
+            <li>SMS на телефон: «Подтвердите вводный/первый урок в личном кабинете до %датаВремя% мск».</li>
+            <li>E-mail: «Назначен урок с новым студентом» — с именем студента, датой, курсом, учебником и расписанием.</li>
+            <li><span class="guide-checklist__text">В ЛКП — модальное окно с предложением студента, где он должен <strong>в течение 3 часов</strong> в промежутке рабочего времени менеджера (9:00–21:00 мск; если поздно предложили — до утра висит) выбрать «Принять» или «Отказаться».</span></li>
+          </ul>
+
+          <figure class="guide-step__figure svu-intro-figure svu-intro-figure--compact">
+            <img src="vu-psp-offer-modal.png" alt="Модальное окно «Предложение нового студента» с кнопками «Принять» и «Отказаться»" loading="lazy">
+            <figcaption>Модальное окно предложения в ЛКП</figcaption>
+          </figure>
+
+          <p class="guide-section__lead">Преподаватель может обработать запрос в своём ЛК — как на основном устройстве, так и на телефоне в браузерной версии. Если у преподавателя сложности с интернетом и он попросит менеджера принять или отклонить ПСП за него — откройте в ЛК консоль преподавателя и нажмите вверху на иконку «человечек в шляпе»: будет прологин в ЛК преподавателя, где менеджер увидит ПСП и нажмёт «Принять» или «Отказаться». После этого обязательно выйдите из ЛК преподавателя.</p>
+        </div>
+      </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-block lk-panel" id="vu-outcomes">
+      <div class="lk-panel__head">
+        <button type="button" class="lk-panel__trigger" aria-expanded="false" aria-controls="vu-outcomes-content">
+          <span class="guide-section__title lk-panel__title">Три возможных исхода</span>
+          <span class="lk-panel__chevron" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </span>
+        </button>
+      </div>
+      <div class="lk-panel__expand" id="vu-outcomes-content">
+        <div class="lk-panel__content">
+
+      <div class="guide-outcomes">
+        <article class="guide-outcome guide-outcome--yes">
+          <h3 class="guide-outcome__title">Преподаватель принял ПСП</h3>
+          <p class="guide-outcome__text">Предложение считается подтверждённым. Запланированный ВУ или первый урок остаётся в силе. Менеджеру уведомления не приходят — делать ничего не нужно.</p>
+          <p class="guide-outcome__text">Студенту автоматически отправится SMS «Вводный/первый урок в «Инглекс» состоится в %датаВремя% мск» и e-mail «Вводный/первый урок подтверждён».</p>
+        </article>
+        <article class="guide-outcome guide-outcome--no">
+          <h3 class="guide-outcome__title">Преподаватель отклонил ПСП</h3>
+          <p class="guide-outcome__text">Система автоматически отменяет связанный вводный урок или первый урок и удаляет расписание. В ЛКМ появится уведомление, что нужен переподбор.</p>
+          <p class="guide-outcome__text">Менеджеру нужно связаться со студентом, сообщить, что этот преподаватель не сможет взять его на обучение, предложить другие кандидатуры и по такому же алгоритму назначить ВУ или первый урок.</p>
+        </article>
+        <article class="guide-outcome guide-outcome--warn">
+          <h3 class="guide-outcome__title">ПСП истекло (нет реакции вовремя)</h3>
+          <p class="guide-outcome__text">Работает так же, как отказ: предложение считается отклонённым, вводный урок или первый урок автоматически отменяется, расписание удаляется. Появится уведомление для переподбора.</p>
+          <p class="guide-outcome__text">Преподавателю отправится e-mail «Вы не успели подтвердить урок» — «Истекло время для подтверждения урока со студентом %имя% на %датаВремя% мск. Передали студента другому преподавателю».</p>
+        </article>
+      </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-block lk-panel" id="vu-notifications">
+      <div class="lk-panel__head">
+        <button type="button" class="lk-panel__trigger" aria-expanded="false" aria-controls="vu-notifications-content">
+          <span class="guide-section__title lk-panel__title">Уведомления для менеджеров</span>
+          <span class="lk-panel__chevron" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </span>
+        </button>
+      </div>
+      <div class="lk-panel__expand" id="vu-notifications-content">
+        <div class="lk-panel__content">
+      <p class="guide-section__lead">Для менеджеров появляется новый тип уведомлений: <strong>ПСП: отклонено</strong>. Два варианта:</p>
+      <ul class="guide-checklist">
+        <li>вручную — преподаватель сам нажал «Отказаться»;</li>
+        <li>автоматически — истёк срок решения в 3 часа.</li>
+      </ul>
+      <p class="guide-section__lead">При появлении таких уведомлений менеджеру нужно связаться со студентом, сообщить, что этот преподаватель не сможет взять его на обучение, предложить другие кандидатуры и по такому же алгоритму назначить ВУ или первый урок (если без ВУ).</p>
+
+      <figure class="guide-step__figure svu-intro-figure">
+        <img src="vu-psp-notifications.png" alt="Уведомления в amoCRM: ВУ — ПСП отклонено" loading="lazy">
+        <figcaption>Уведомления «ВУ — ПСП отклонено» в amoCRM</figcaption>
+      </figure>
+        </div>
+      </div>
+    </section>
+
+    <div class="tip vu-urgent-tip">
+      <svg class="tip__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="9" y1="18" x2="15" y2="18"/><line x1="10" y1="22" x2="14" y2="22"/>
+        <path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/>
+      </svg>
+      <p class="tip__text">Срочный ВУ не участвует в логике предложения. Если включён «Срочный», но вы назначаете ещё и первый урок, то предложение сработает по первому уроку.</p>
+    </div>
+
+    </div>
+
+    <div class="vu-tabs__panel" id="vu-panel-reminders" data-tab-group="vu" data-tab-panel="reminders" role="tabpanel" aria-labelledby="vu-tab-btn-reminders" hidden>
+    <section class="content-block">
+      <h2 class="guide-section__title">Напоминания о ВУ</h2>
+
+      <h3 class="guide-subsection__title">Студенту</h3>
+      <ul class="guide-checklist">
+        <li>За 24 часа до ВУ студенту приходит SMS на телефон с напоминанием о времени ВУ.</li>
+        <li>За 2 часа до ВУ студенту приходит SMS на телефон с напоминанием о времени ВУ.</li>
+        <li>За 1,5 часа до ВУ идёт автозвонок с просьбой подтвердить готовность посетить ВУ: клиент должен нажать цифру 1 = «Да», 2 = «Нет» (если не ответили или ничего не выбрали — ВУ остаётся назначенным).</li>
+        <li>За 10 минут до ВУ студенту на почту приходит письмо со ссылкой для прямого перехода в Онлайн-класс.</li>
+        <li>За 8–10 минут до начала ВУ студенту приходит ещё SMS на телефон о том, что отправили ссылку для входа на e-mail.</li>
+      </ul>
+
+      <h3 class="guide-subsection__title">Преподавателю</h3>
+      <ul class="guide-checklist">
+        <li>За 2 часа до ВУ преподавателю приходит SMS на телефон с напоминанием о времени ВУ.</li>
+      </ul>
+    </section>
+    </div>
+
+    <div class="vu-tabs__panel" id="vu-panel-booking" data-tab-group="vu" data-tab-panel="booking" role="tabpanel" aria-labelledby="vu-tab-btn-booking" hidden>
+    <section class="content-block guide-checklist-block">
+      <h2 class="guide-section__title">Сроки брони расписания / отсрочка в назначении ВУ или ПУ</h2>
+      <p class="guide-section__lead">В наших интересах записать клиента, но если он не показывает сразу свой положительный настрой — не подтверждает ВУ, неоднократно переносит ВУ, переносит первый урок на долгий срок вперёд, не вносит первую оплату, тянет, хочет подумать и т.д. — нам лучше его пока убрать, уведомив об этом, и записать другого желающего на эти часы, который точно готов оплатить и сразу заниматься.</p>
+      <p class="guide-section__lead">Такие студенты держат бронь на расписании: мы из-за этого не можем воспользоваться часами при другом поиске, да и преподаватель не рад — он ждёт, а его расписание «не работает», часы заняты, а заработка нет.</p>
+      <ul class="guide-checklist">
+        <li>От даты ВУ первый урок назначается максимум на 2 недели вперёд.</li>
+        <li>Если студент хочет приступить через 3 недели, через месяц — сообщите, что у нас не принято бронировать график наперёд, мы так долго держать расписание без оплаты и занятий не сможем. Открепим график, а ближе к моменту готовности заниматься согласуем повторно расписание — если получится, с этим же преподавателем, либо подберём другого. Менеджеру подбора согласовать дату, когда с ним связаться.</li>
+        <li>Дату первого урока (ПУ) студент может перенести не более чем на неделю вперёд от предыдущей даты. Если первый раз не оплатил, а перенёс, потом опять просит перенести — третьего раза не даём: пусть определится с датой начала обучения, потом обращается.</li>
+        <li>Если студент после ВУ хочет думать — через 3–5 дней уточните у студента его планы. Если он не готов определиться, нужно больше времени, чтобы понять, хотят ли заниматься — график нужно открепить, так долго держать бронь не можем. Будем рады связаться в удобный момент для нового согласования.</li>
+      </ul>
+    </section>
+    </div>
   </main>
+
+  <div class="image-modal" id="image-modal" aria-hidden="true">
+    <button type="button" class="image-modal__close" id="image-modal-close" aria-label="Закрыть изображение">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+        <line x1="18" y1="6" x2="6" y2="18"/>
+        <line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+    <div class="image-modal__backdrop" id="image-modal-backdrop"></div>
+    <figure class="image-modal__figure">
+      <img class="image-modal__img" id="image-modal-img" src="" alt="">
+      <figcaption class="image-modal__caption" id="image-modal-caption"></figcaption>
+    </figure>
+  </div>
+
+  <script src="../day-3/lk-panel.js"></script>
+  <script src="vu-tabs.js"></script>
+  <script src="../day-5/image-modal.js"></script>
 </body>
 </html>
