@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>День 3 — Онбординг</title>
+  <title>День 3 — amoCRM и ЛК</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -17,17 +17,143 @@
 
     <section class="hero">
       <div class="hero__content">
-        <h1 class="hero__title">Тема третьего дня</h1>
-        <p class="hero__desc">Описание материалов третьего дня.</p>
+        <h1 class="hero__title">День 3: amoCRM и ЛК (личный кабинет)</h1>
+        <p class="hero__desc">Научитесь работать в amoCRM и личном кабинете — двух ключевых инструментах для ведения сделок, подбора преподавателей и сопровождения студентов.</p>
+      </div>
+      <div class="hero__art" aria-hidden="true">
+        <svg viewBox="0 0 320 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M42 32l2 5 5 1-4 3 1 5-4-3-4 3 1-5-4-3 5-1z" stroke="white" stroke-width="1.5" stroke-linejoin="round" opacity="0.7"/>
+          <path d="M272 28l1.5 3.5 3.5 0.5-2.5 2.5 0.7 3.5-3.2-2-3.2 2 0.7-3.5-2.5-2.5 3.5-0.5z" stroke="white" stroke-width="1.5" stroke-linejoin="round" opacity="0.6"/>
+          <circle cx="58" cy="148" r="2" fill="white" opacity="0.5"/>
+          <circle cx="285" cy="62" r="2" fill="white" opacity="0.5"/>
+
+          <!-- CRM board -->
+          <rect x="48" y="44" width="108" height="96" rx="10" stroke="white" stroke-width="2"/>
+          <line x1="48" y1="68" x2="156" y2="68" stroke="white" stroke-width="1.5" opacity="0.7"/>
+          <rect x="60" y="80" width="84" height="14" rx="4" stroke="white" stroke-width="1.5" opacity="0.8"/>
+          <rect x="60" y="102" width="64" height="14" rx="4" stroke="white" stroke-width="1.5" opacity="0.65"/>
+          <rect x="60" y="124" width="72" height="14" rx="4" stroke="white" stroke-width="1.5" opacity="0.65"/>
+
+          <!-- user profile / LK -->
+          <rect x="178" y="52" width="96" height="88" rx="10" stroke="white" stroke-width="2"/>
+          <circle cx="226" cy="84" r="14" stroke="white" stroke-width="2"/>
+          <path d="M206 118c4-10 32-10 40 0" stroke="white" stroke-width="2" stroke-linecap="round"/>
+          <line x1="194" y1="128" x2="258" y2="128" stroke="white" stroke-width="1.5" opacity="0.7"/>
+
+          <path d="M72 152c8 3 16-3 24 0" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+          <path d="M240 158c10 2 18-4 26 0" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+        </svg>
+      </div>
+    </section>
+
+    <section class="top-section">
+      <h2 class="section-title">Что вас ждёт сегодня</h2>
+      <div class="preview-cards preview-cards--triple">
+        <a href="https://drive.google.com/file/d/1vjHZFVVPNB8kBjDf_ypxpRB_r-hlfyUR/view?usp=drive_link" class="preview-card preview-card--link" target="_blank" rel="noopener noreferrer">
+          <div class="preview-card__icon preview-card__icon--violet">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="5 3 19 12 5 21 5 3"/>
+            </svg>
+          </div>
+          <h3 class="preview-card__title">Видео по воронке и KPI</h3>
+          <p class="preview-card__desc">Этапы воронки и ключевые показатели</p>
+        </a>
+        <a href="amocrm.html" class="preview-card preview-card--link">
+          <div class="preview-card__icon preview-card__icon--blue">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/>
+            </svg>
+          </div>
+          <h3 class="preview-card__title">amoCRM</h3>
+          <p class="preview-card__desc">Сделки, этапы и работа с клиентами</p>
+        </a>
+        <a href="lk.html" class="preview-card preview-card--link">
+          <div class="preview-card__icon preview-card__icon--teal">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+            </svg>
+          </div>
+          <h3 class="preview-card__title">Личный кабинет (ЛК)</h3>
+          <p class="preview-card__desc">Заявки, подбор и оформление студентов</p>
+        </a>
       </div>
     </section>
 
     <section class="materials">
       <div class="materials__header">
         <h2>Материалы дня</h2>
-        <span class="badge">Скоро</span>
+        <span class="badge">3 этапа</span>
       </div>
-      <p class="day-empty">Материалы этого дня будут добавлены позже. Отредактируйте <code>day-3/index.html</code>.</p>
+
+      <article class="material-item">
+        <span class="material-item__num">1</span>
+        <div class="material-item__icon material-item__icon--violet">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="5 3 19 12 5 21 5 3"/>
+          </svg>
+        </div>
+        <div class="material-item__content">
+          <h3 class="material-item__title">Видео по воронке и KPI</h3>
+          <p class="material-item__desc">Как устроена воронка продаж и какие показатели эффективности отслеживаем</p>
+        </div>
+        <span class="material-item__tag">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="5 3 19 12 5 21 5 3"/>
+          </svg>
+          Видео
+        </span>
+        <a href="https://drive.google.com/file/d/1vjHZFVVPNB8kBjDf_ypxpRB_r-hlfyUR/view?usp=drive_link" class="btn btn--outline btn--with-time" target="_blank" rel="noopener noreferrer"><span class="btn__label">Посмотреть</span><span class="btn__time">8 мин</span></a>
+      </article>
+
+      <article class="material-item">
+        <span class="material-item__num">2</span>
+        <div class="material-item__icon material-item__icon--blue">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/>
+          </svg>
+        </div>
+        <div class="material-item__content">
+          <h3 class="material-item__title">amoCRM</h3>
+          <p class="material-item__desc">Сделки, этапы воронки, примечания, задачи и связка с ЛК</p>
+        </div>
+        <span class="material-item__tag">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/>
+          </svg>
+          Инструкция
+        </span>
+        <a href="amocrm.html" class="btn btn--outline">Изучить</a>
+      </article>
+
+      <article class="material-item">
+        <span class="material-item__num">3</span>
+        <div class="material-item__icon material-item__icon--teal">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+          </svg>
+        </div>
+        <div class="material-item__content">
+          <h3 class="material-item__title">Личный кабинет (ЛК)</h3>
+          <p class="material-item__desc">Оформление заявок, подбор преподавателей и профили студентов</p>
+        </div>
+        <span class="material-item__tag">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/>
+          </svg>
+          Инструкция
+        </span>
+        <a href="lk.html" class="btn btn--outline">Изучить</a>
+      </article>
+
+      <div class="tip">
+        <svg class="tip__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="9" y1="18" x2="15" y2="18"/><line x1="10" y1="22" x2="14" y2="22"/>
+          <path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/>
+        </svg>
+        <p class="tip__text">
+          <strong>Совет:</strong> Начните с видео по воронке и KPI, затем переходите к amoCRM и личному кабинету.
+        </p>
+      </div>
     </section>
   </main>
 </body>

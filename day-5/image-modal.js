@@ -8,10 +8,21 @@
 
   if (!modal || !modalImg || !closeBtn || !backdrop || !pageRoot) return;
 
+  function getCaption(img) {
+    var figure = img.closest('figure');
+    if (figure) {
+      var figcaption = figure.querySelector('figcaption');
+      if (figcaption && figcaption.textContent.trim()) {
+        return figcaption.textContent.trim();
+      }
+    }
+    return img.alt || '';
+  }
+
   function openModal(img) {
     modalImg.src = img.currentSrc || img.src;
     modalImg.alt = img.alt || '';
-    modalCaption.textContent = img.alt || '';
+    modalCaption.textContent = getCaption(img);
     modal.classList.add('image-modal--open');
     modal.setAttribute('aria-hidden', 'false');
     document.body.classList.add('image-modal-open');

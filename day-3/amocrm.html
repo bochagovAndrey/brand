@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>amoCRM — День 3</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <main class="content-page content-page--guide">
+    <div class="content-page__back">
+      <a href="index.html" class="btn btn--ghost">&larr; Назад к материалам дня</a>
+    </div>
+
+    <header class="content-page__header">
+      <h1>amoCRM</h1>
+      <p>Сводка по работе со сделками, этапами, примечаниями и задачами — материалы из других дней онбординга собраны здесь в одном месте.</p>
+    </header>
+
+    <nav class="op-toc content-block" aria-label="Содержание">
+      <h2 class="op-toc__title">Содержание</h2>
+      <ol class="op-toc__list">
+        <li><a href="#basics">Зачем нужен amoCRM</a></li>
+        <li><a href="#deals-tab">Вкладка «Сделки»</a></li>
+        <li><a href="#stages">Этапы в amoCRM</a></li>
+        <li><a href="#tasks-tab">Вкладка «Задачи»</a></li>
+        <li><a href="#email">Как написать клиенту на почту</a></li>
+        <li><a href="#wa">Как написать клиенту в WA</a></li>
+        <li><a href="#wa-no-chat">Что делать, если в сделке не видно переписки в WA</a></li>
+        <li><a href="#sms">Как отправить клиенту СМС</a></li>
+        <li><a href="#notes">Примечания и задачи</a></li>
+        <li><a href="#guides">Подробные инструкции</a></li>
+      </ol>
+    </nav>
+
+    <section class="content-block lk-panel" id="basics">
+      <div class="lk-panel__head">
+        <button type="button" class="lk-panel__trigger" aria-expanded="false" aria-controls="basics-content">
+          <span class="guide-section__title lk-panel__title">Зачем нужен amoCRM</span>
+          <span class="lk-panel__chevron" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </span>
+        </button>
+      </div>
+      <div class="lk-panel__expand" id="basics-content">
+        <div class="lk-panel__content">
+          <p class="guide-section__lead">amoCRM — основная CRM для работы с клиентами. В ней ведутся сделки, фиксируется переписка и звонки, проставляются этапы воронки, создаются примечания и задачи.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-block lk-panel" id="deals-tab">
+      <div class="lk-panel__head">
+        <button type="button" class="lk-panel__trigger" aria-expanded="false" aria-controls="deals-tab-content">
+          <span class="guide-section__title lk-panel__title">Вкладка «Сделки»</span>
+          <span class="lk-panel__chevron" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </span>
+        </button>
+      </div>
+      <div class="lk-panel__expand" id="deals-tab-content">
+        <div class="lk-panel__content">
+          <div class="amo-deals" id="amo-deals">
+            <div class="help-browser amo-deals-browser" id="amo-deals-browser">
+              <div class="help-browser__grid-wrap" id="amo-deals-grid-wrap">
+                <p class="help-browser__hint">Нажмите на раздел, чтобы открыть инструкцию</p>
+                <ul class="help-topics__grid amo-deals-browser__grid" id="amo-deals-grid"></ul>
+              </div>
+
+              <div class="help-browser__detail" id="amo-deals-detail">
+                <aside class="help-sidebar" aria-label="Разделы вкладки «Сделки»">
+                  <button type="button" class="help-sidebar__back" id="amo-deals-back-grid">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <polyline points="15 18 9 12 15 6"/>
+                    </svg>
+                    Все разделы
+                  </button>
+                  <ul class="help-sidebar__list" id="amo-deals-sidebar"></ul>
+                </aside>
+
+                <article class="help-detail amo-deals-browser__content" aria-live="polite">
+                  <h3 class="help-detail__title" id="amo-deals-detail-title"></h3>
+                  <div class="help-detail__body" id="amo-deals-detail-body"></div>
+                </article>
+              </div>
+            </div>
+
+            <div class="amo-deals-source" hidden id="amo-deals-source">
+              <section data-topic-id="funnel" data-topic-name="Воронка">
+                <div class="amo-deals-topic">
+                  <p>Обычно мы работаем из воронки «Продажи».</p>
+                  <p>Чтобы открыть её, нужно слева навести курсор на вкладку «Сделки» и в открывшемся окне выбрать воронку «Продажи».</p>
+                  <figure class="guide-figure guide-figure--compact amo-deals-figure--narrow">
+                    <img src="../Воронка.png" alt="В amoCRM: наведите на вкладку «Сделки» слева и выберите воронку «Продажи»" loading="lazy">
+                  </figure>
+                </div>
+              </section>
+              <section data-topic-id="my-deals" data-topic-name="Как открыть свои сделки">
+                <div class="amo-deals-topic">
+                  <p>Чтобы открыть только свои сделки:</p>
+                  <ul>
+                    <li>Нажмите вверху на поле «Поиск и фильтр»;</li>
+                  </ul>
+                  <figure class="guide-figure guide-figure--compact amo-deals-figure--wide">
+                    <img src="../ПоискИфильтр.png" alt="Поле «Поиск и фильтр» вверху воронки «Продажи»" loading="lazy">
+                  </figure>
+                  <ul>
+                    <li>В открывшемся окне выберите «Только мои сделки».</li>
+                  </ul>
+                  <figure class="guide-figure guide-figure--compact amo-deals-figure--wide">
+                    <img src="../ТолькоМоиСделки.png" alt="Пункт «Только мои сделки» в окне поиска и фильтра" loading="lazy">
+                  </figure>
+                </div>
+              </section>
+              <section data-topic-id="partner-deals" data-topic-name="Как открыть сделки свои и напарника">
+                <div class="amo-deals-topic">
+                  <p>Чтобы открыть одновременно сделки и свои, и напарника:</p>
+                  <ul>
+                    <li>Нажмите вверху на поле «Поиск и фильтр»;</li>
+                  </ul>
+                  <figure class="guide-figure guide-figure--compact amo-deals-figure--wide">
+                    <img src="../ПоискИфильтр.png" alt="Поле «Поиск и фильтр» вверху воронки «Продажи»" loading="lazy">
+                  </figure>
+                  <ul>
+                    <li>В открывшемся окне найдите поле «Менеджеры», нажмите на него и выберите нужных менеджеров (себя и напарника).</li>
+                  </ul>
+                  <figure class="guide-figure guide-figure--compact amo-deals-figure--wide">
+                    <img src="../ПолеМенеджер.png" alt="Поле «Менеджеры» в окне поиска и фильтра" loading="lazy">
+                  </figure>
+                </div>
+              </section>
+              <section data-topic-id="find-client" data-topic-name="Как найти клиента">
+                <div class="amo-deals-topic">
+                  <p>Чтобы найти клиента — нажмите на «Поиск и фильтр».</p>
+                  <figure class="guide-figure guide-figure--compact amo-deals-figure--wide">
+                    <img src="../ПоискИфильтр.png" alt="Поле «Поиск и фильтр» вверху воронки «Продажи»" loading="lazy">
+                  </figure>
+                  <p>Клиента в АМО можно найти по любой информации, которая есть в сделке:</p>
+                  <ul>
+                    <li>номер телефона;</li>
+                    <li>электронная почта;</li>
+                    <li>ID сделки;</li>
+                    <li>фамилия и имя клиента;</li>
+                    <li>ник клиента в ТГ.</li>
+                  </ul>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-block lk-panel" id="stages">
+      <div class="lk-panel__head">
+        <button type="button" class="lk-panel__trigger" aria-expanded="false" aria-controls="stages-content">
+          <span class="guide-section__title lk-panel__title">Этапы в amoCRM</span>
+          <span class="lk-panel__chevron" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </span>
+        </button>
+      </div>
+      <div class="lk-panel__expand" id="stages-content">
+        <div class="lk-panel__content">
+          <div class="amo-stages" id="amo-stages">
+            <div class="amo-stages__roles" role="tablist" aria-label="Роль в amoCRM">
+              <button type="button" class="amo-stages__role amo-stages__role--active" role="tab" data-role="qualifier" aria-selected="true" id="amo-stages-tab-qualifier">Квалификатор</button>
+              <button type="button" class="amo-stages__role" role="tab" data-role="coordinator" aria-selected="false" id="amo-stages-tab-coordinator">Координатор</button>
+            </div>
+
+            <div class="help-browser amo-stages-browser" id="amo-stages-browser">
+              <div class="help-browser__grid-wrap" id="amo-stages-grid-wrap">
+                <p class="help-browser__hint">Нажмите на этап, чтобы открыть описание</p>
+                <ul class="help-topics__grid amo-stages-browser__grid" id="amo-stages-grid"></ul>
+              </div>
+
+              <div class="help-browser__detail" id="amo-stages-detail">
+                <aside class="help-sidebar" aria-label="Этапы воронки">
+                  <button type="button" class="help-sidebar__back" id="amo-stages-back-grid">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <polyline points="15 18 9 12 15 6"/>
+                    </svg>
+                    Все этапы
+                  </button>
+                  <ul class="help-sidebar__list" id="amo-stages-sidebar"></ul>
+                </aside>
+
+                <article class="help-detail amo-stages-browser__content" aria-live="polite">
+                  <h3 class="help-detail__title" id="amo-stages-detail-title"></h3>
+                  <div class="help-detail__body" id="amo-stages-detail-body"></div>
+                </article>
+              </div>
+            </div>
+
+            <div class="amo-stages-source" hidden id="amo-stages-source">
+              <section data-role="qualifier" data-stage-id="new-lead" data-stage-name="Новый лид">
+                      <dl class="amo-stage-fields">
+                        <div class="amo-stage-field"><dt class="amo-stage-field__label">Описание этапа</dt><dd class="amo-stage-field__value"><p>Все поступающие новые лиды в воронку.</p></dd></div>
+                        <div class="amo-stage-field"><dt class="amo-stage-field__label">Задача сотрудника</dt><dd class="amo-stage-field__value"><p>Все лиды автоматизированы и автоматически переходят в этап «Ответственный назначен».</p></dd></div>
+                        <div class="amo-stage-field"><dt class="amo-stage-field__label">Что происходит в сделке автоматически</dt><dd class="amo-stage-field__value"><p>При создании сделки в этапе заполняются: имя, e-mail, телефон. Все сделки, кроме Авито, автоматически переходят в этап «Ответственный назначен».</p><p>Для Авито работает бот, который выясняет первичную информацию — например, номер телефона — и затем передаёт сделку в этап «Ответственный назначен».</p></dd></div>
+                        <div class="amo-stage-field"><dt class="amo-stage-field__label">Что требуется заполнить сотруднику</dt><dd class="amo-stage-field__value"><p>Если сделку создаёт Квалификатор, заполнить:</p><ul><li>имя и фамилию;</li><li>номер телефона;</li><li>e-mail;</li><li>тип сделки.</li></ul></dd></div>
+                        <div class="amo-stage-field"><dt class="amo-stage-field__label">Условия перехода в следующий этап</dt><dd class="amo-stage-field__value"><p>—</p></dd></div>
+                        <div class="amo-stage-field"><dt class="amo-stage-field__label">Распределение звонков</dt><dd class="amo-stage-field__value"><p>Звонок проходит на всех, кто на смене и не на линии.</p></dd></div>
+                        <div class="amo-stage-field"><dt class="amo-stage-field__label">Распределение сообщений из мессенджеров</dt><dd class="amo-stage-field__value"><p>На админа падают задачи, пока ответственный не сменён.</p></dd></div>
+                      </dl>
+              </section>
+              <section data-role="qualifier" data-stage-id="assigned" data-stage-name="Ответственный назначен">
+                      <dl class="amo-stage-fields">
+                        <div class="amo-stage-field"><dt class="amo-stage-field__label">Описание этапа</dt><dd class="amo-stage-field__value"><p>Все новые клиенты, которых нужно отработать.</p></dd></div>
+                        <div class="amo-stage-field"><dt class="amo-stage-field__label">Задача сотрудника</dt><dd class="amo-stage-field__value"><p>Забрать сделку, которая назначена на сотрудника, и перевести её в этап «В работе».</p></dd></div>
+                        <div class="amo-stage-field"><dt class="amo-stage-field__label">Что происходит в сделке автоматически</dt><dd class="amo-stage-field__value"><p>Назначение ответственного и установка задачи «Новый лид» на ответственного.</p><p>Назначение происходит в порядке электронной очереди на тех сотрудников, которые находятся на смене и имеют статус «Онлайн» в виджете «Распределение».</p></dd></div>
+                        <div class="amo-stage-field"><dt class="amo-stage-field__label">Что требуется заполнить сотруднику</dt><dd class="amo-stage-field__value"><p>—</p></dd></div>
+                        <div class="amo-stage-field"><dt class="amo-stage-field__label">Условия перехода в следующий этап</dt><dd class="amo-stage-field__value"><p>—</p></dd></div>
+                        <div class="amo-stage-field"><dt class="amo-stage-field__label">Распределение звонков</dt><dd class="amo-stage-field__value"><p>На ответственного Квалификатора.</p></dd></div>
+                        <div class="amo-stage-field"><dt class="amo-stage-field__label">Распределение сообщений из мессенджеров</dt><dd class="amo-stage-field__value"><p>На ответственного Квалификатора.</p></dd></div>
+                      </dl>
+              </section>
+              <section data-role="qualifier" data-stage-id="in-work" data-stage-name="В работе">
+                      <dl class="amo-stage-fields">
+                        <div class="amo-stage-field"><dt class="amo-stage-field__label">Описание этапа</dt><dd class="amo-stage-field__value"><p>Все клиенты, с которыми на текущий момент не получилось связаться.</p></dd></div>
+                        <div class="amo-stage-field"><dt class="amo-stage-field__label">Задача сотрудника</dt><dd class="amo-stage-field__value"><ol><li>Попытаться дозвониться до клиента согласно цепочке касаний.</li><li>Перевести в следующий этап в зависимости от исхода звонка:<ul><li>если не получилось — остаётся в текущем этапе;</li><li>если клиент ответил, но неудобно говорить / попросил перезвонить / предпочёл переписку — в «Контакт установлен»;</li><li>если поговорили, выявили потребность, сделали презентацию, но не записали на урок (например, нет слотов) — в «Квалифицирован»;</li><li>если поговорили и записали на ВУ / СВУ — в «Передан в подбор».</li></ul></li></ol></dd></div>
+                        <div class="amo-stage-field"><dt class="amo-stage-field__label">Что происходит в сделке автоматически</dt><dd class="amo-stage-field__value"><p>Автозадача, если клиент в этапе дольше 3 дней.</p></dd></div>
+                        <div class="amo-stage-field"><dt class="amo-stage-field__label">Что требуется заполнить сотруднику</dt><dd class="amo-stage-field__value"><p>Поля, которые знаем:</p><ul><li>фамилия (если не заполнена);</li><li>город, страна;</li><li>программа, текущий / целевой уровень, длительность урока, пожелания по обучению, дни недели для уроков, дата и время ВУ;</li><li>возраст, пол;</li><li>удобный вид связи.</li></ul></dd></div>
+                        <div class="amo-stage-field"><dt class="amo-stage-field__label">Условия перехода в следующий этап</dt><dd class="amo-stage-field__value"><ul><li><strong>«В работе»</strong> — если не вышел на связь.</li><li><strong>«Контакт установлен»</strong> — если ответил хотя бы раз.</li><li><strong>«Квалифицирован»</strong> — если выявили потребности, но не записали на урок.</li><li><strong>«Передан в подбор»</strong> — собрана вся информация, записано время пробного урока, заполнены обязательные поля.</li></ul></dd></div>
+                        <div class="amo-stage-field"><dt class="amo-stage-field__label">Распределение звонков</dt><dd class="amo-stage-field__value"><p>На ответственного Квалификатора.</p></dd></div>
+                        <div class="amo-stage-field"><dt class="amo-stage-field__label">Распределение сообщений из мессенджеров</dt><dd class="amo-stage-field__value"><p>На ответственного Квалификатора.</p></dd></div>
+                      </dl>
+              </section>
+              <section data-role="qualifier" data-stage-id="contact" data-stage-name="Контакт установлен">
+                      <dl class="amo-stage-fields">
+                        <div class="amo-stage-field"><dt class="amo-stage-field__label">Описание этапа</dt><dd class="amo-stage-field__value"><p>Все клиенты, которые вышли на связь, но не получилось их квалифицировать (сделать выявление потребностей).</p></dd></div>
+                        <div class="amo-stage-field"><dt class="amo-stage-field__label">Задача сотрудника</dt><dd class="amo-stage-field__value"><ol><li>Выявление потребности.</li><li>Сбор пожеланий к преподавателю.</li><li>Запись удобного времени для дальнейшего обучения.</li></ol></dd></div>
+                        <div class="amo-stage-field"><dt class="amo-stage-field__label">Что происходит в сделке автоматически</dt><dd class="amo-stage-field__value"><p>Автозадача, если клиент в этапе дольше 3 дней.</p></dd></div>
+                        <div class="amo-stage-field"><dt class="amo-stage-field__label">Что требуется заполнить сотруднику</dt><dd class="amo-stage-field__value"><p>Дозаполняем поля, если что-то узнали:</p><ul><li>фамилия (если не заполнена);</li><li>город, страна;</li><li>программа, текущий / целевой уровень, длительность урока, пожелания по обучению, дни недели для уроков, дата и время ВУ;</li><li>возраст, пол;</li><li>удобный вид связи.</li></ul></dd></div>
+                        <div class="amo-stage-field"><dt class="amo-stage-field__label">Условия перехода в следующий этап</dt><dd class="amo-stage-field__value"><p>В случае записи на ВУ / СВУ: собрана информация о пожеланиях клиента и записано желательное время для пробного урока и для дальнейшего обучения. Заполнены все обязательные поля.</p></dd></div>
+                        <div class="amo-stage-field"><dt class="amo-stage-field__label">Распределение звонков</dt><dd class="amo-stage-field__value"><p>На ответственного Квалификатора.</p></dd></div>
+                        <div class="amo-stage-field"><dt class="amo-stage-field__label">Распределение сообщений из мессенджеров</dt><dd class="amo-stage-field__value"><p>На ответственного Квалификатора.</p></dd></div>
+                      </dl>
+              </section>
+              <section data-role="qualifier" data-stage-id="qualified" data-stage-name="Квалифицирован">
+                      <dl class="amo-stage-fields">
+                        <div class="amo-stage-field"><dt class="amo-stage-field__label">Описание этапа</dt><dd class="amo-stage-field__value"><p>Все клиенты, которых получилось квалифицировать, но не удалось сделать презентацию школы и вводного урока или записать на ВУ / СВУ.</p></dd></div>
+                        <div class="amo-stage-field"><dt class="amo-stage-field__label">Задача сотрудника</dt><dd class="amo-stage-field__value"><ol><li>Презентация школы и вводного урока.</li><li>Передать клиента в подбор, передвинув сделку в следующий этап.</li></ol></dd></div>
+                        <div class="amo-stage-field"><dt class="amo-stage-field__label">Что происходит в сделке автоматически</dt><dd class="amo-stage-field__value"><p>Автозадача, если клиент в этапе дольше 3 дней.</p></dd></div>
+                        <div class="amo-stage-field"><dt class="amo-stage-field__label">Что требуется заполнить сотруднику</dt><dd class="amo-stage-field__value"><p>Дозаполняем поля, если что-то узнали:</p><ul><li>фамилия (если не заполнена);</li><li>город, страна;</li><li>программа, текущий / целевой уровень, длительность урока, пожелания по обучению, дни недели для уроков, дата и время ВУ;</li><li>возраст, пол;</li><li>удобный вид связи.</li></ul></dd></div>
+                        <div class="amo-stage-field"><dt class="amo-stage-field__label">Условия перехода в следующий этап</dt><dd class="amo-stage-field__value"><p>В случае записи на ВУ / СВУ: собрана информация о пожеланиях клиента и записано желательное время для пробного урока и для дальнейшего обучения. Заполнены все обязательные поля.</p></dd></div>
+                        <div class="amo-stage-field"><dt class="amo-stage-field__label">Распределение звонков</dt><dd class="amo-stage-field__value"><p>На ответственного Квалификатора.</p></dd></div>
+                        <div class="amo-stage-field"><dt class="amo-stage-field__label">Распределение сообщений из мессенджеров</dt><dd class="amo-stage-field__value"><p>На ответственного Квалификатора.</p></dd></div>
+                      </dl>
+              </section>
+              <section data-role="coordinator" data-stage-id="handover" data-stage-name="Передан в подбор">
+                      <dl class="amo-stage-fields">
+                        <div class="amo-stage-field"><dt class="amo-stage-field__label">Описание этапа</dt><dd class="amo-stage-field__value"><p>В этот этап переводят сделки Квалификаторы при записи на ВУ/СВУ. Тут находятся все недавно записанные на ВУ/СВУ клиенты и клиенты, которым пока не подобрали преподавателя.</p></dd></div>
+                        <div class="amo-stage-field"><dt class="amo-stage-field__label">Задача сотрудника</dt><dd class="amo-stage-field__value"><ul><li><strong>В случае ВУ:</strong> связаться с клиентом и подобрать преподавателя, назначить расписание в ЛК.</li><li><strong>В случае СВУ:</strong> ничего делать не нужно.</li></ul></dd></div>
+                        <div class="amo-stage-field"><dt class="amo-stage-field__label">Что происходит в сделке автоматически</dt><dd class="amo-stage-field__value"><p>В этом этапе работает распределение с Квалификаторов на Координаторов. При назначении ответственного Координатора устанавливается ответственный в ЛК. После распределения на Координатора, если нужен ВУ и подбор преподавателя — ставится задача.</p><ul><li><strong>В случае ВУ:</strong> при составлении расписания в ЛК сделка автоматически сменит этап на «Записан на ВУ», задача не ставится.</li><li><strong>В случае СВУ:</strong> сделка автоматически при автоназначении переходит в следующий этап «Записан на ВУ», задача не ставится.</li></ul></dd></div>
+                        <div class="amo-stage-field"><dt class="amo-stage-field__label">Что требуется заполнить сотруднику</dt><dd class="amo-stage-field__value"><p><strong>В случае ВУ:</strong> подобрать преподавателя, создать расписание и поставить дату и время ВУ в ЛК.</p></dd></div>
+                        <div class="amo-stage-field"><dt class="amo-stage-field__label">Условия перехода в следующий этап</dt><dd class="amo-stage-field__value"><p><strong>В случае ВУ:</strong> подобран преподаватель, создано расписание, назначен вводный урок.</p></dd></div>
+                        <div class="amo-stage-field"><dt class="amo-stage-field__label">Распределение звонков</dt><dd class="amo-stage-field__value"><p>На ответственного Координатора.</p></dd></div>
+                        <div class="amo-stage-field"><dt class="amo-stage-field__label">Распределение сообщений из мессенджеров</dt><dd class="amo-stage-field__value"><p>На ответственного Координатора.</p></dd></div>
+                      </dl>
+              </section>
+              <section data-role="coordinator" data-stage-id="scheduled" data-stage-name="Записан на ВУ">
+                      <dl class="amo-stage-fields">
+                        <div class="amo-stage-field"><dt class="amo-stage-field__label">Описание этапа</dt><dd class="amo-stage-field__value"><p>Клиент, записанный на СВУ, либо клиент, прошедший этап подбора преподавателя:</p><ul><li>те, кто не подтвердил своё присутствие в автозвонке;</li><li>те, у кого ещё не было автозвонка.</li></ul></dd></div>
+                        <div class="amo-stage-field"><dt class="amo-stage-field__label">Задача сотрудника</dt><dd class="amo-stage-field__value"><p>Проконтролировать выход клиентов на ВУ/СВУ.</p></dd></div>
+                        <div class="amo-stage-field"><dt class="amo-stage-field__label">Что происходит в сделке автоматически</dt><dd class="amo-stage-field__value"><p>В сделку передаётся из ЛК:</p><ol><li>дата и время назначенного ВУ;</li><li>ФИ препода;</li><li>в случае переназначения — новые данные о дате и преподе ВУ;</li><li>комментарии менеджера подбора о клиенте (в виде примечания), его пожелания к обучению и другие пометки.</li></ol><p>Если клиент подтвердил присутствие — заполняется поле и сделка двигается дальше в «Подтвердил ВУ», висит без задачи.</p><p>Если клиент не ответил на автозвонок — ставится задача «ВУ — не ответил на автозвонок», координатору нужно позвонить клиенту и получить подтверждение.</p><p>Если клиент в автозвонке нажал «2» — сделка автоматически переводится в этап «Отказ ВУ» и ставится задача менеджеру.</p></dd></div>
+                        <div class="amo-stage-field"><dt class="amo-stage-field__label">Что требуется заполнить сотруднику</dt><dd class="amo-stage-field__value"><p>—</p></dd></div>
+                        <div class="amo-stage-field"><dt class="amo-stage-field__label">Условия перехода в следующий этап</dt><dd class="amo-stage-field__value"><ol><li>ВУ/СВУ прошёл успешно, других ВУ не назначено — в этап «Посетил ВУ».</li><li>ВУ/СВУ прошёл не успешно, связывается также Координатор — в этап «Отказ ВУ».</li></ol></dd></div>
+                        <div class="amo-stage-field"><dt class="amo-stage-field__label">Распределение звонков</dt><dd class="amo-stage-field__value"><p>На ответственного Координатора.</p></dd></div>
+                        <div class="amo-stage-field"><dt class="amo-stage-field__label">Распределение сообщений из мессенджеров</dt><dd class="amo-stage-field__value"><p>На ответственного Координатора.</p></dd></div>
+                      </dl>
+              </section>
+              <section data-role="coordinator" data-stage-id="confirmed" data-stage-name="Подтвердил ВУ">
+                      <dl class="amo-stage-fields">
+                        <div class="amo-stage-field"><dt class="amo-stage-field__label">Описание этапа</dt><dd class="amo-stage-field__value"><p>Клиенты, подтвердившие присутствие на ВУ в автозвонке.</p></dd></div>
+                        <div class="amo-stage-field"><dt class="amo-stage-field__label">Задача сотрудника</dt><dd class="amo-stage-field__value"><p>Проконтролировать выход клиентов на ВУ/СВУ.</p></dd></div>
+                        <div class="amo-stage-field"><dt class="amo-stage-field__label">Что происходит в сделке автоматически</dt><dd class="amo-stage-field__value"><ul><li>Если клиент посетил ВУ/СВУ — сделка уйдёт дальше в «Посетил ВУ».</li><li>Если клиент не посетил или отменил ВУ/СВУ — сделка уйдёт в «Отказ ВУ» и поставится задача менеджеру.</li></ul></dd></div>
+                        <div class="amo-stage-field"><dt class="amo-stage-field__label">Что требуется заполнить сотруднику</dt><dd class="amo-stage-field__value"><p>—</p></dd></div>
+                        <div class="amo-stage-field"><dt class="amo-stage-field__label">Условия перехода в следующий этап</dt><dd class="amo-stage-field__value"><ol><li>ВУ/СВУ прошёл успешно, других ВУ не назначено — в этап «Посетил ВУ».</li><li>ВУ/СВУ прошёл не успешно, связывается также Координатор — в этап «Отказ ВУ».</li></ol></dd></div>
+                        <div class="amo-stage-field"><dt class="amo-stage-field__label">Распределение звонков</dt><dd class="amo-stage-field__value"><p>На ответственного Координатора.</p></dd></div>
+                        <div class="amo-stage-field"><dt class="amo-stage-field__label">Распределение сообщений из мессенджеров</dt><dd class="amo-stage-field__value"><p>На ответственного Координатора.</p></dd></div>
+                      </dl>
+              </section>
+              <section data-role="coordinator" data-stage-id="refused" data-stage-name="Отказ ВУ">
+                      <dl class="amo-stage-fields">
+                        <div class="amo-stage-field"><dt class="amo-stage-field__label">Описание этапа</dt><dd class="amo-stage-field__value"><p>Клиенты, не посетившие ВУ/СВУ.</p></dd></div>
+                        <div class="amo-stage-field"><dt class="amo-stage-field__label">Задача сотрудника</dt><dd class="amo-stage-field__value"><p>Пытаться связаться с клиентом согласно цепочке касаний. Предложить перезаписаться на более удобные день/время.</p></dd></div>
+                        <div class="amo-stage-field"><dt class="amo-stage-field__label">Что происходит в сделке автоматически</dt><dd class="amo-stage-field__value"><p>Если данная сделка уже однажды была в этом этапе — сделка автоматически из того этапа уйдёт в «Закрыто и нереализовано».</p></dd></div>
+                        <div class="amo-stage-field"><dt class="amo-stage-field__label">Что требуется заполнить сотруднику</dt><dd class="amo-stage-field__value"><ul><li><strong>В случае отказа и перевода сделки в ЗИН</strong> — заполнить поле «Причина отказа».</li><li><strong>В случае перезаписи</strong> — поставить в ЛК расписание и дату и время ВУ.</li></ul></dd></div>
+                        <div class="amo-stage-field"><dt class="amo-stage-field__label">Условия перехода в следующий этап</dt><dd class="amo-stage-field__value"><ol><li>Клиент отказался от посещения ВУ/СВУ — в «Закрыто и нереализовано».</li><li>Клиент перезаписан — в «Записан на ВУ».</li></ol></dd></div>
+                        <div class="amo-stage-field"><dt class="amo-stage-field__label">Распределение звонков</dt><dd class="amo-stage-field__value"><p>На ответственного Координатора.</p></dd></div>
+                        <div class="amo-stage-field"><dt class="amo-stage-field__label">Распределение сообщений из мессенджеров</dt><dd class="amo-stage-field__value"><p>На ответственного Координатора.</p></dd></div>
+                      </dl>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-block lk-panel" id="tasks-tab">
+      <div class="lk-panel__head">
+        <button type="button" class="lk-panel__trigger" aria-expanded="false" aria-controls="tasks-tab-content">
+          <span class="guide-section__title lk-panel__title">Вкладка «Задачи»</span>
+          <span class="lk-panel__chevron" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </span>
+        </button>
+      </div>
+      <div class="lk-panel__expand" id="tasks-tab-content">
+        <div class="lk-panel__content">
+          <div class="amo-tasks-intro">
+            <figure class="guide-figure amo-tasks-intro__figure">
+              <img src="../ЗадачиВкладка.png" alt="Вкладка «Задачи» в боковом меню amoCRM" loading="lazy">
+            </figure>
+            <p class="amo-tasks-intro__text">Чтобы открыть свои задачи — нужно слева выбрать вкладку «Задачи».</p>
+          </div>
+
+          <div class="amo-tasks" id="amo-tasks">
+            <div class="help-browser amo-tasks-browser" id="amo-tasks-browser">
+              <div class="help-browser__grid-wrap" id="amo-tasks-grid-wrap">
+                <p class="help-browser__hint">Нажмите на раздел, чтобы открыть инструкцию</p>
+                <ul class="help-topics__grid amo-tasks-browser__grid" id="amo-tasks-grid"></ul>
+              </div>
+
+              <div class="help-browser__detail" id="amo-tasks-detail">
+                <aside class="help-sidebar" aria-label="Разделы вкладки «Задачи»">
+                  <button type="button" class="help-sidebar__back" id="amo-tasks-back-grid">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <polyline points="15 18 9 12 15 6"/>
+                    </svg>
+                    Все разделы
+                  </button>
+                  <ul class="help-sidebar__list" id="amo-tasks-sidebar"></ul>
+                </aside>
+
+                <article class="help-detail amo-tasks-browser__content" aria-live="polite">
+                  <h3 class="help-detail__title" id="amo-tasks-detail-title"></h3>
+                  <div class="help-detail__body" id="amo-tasks-detail-body"></div>
+                </article>
+              </div>
+            </div>
+
+            <div class="amo-tasks-source" hidden id="amo-tasks-source">
+              <section data-topic-id="partner-tasks" data-topic-name="Как открыть свои задачи и задачи напарника">
+                <div class="amo-tasks-topic">
+                  <ul>
+                    <li>Нажмите на поле «Фильтр»;</li>
+                    <li>Выберите нужных менеджеров в поле ответственного (себя и напарника).</li>
+                  </ul>
+                  <div class="amo-tasks-figures">
+                    <figure class="guide-figure guide-figure--compact amo-deals-figure--wide">
+                      <img src="../ФильтрМенеджер.png" alt="Фильтр задач: поле «Фильтр» и выбор ответственного менеджера" loading="lazy">
+                    </figure>
+                    <figure class="guide-figure guide-figure--compact amo-deals-figure--wide amo-tasks-figure--detail">
+                      <img src="../ЗадачиВыборМенеджеров.png" alt="Выбор менеджеров в фильтре задач" loading="lazy">
+                    </figure>
+                  </div>
+                </div>
+              </section>
+              <section data-topic-id="filter-by-stage" data-topic-name="Как отфильтровать задачи по отдельному этапу">
+                <div class="amo-tasks-topic">
+                  <ul>
+                    <li>Нажмите на поле «Фильтр»;</li>
+                    <li>Выберите нужный этап в поле «Воронки, этапы».</li>
+                  </ul>
+                  <div class="amo-tasks-figures">
+                    <figure class="guide-figure guide-figure--compact amo-deals-figure--wide">
+                      <img src="../ФильтрЭтап.png" alt="Фильтр задач: поле «Фильтр» и выбор этапа в «Воронки, этапы»" loading="lazy">
+                    </figure>
+                    <figure class="guide-figure guide-figure--compact amo-deals-figure--wide amo-tasks-figure--detail">
+                      <img src="../ЗадачиВыборЭтапа.png" alt="Выбор этапа воронки в фильтре задач" loading="lazy">
+                    </figure>
+                  </div>
+                </div>
+              </section>
+              <section data-topic-id="filter-by-type" data-topic-name="Как отфильтровать задачи по конкретному типу">
+                <div class="amo-tasks-topic">
+                  <ul>
+                    <li>Нажмите на поле «Фильтр»;</li>
+                    <li>Выберите нужный тип в поле «Все типы».</li>
+                  </ul>
+                  <div class="amo-tasks-figures">
+                    <figure class="guide-figure guide-figure--compact amo-deals-figure--wide">
+                      <img src="../ФильтрТипЗадачи.png" alt="Фильтр задач: поле «Фильтр» и выбор типа в «Все типы»" loading="lazy">
+                    </figure>
+                    <figure class="guide-figure guide-figure--compact amo-deals-figure--wide amo-tasks-figure--detail">
+                      <img src="../ЗадачиВыборТипа.png" alt="Выбор типа задачи в фильтре" loading="lazy">
+                    </figure>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-block lk-panel" id="email">
+      <div class="lk-panel__head">
+        <button type="button" class="lk-panel__trigger" aria-expanded="false" aria-controls="email-content">
+          <span class="guide-section__title lk-panel__title">Как написать клиенту на почту</span>
+          <span class="lk-panel__chevron" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </span>
+        </button>
+      </div>
+      <div class="lk-panel__expand" id="email-content">
+        <div class="lk-panel__content amo-email-guide">
+          <p>Чтобы написать клиенту на почту — нужно изначально зайти в сделку с этим клиентом.</p>
+          <p>Далее есть два способа:</p>
+          <ol class="amo-email-guide__steps">
+            <li>
+              <p>Нажать в контакте на почту клиента и в открывшемся окне выбрать «Почтовик от „Команда F5"».</p>
+              <figure class="guide-figure guide-figure--compact amo-deals-figure--wide amo-email-guide__figure--narrow">
+                <img src="../Почта1.png" alt="Выбор «Почтовик от Команда F5» в контакте клиента" loading="lazy">
+              </figure>
+            </li>
+            <li>
+              <p>Справа в виджетах найти почтовик и нажать кнопку «Написать письмо».</p>
+              <figure class="guide-figure guide-figure--compact amo-deals-figure--wide amo-email-guide__figure--narrow">
+                <img src="../Почта2.png" alt="Виджет «Почтовик» и кнопка «Написать письмо»" loading="lazy">
+              </figure>
+            </li>
+          </ol>
+          <p>После этого откроется окно Почтовика.</p>
+          <p>В нём можно сразу написать письмо либо выбрать уже готовый шаблон из списка. Шаблон также можно найти по поиску, если вы знаете название подходящего вам шаблона. После того, как вы выбрали шаблон — текст в письме можно редактировать.</p>
+          <p>Перед отправкой письма можно посмотреть, как письмо будет выглядеть у клиента, нажав на значок глаза.</p>
+          <figure class="guide-figure guide-figure--compact amo-deals-figure--wide">
+            <img src="../Почта3.png" alt="Окно написания письма в виджете «Почтовик»" loading="lazy">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-block lk-panel" id="wa">
+      <div class="lk-panel__head">
+        <button type="button" class="lk-panel__trigger" aria-expanded="false" aria-controls="wa-content">
+          <span class="guide-section__title lk-panel__title">Как написать клиенту в WA</span>
+          <span class="lk-panel__chevron" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </span>
+        </button>
+      </div>
+      <div class="lk-panel__expand" id="wa-content">
+        <div class="lk-panel__content amo-wa-guide">
+          <p>Чтобы написать клиенту в WhatsApp, нужно изначально открыть сделку с этим клиентом.</p>
+          <p>Есть три способа написать клиенту:</p>
+          <ol class="amo-wa-guide__steps">
+            <li>
+              <p>Справа выбрать виджет Pact.</p>
+              <ul>
+                <li>Выбираем мессенджер WABA;</li>
+                <li>Компания — Инглекс (если изначально не выбрано);</li>
+                <li>Выбираем нужный шаблон;</li>
+                <li>Если в шаблоне есть пропуски — нужно их заполнить.</li>
+              </ul>
+              <div class="amo-wa-figures">
+                <figure class="guide-figure guide-figure--compact amo-deals-figure--wide amo-wa-guide__figure--narrow">
+                  <img src="../WAPact.png" alt="Виджет Pact: мессенджер WABA, компания Инглекс и выбор шаблона" loading="lazy">
+                </figure>
+                <figure class="guide-figure guide-figure--compact amo-deals-figure--wide amo-wa-guide__figure--narrow">
+                  <img src="../WAPactШаблон.png" alt="Заполнение пропусков в шаблоне Pact" loading="lazy">
+                </figure>
+              </div>
+            </li>
+            <li>
+              <p>Нажать в контакте на номер телефона и в открывшемся окне выбрать «Инглекс (Pact WABA)».</p>
+              <figure class="guide-figure guide-figure--compact amo-deals-figure--wide amo-wa-guide__figure--narrow">
+                <img src="../WAТелефон.png" alt="Выбор «Инглекс (Pact WABA)» в контакте клиента" loading="lazy">
+              </figure>
+            </li>
+            <li>
+              <p>Если переписка с клиентом уже велась, можно нажать на зелёный текст с номером беседы рядом с перепиской.</p>
+              <figure class="guide-figure guide-figure--compact amo-deals-figure--wide amo-wa-guide__figure--narrow">
+                <img src="../WAБеседа.png" alt="Зелёный номер беседы рядом с перепиской в amoCRM" loading="lazy">
+              </figure>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-block lk-panel" id="wa-no-chat">
+      <div class="lk-panel__head">
+        <button type="button" class="lk-panel__trigger" aria-expanded="false" aria-controls="wa-no-chat-content">
+          <span class="guide-section__title lk-panel__title">Что делать, если в сделке не видно переписки в WA</span>
+          <span class="lk-panel__chevron" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </span>
+        </button>
+      </div>
+      <div class="lk-panel__expand" id="wa-no-chat-content">
+        <div class="lk-panel__content">
+          <a href="https://drive.google.com/file/d/1fsGUi8qT7_JPt6sMOJMoJDxdzgt0n5pt/view?usp=drive_link" class="btn btn--outline btn--with-time" target="_blank" rel="noopener noreferrer"><span class="btn__label">Посмотреть</span><span class="btn__time">5 мин</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-block lk-panel" id="sms">
+      <div class="lk-panel__head">
+        <button type="button" class="lk-panel__trigger" aria-expanded="false" aria-controls="sms-content">
+          <span class="guide-section__title lk-panel__title">Как отправить клиенту СМС</span>
+          <span class="lk-panel__chevron" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </span>
+        </button>
+      </div>
+      <div class="lk-panel__expand" id="sms-content">
+        <div class="lk-panel__content amo-sms-guide">
+          <p>Чтобы отправить клиенту СМС, нужно изначально открыть сделку с клиентом.</p>
+          <p>После этого справа находим виджет «Bytehand SMS» и нажимаем на него.</p>
+          <figure class="guide-figure guide-figure--compact amo-deals-figure--wide amo-sms-guide__figure--narrow">
+            <img src="../СМСBytehand.png" alt="Виджет «Bytehand SMS» в сделке" loading="lazy">
+          </figure>
+          <p>Отправлять можно только те шаблоны, которые уже есть.</p>
+          <figure class="guide-figure guide-figure--compact amo-deals-figure--wide amo-sms-guide__figure--narrow">
+            <img src="../СМСШаблоны.png" alt="Выбор шаблона в виджете «Bytehand SMS»" loading="lazy">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-block lk-panel" id="notes">
+      <div class="lk-panel__head">
+        <button type="button" class="lk-panel__trigger" aria-expanded="false" aria-controls="notes-content">
+          <span class="guide-section__title lk-panel__title">Примечания и задачи</span>
+          <span class="lk-panel__chevron" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </span>
+        </button>
+      </div>
+      <div class="lk-panel__expand" id="notes-content">
+        <div class="lk-panel__content amo-notes-guide">
+          <ul class="guide-checklist amo-notes-guide__checklist">
+            <li>Обновляйте примечания в amo на актуальные — так коллегам проще подхватить заявку, когда вы на выходном.</li>
+            <li>Регулярно проверяйте все свои заявки, чтобы они не «провисали» с неактуальными статусами.</li>
+            <li>При закрытии заявки из-за отсутствия связи со студентом не забывайте менять статус на «архивный» и отклонять заявку в ЛК.</li>
+          </ul>
+          <p>В сделке в центральном поле можно добавить примечание. После добавления примечание также можно редактировать. Либо закрепить/открепить. При закрепе — примечание всегда будет сверху в сделке, чтобы его не потерять (если в нём указана важная информация, например).</p>
+          <figure class="guide-figure guide-figure--compact amo-deals-figure--wide amo-notes-guide__figure--narrow">
+            <img src="../ПримечаниеДобавить.png" alt="Добавление примечания в центральном поле сделки" loading="lazy">
+          </figure>
+          <div class="amo-notes-figures">
+            <figure class="guide-figure guide-figure--compact amo-deals-figure--wide amo-notes-guide__figure--narrow">
+              <img src="../ПримечаниеДействия.png" alt="Меню примечания: закрепить, удалить, изменить" loading="lazy">
+            </figure>
+            <figure class="guide-figure guide-figure--compact amo-deals-figure--wide amo-notes-guide__figure--narrow">
+              <img src="../ПримечаниеОткрепить.png" alt="Меню закреплённого примечания: открепить, удалить, изменить" loading="lazy">
+            </figure>
+          </div>
+          <figure class="guide-figure guide-figure--compact amo-deals-figure--wide amo-notes-guide__figure--feed">
+            <img src="../ПримечаниеЗакреплено.png" alt="Закреплённое примечание сверху ленты сделки" loading="lazy">
+          </figure>
+
+          <div class="amo-notes-auto-tasks">
+            <h3 class="amo-notes-auto-tasks__title">Какие задачи ставятся автоматически</h3>
+            <figure class="guide-figure guide-figure--compact amo-deals-figure--wide amo-notes-guide__figure--feed">
+              <img src="../ЗадачаАвтоОтменилУрок.png" alt="Автозадача: ВУ — отменил урок, подтвердить отчёт" loading="lazy">
+            </figure>
+            <figure class="guide-figure guide-figure--compact amo-deals-figure--wide amo-notes-guide__figure--feed">
+              <img src="../ЗадачаАвтоНеПодтвердил.png" alt="Автозадача: ВУ — не подтвердил присутствие" loading="lazy">
+            </figure>
+            <figure class="guide-figure guide-figure--compact amo-deals-figure--wide amo-notes-guide__figure--feed">
+              <img src="../ЗадачаАвтоСМС.png" alt="Автозадача: проблемы с доставкой СМС" loading="lazy">
+            </figure>
+            <figure class="guide-figure guide-figure--compact amo-deals-figure--wide amo-notes-guide__figure--feed">
+              <img src="../ЗадачаАвтоПСП3часа.png" alt="Автозадача: ВУ — ПСП отклонено, более 3 часов без реакции" loading="lazy">
+            </figure>
+            <figure class="guide-figure guide-figure--compact amo-deals-figure--wide amo-notes-guide__figure--feed">
+              <img src="../ЗадачаАвтоПСПОтказ.png" alt="Автозадача: ВУ — ПСП отклонено, отказ преподавателя" loading="lazy">
+            </figure>
+            <figure class="guide-figure guide-figure--compact amo-deals-figure--wide amo-notes-guide__figure--feed">
+              <img src="../ЗадачаАвтоСообщение.png" alt="Автозадача: пришло сообщение" loading="lazy">
+            </figure>
+            <figure class="guide-figure guide-figure--compact amo-deals-figure--wide amo-notes-guide__figure--feed">
+              <img src="../ЗадачаАвтоНеявка.png" alt="Автозадача: ВУ — неявка, подтвердить отчёт" loading="lazy">
+            </figure>
+            <figure class="guide-figure guide-figure--compact amo-deals-figure--wide amo-notes-guide__figure--feed">
+              <img src="../ЗадачаАвтоОшибкаУведомления.png" alt="Автозадача: ошибка в уведомлении, студент не согласен" loading="lazy">
+            </figure>
+            <figure class="guide-figure guide-figure--compact amo-deals-figure--wide amo-notes-guide__figure--feed">
+              <img src="../ЗадачаАвтоОтменилУрокAPI.png" alt="Автозадача: ВУ — отменил урок" loading="lazy">
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-block lk-panel" id="guides">
+      <div class="lk-panel__head">
+        <button type="button" class="lk-panel__trigger" aria-expanded="false" aria-controls="guides-content">
+          <span class="guide-section__title lk-panel__title">Подробные инструкции</span>
+          <span class="lk-panel__chevron" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </span>
+        </button>
+      </div>
+      <div class="lk-panel__expand" id="guides-content">
+        <div class="lk-panel__content">
+          <p class="guide-section__lead">Развёрнутые материалы по amoCRM и связанным процессам — в других днях онбординга:</p>
+          <ul class="link-cards">
+            <li>
+              <a href="../day-4/svu.html" class="link-card">
+                <span class="link-card__icon link-card__icon--amber" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                  </svg>
+                </span>
+                <span class="link-card__body">
+                  <span class="link-card__label">Срочные вводные уроки (СВУ) — День 4</span>
+                  <span class="link-card__hint">Бронь слотов, связка amoCRM ↔ ЛК, этап «Передан в подбор»</span>
+                </span>
+                <span class="link-card__arrow" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+                  </svg>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="../day-5/autocall.html" class="link-card">
+                <span class="link-card__icon link-card__icon--blue" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                  </svg>
+                </span>
+                <span class="link-card__body">
+                  <span class="link-card__label">Автозвонок для подтверждения — День 5</span>
+                  <span class="link-card__hint">Этапы сделки в amoCRM после робот-звонка, задачи координатору</span>
+                </span>
+                <span class="link-card__arrow" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+                  </svg>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="../day-5/applications.html" class="link-card">
+                <span class="link-card__icon link-card__icon--green" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/>
+                  </svg>
+                </span>
+                <span class="link-card__body">
+                  <span class="link-card__label">Работа с заявками — День 5</span>
+                  <span class="link-card__hint">Примечания в amo, тариф из сделки, чеклист для новых студентов</span>
+                </span>
+                <span class="link-card__arrow" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+                  </svg>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="tip">
+      <svg class="tip__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="9" y1="18" x2="15" y2="18"/><line x1="10" y1="22" x2="14" y2="22"/>
+        <path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/>
+      </svg>
+      <p class="tip__text">
+        <strong>Совет:</strong> При проблемах с распределением в amo или некорректным начислением КПИ в ЛК — пишите в чат с IT в Пачке.
+      </p>
+    </div>
+  </main>
+  <script src="lk-panel.js"></script>
+  <script src="amocrm-deals.js"></script>
+  <script src="amocrm-tasks.js"></script>
+  <script src="amocrm-stages.js"></script>
+</body>
+</html>
