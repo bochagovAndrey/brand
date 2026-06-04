@@ -9,15 +9,14 @@
   if (!browser || !gridEl || !sidebarEl || !titleEl || !bodyEl) return;
 
   var topics = [
-    { id: 'lk', name: '1. Правильно оформляем ЛК', templateId: 'students-topic-lk' },
-    { id: 'tariff', name: '2. Проверяем и сообщаем тариф студента', templateId: 'students-topic-tariff' },
-    { id: 'no-level', name: '3. НЕ сообщаем уровень совсем нового студента преподавателю', templateId: 'students-topic-no-level' },
-    { id: 'qualifiers-comment', name: '4. Копируем комментарий от Квалификаторов', templateId: 'students-topic-qualifiers-comment' },
-    { id: 'vu-passed', name: '5. Сообщаем преподавателю, если студент новый, но уже проходил ВУ', templateId: 'students-topic-vu-passed' },
-    { id: 'remind-student', name: '6. Напоминаем о себе студенту', templateId: 'students-topic-remind-student' },
-    { id: 'amo-notes', name: '7. Обновляем примечания в АМО на актуальные', templateId: 'students-topic-amo-notes' },
-    { id: 'check-own', name: '8. Проверяем все свои заявки', templateId: 'students-topic-check-own' },
-    { id: 'archive-right', name: '9. Убираем в архив правильно', templateId: 'students-topic-archive-right' }
+    { id: 'tariff', name: '1. Проверяем и сообщаем тариф студента', templateId: 'students-topic-tariff' },
+    { id: 'no-level', name: '2. НЕ сообщаем уровень совсем нового студента преподавателю', templateId: 'students-topic-no-level' },
+    { id: 'qualifiers-comment', name: '3. Копируем комментарий от Квалификаторов', templateId: 'students-topic-qualifiers-comment' },
+    { id: 'vu-passed', name: '4. Сообщаем преподавателю, если студент новый, но уже проходил ВУ', templateId: 'students-topic-vu-passed' },
+    { id: 'remind-student', name: '5. Напоминаем о себе студенту', templateId: 'students-topic-remind-student' },
+    { id: 'amo-notes', name: '6. Обновляем примечания и задачи в АМО на актуальные', templateId: 'students-topic-amo-notes' },
+    { id: 'check-own', name: '7. Проверяем все свои заявки', templateId: 'students-topic-check-own' },
+    { id: 'archive-right', name: '8. Убираем в архив правильно', templateId: 'students-topic-archive-right' }
   ];
 
   function getTopicById(id) {

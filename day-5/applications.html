@@ -96,24 +96,6 @@
             </div>
           </div>
 
-          <template id="students-topic-lk">
-            <section class="content-block">
-              <p class="guide-section__lead">Сначала проверяем в заявке все поля и приводим их в порядок, если что-то не так заполнено.</p>
-              <ul class="guide-checklist">
-                <li>ФИ студента в отдельном поле своем прописываем.</li>
-                <li>Латиницу меняем на кириллицу (т.е. англ. буквы на русские).</li>
-                <li>Букву Ё меняем на Е.</li>
-                <li>Ставим верный часовой пояс.</li>
-                <li>Города нужно прописывать полностью. Варианты: СПБ, МСК, МО, Питер и т.д. - категорически не подходят, меняем.</li>
-                <li>Если странно указан возраст, например, "-1", то убираем это, ставим "-", если нет у нас информации.</li>
-              </ul>
-              <figure class="guide-figure guide-figure--compact app-figure-captioned">
-                <img src="../РаботаСЗаявками2.png" alt="Пример некорректного возраста в сообщении: значение -1" loading="lazy">
-                <figcaption>Пример некорректного заполнения: возраст "-1".</figcaption>
-              </figure>
-            </section>
-          </template>
-
           <template id="students-topic-tariff">
             <section class="content-block">
               <ul class="guide-checklist">
@@ -126,6 +108,18 @@
                 <figure class="guide-figure">
                   <img src="../РаботаСЗаявками6.png" alt="Пример тарифа студента в карточке заявки" loading="lazy">
                 </figure>
+              </div>
+              <div class="tip">
+                <svg class="tip__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="9" y1="18" x2="15" y2="18"/><line x1="10" y1="22" x2="14" y2="22"/>
+                  <path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/>
+                </svg>
+                <div class="tip__text">
+                  <p>Либо в АМО в самом начале (в самом верху) сделки.</p>
+                  <figure class="guide-figure guide-figure--compact">
+                    <img src="../РаботаСЗаявками1.png" alt="Примечание в amoCRM в начале сделки: текущий тариф студента и тариф с носителями" loading="lazy">
+                  </figure>
+                </div>
               </div>
               <ul class="guide-checklist">
                 <li>При предложении ученика нового или старого, преподавателю обязательно сообщайте тариф (без уточнений архивности и даты тарифа):</li>
@@ -283,9 +277,21 @@
             <section class="content-block">
               <p class="guide-section__lead">Если не выходит на связь студент с вами и закрываете заявку, то не забывайте:</p>
               <ul class="guide-checklist">
-                <li>менять статус на “архивный”.</li>
-                <li>отклонять саму заявку.</li>
+                <li>В ЛК открепить расписание;</li>
+                <li>В АМО закрыть сделку в «Закрыто и нереализовано» и проставить причину отказа.</li>
               </ul>
+              <div class="tip">
+                <svg class="tip__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="9" y1="18" x2="15" y2="18"/><line x1="10" y1="22" x2="14" y2="22"/>
+                  <path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/>
+                </svg>
+                <div class="tip__text">
+                  <p>Если забудете открепить расписание, то при закрытии сделки в АМО вам поставится задача и попросит открепить расписание и заархивировать клиента (поменять статус на «Архивный»).</p>
+                  <figure class="guide-figure guide-figure--compact">
+                    <img src="../РаботаСЗаявками22.png" alt="Задача «Контроль» в amoCRM: открепить расписание и перевести студента в архив" loading="lazy">
+                  </figure>
+                </div>
+              </div>
             </section>
           </template>
         </div>
