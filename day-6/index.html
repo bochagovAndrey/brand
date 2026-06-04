@@ -17,17 +17,169 @@
 
     <section class="hero">
       <div class="hero__content">
-        <h1 class="hero__title">Тема шестого дня</h1>
-        <p class="hero__desc">Описание материалов шестого дня.</p>
+        <h1 class="hero__title">День 6: Регламенты и нештатные ситуации</h1>
+        <p class="hero__desc">Звонки, касания, рабочий день, отпуска, болезни и технические сбои — правила для ежедневной работы координатора и квалификатора.</p>
+      </div>
+      <div class="hero__art" aria-hidden="true">
+        <svg viewBox="0 0 320 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M42 32l2 5 5 1-4 3 1 5-4-3-4 3 1-5-4-3 5-1z" stroke="white" stroke-width="1.5" stroke-linejoin="round" opacity="0.7"/>
+          <circle cx="58" cy="148" r="2" fill="white" opacity="0.5"/>
+          <circle cx="285" cy="62" r="2" fill="white" opacity="0.5"/>
+
+          <rect x="52" y="48" width="88" height="88" rx="12" stroke="white" stroke-width="2"/>
+          <path d="M88 72v24M76 84h24" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M68 118c6-8 20-8 28 0" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+
+          <path d="M168 56h72v52H168z" stroke="white" stroke-width="2" stroke-linejoin="round"/>
+          <path d="M184 72h40M184 88h28M184 104h36" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.75"/>
+
+          <path d="M228 132c0-14 10-24 24-24s24 10 24 24" stroke="white" stroke-width="2"/>
+          <path d="M240 132h16l-4 8h-8l-4-8z" stroke="white" stroke-width="2" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </section>
+
+    <section class="top-section">
+      <h2 class="section-title">Что вас ждёт сегодня</h2>
+      <div class="preview-cards preview-cards--five">
+        <a href="workday-regulations.html" class="preview-card preview-card--link">
+          <div class="preview-card__icon preview-card__icon--teal">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <h3 class="preview-card__title">Регламент рабочего дня</h3>
+          <p class="preview-card__desc">Смена и чаты команды</p>
+        </a>
+        <a href="calls-regulations.html" class="preview-card preview-card--link">
+          <div class="preview-card__icon preview-card__icon--blue">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+          </div>
+          <h3 class="preview-card__title">Регламент звонков</h3>
+          <p class="preview-card__desc">Звонки из amoCRM</p>
+        </a>
+        <a href="touch-chain-regulations.html" class="preview-card preview-card--link">
+          <div class="preview-card__icon preview-card__icon--violet">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+            </svg>
+          </div>
+          <h3 class="preview-card__title">Регламент цепочки касаний</h3>
+          <p class="preview-card__desc">Попытки связи с клиентом</p>
+        </a>
+        <a href="illnesses-tech.html" class="preview-card preview-card--link">
+          <div class="preview-card__icon preview-card__icon--amber">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+            </svg>
+          </div>
+          <h3 class="preview-card__title">Болезни и технические неполадки</h3>
+          <p class="preview-card__desc">Сбои, свет, болезнь</p>
+        </a>
+        <a href="vacation-regulations.html" class="preview-card preview-card--link">
+          <div class="preview-card__icon preview-card__icon--rose">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+            </svg>
+          </div>
+          <h3 class="preview-card__title">Регламент отпусков</h3>
+          <p class="preview-card__desc">28 дней, график, отпускные</p>
+        </a>
       </div>
     </section>
 
     <section class="materials">
       <div class="materials__header">
         <h2>Материалы дня</h2>
-        <span class="badge">Скоро</span>
+        <span class="badge">5 блоков</span>
       </div>
-      <p class="day-empty">Материалы этого дня будут добавлены позже. Отредактируйте <code>day-6/index.html</code>.</p>
+
+      <article class="material-item">
+        <span class="material-item__num">1</span>
+        <div class="material-item__icon material-item__icon--teal">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+          </svg>
+        </div>
+        <div class="material-item__content">
+          <h3 class="material-item__title">Регламент рабочего дня</h3>
+          <p class="material-item__desc">Смена, перерывы, отчёт и новости отдела</p>
+        </div>
+        <span class="material-item__tag">Гайд</span>
+        <a href="workday-regulations.html" class="btn btn--outline">Изучить</a>
+      </article>
+
+      <article class="material-item">
+        <span class="material-item__num">2</span>
+        <div class="material-item__icon material-item__icon--blue">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+        </div>
+        <div class="material-item__content">
+          <h3 class="material-item__title">Регламент звонков</h3>
+          <p class="material-item__desc">Исходящие звонки из amoCRM и связь с этапами воронки</p>
+        </div>
+        <span class="material-item__tag">Гайд</span>
+        <a href="calls-regulations.html" class="btn btn--outline">Изучить</a>
+      </article>
+
+      <article class="material-item">
+        <span class="material-item__num">3</span>
+        <div class="material-item__icon material-item__icon--violet">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+          </svg>
+        </div>
+        <div class="material-item__content">
+          <h3 class="material-item__title">Регламент цепочки касаний</h3>
+          <p class="material-item__desc">Попытки связи с клиентом и переводы между этапами</p>
+        </div>
+        <span class="material-item__tag">Гайд</span>
+        <a href="touch-chain-regulations.html" class="btn btn--outline">Изучить</a>
+      </article>
+
+      <article class="material-item">
+        <span class="material-item__num">4</span>
+        <div class="material-item__icon material-item__icon--amber">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+          </svg>
+        </div>
+        <div class="material-item__content">
+          <h3 class="material-item__title">Болезни и технические неполадки</h3>
+          <p class="material-item__desc">Технические неполадки на смене, оплата и больничный</p>
+        </div>
+        <span class="material-item__tag">Гайд</span>
+        <a href="illnesses-tech.html" class="btn btn--outline">Изучить</a>
+      </article>
+
+      <article class="material-item">
+        <span class="material-item__num">5</span>
+        <div class="material-item__icon material-item__icon--rose">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+          </svg>
+        </div>
+        <div class="material-item__content">
+          <h3 class="material-item__title">Регламент отпусков</h3>
+          <p class="material-item__desc">Правила отпуска, график и расчёт отпускных</p>
+        </div>
+        <span class="material-item__tag">Гайд</span>
+        <a href="vacation-regulations.html" class="btn btn--outline">Изучить</a>
+      </article>
+
+      <div class="tip">
+        <svg class="tip__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="9" y1="18" x2="15" y2="18"/><line x1="10" y1="22" x2="14" y2="22"/>
+          <path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/>
+        </svg>
+        <p class="tip__text">
+          <strong>Совет:</strong> Проходите материалы по порядку: рабочий день → звонки → цепочка касаний → болезни и тех. неполадки → отпуска.
+        </p>
+      </div>
     </section>
   </main>
 </body>
