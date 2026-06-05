@@ -61,8 +61,18 @@
           </svg>
         </div>
         <div class="guide-alert__body">
-          <h3 class="guide-alert__title">Звонок за рубеж</h3>
-          <p class="guide-alert__lead">Два разных способа позвонить за рубеж:</p>
+          <div class="touch-chain-abroad-head">
+            <div class="touch-chain-abroad-head__text">
+              <h3 class="guide-alert__title">Звонок за рубеж</h3>
+              <p class="guide-alert__lead">Два разных способа позвонить за рубеж:</p>
+            </div>
+            <button type="button" class="btn btn--outline touch-chain-mango-btn" data-open-guide-modal="mango-number-modal">
+              <svg class="btn__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+              Как сменить номер в МАНГО
+            </button>
+          </div>
           <div class="touch-chain-abroad-methods">
             <article class="touch-chain-abroad-method">
               <span class="touch-chain-abroad-method__label">Способ 1</span>
@@ -177,5 +187,57 @@
       <p class="tip__text"><strong>Совет:</strong> Перед звонком просмотрите переписку и прошлые касания. Напоминания по заявке после подбора — в <a href="../day-5/applications.html">«Работа с заявками»</a>.</p>
     </div>
   </main>
+
+  <div class="guide-modal" id="mango-number-modal" aria-hidden="true" role="dialog" aria-labelledby="mango-number-modal-title">
+    <div class="guide-modal__backdrop" data-close-guide-modal></div>
+    <div class="guide-modal__panel">
+      <button type="button" class="guide-modal__close" data-close-guide-modal aria-label="Закрыть">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+      <h2 class="guide-modal__title" id="mango-number-modal-title">Как сменить номер в МАНГО</h2>
+      <ol class="guide-modal__steps">
+        <li>
+          <span class="guide-modal__step-num" aria-hidden="true">1</span>
+          <div class="guide-modal__step-body">
+            <p>В приложении <strong>Mango Talker</strong> внизу окна нажмите на строку <strong>«Ваш исходящий номер»</strong> — справа от номера стрелка ⌵.</p>
+            <figure class="guide-figure">
+              <img src="../day-3/mango-outgoing-step1.png" alt="Mango Talker: строка «Ваш исходящий номер» внизу окна" loading="lazy">
+            </figure>
+          </div>
+        </li>
+        <li>
+          <span class="guide-modal__step-num" aria-hidden="true">2</span>
+          <div class="guide-modal__step-body">
+            <p>Откроется список доступных номеров. Выберите нужный — для звонков за рубеж обычно номер с <strong>бриллиантом</strong> 💎.</p>
+            <figure class="guide-figure">
+              <img src="../day-3/mango-outgoing-step2.png" alt="Список исходящих номеров в Mango Talker" loading="lazy">
+            </figure>
+          </div>
+        </li>
+        <li>
+          <span class="guide-modal__step-num" aria-hidden="true">3</span>
+          <div class="guide-modal__step-body">
+            <p>Нажмите на кружок справа от номера — появится синяя галочка, номер выбран.</p>
+            <figure class="guide-figure">
+              <img src="../day-3/mango-outgoing-step3.png" alt="Выбранный номер с меткой 💎Клиент-Менеджеры в Mango Talker" loading="lazy">
+            </figure>
+          </div>
+        </li>
+        <li>
+          <span class="guide-modal__step-num" aria-hidden="true">4</span>
+          <div class="guide-modal__step-body">
+            <p>Внизу окна отобразится выбранный исходящий номер — можно звонить.</p>
+            <figure class="guide-figure">
+              <img src="../day-3/mango-outgoing-step4.png" alt="Внизу Mango Talker отображается выбранный исходящий номер" loading="lazy">
+            </figure>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <script src="../day-3/guide-modal.js"></script>
 </body>
 </html>
