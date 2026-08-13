@@ -6929,11 +6929,19 @@ body.guide-modal-open {
   color: #6d4fc7;
 }
 
-.svu-mvu-group__names {
-  margin: 0 0 8px;
+.svu-mvu-group__list {
+  list-style: disc;
+  margin: 0 0 10px;
+  padding-left: 1.2em;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.svu-mvu-group__list li {
   font-size: 15px;
   font-weight: 600;
-  line-height: 1.5;
+  line-height: 1.45;
   color: var(--gray-800);
 }
 
