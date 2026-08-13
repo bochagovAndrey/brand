@@ -1579,6 +1579,7 @@ body {
 
 .courses-detail__note {
   padding: 12px 14px;
+  margin-bottom: 14px;
   background: var(--gray-50);
   border-left: 3px solid var(--blue);
   border-radius: 0 8px 8px 0;
