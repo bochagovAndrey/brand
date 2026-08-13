@@ -2818,9 +2818,8 @@ body {
 }
 
 .guide-notice__checks li {
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
+  position: relative;
+  padding-left: 1.35em;
   font-size: 15px;
   line-height: 1.55;
   color: var(--gray-800);
@@ -2828,7 +2827,9 @@ body {
 
 .guide-notice__checks li::before {
   content: "✓";
-  flex-shrink: 0;
+  position: absolute;
+  left: 0;
+  top: 0.1em;
   font-weight: 700;
   color: var(--gray-700);
 }
@@ -6829,6 +6830,125 @@ body.guide-modal-open {
   line-height: 1.65;
   color: var(--gray-600);
   margin: 0 0 20px;
+}
+
+.svu-about-alert {
+  margin: 0 0 20px;
+}
+
+.svu-about-alert .guide-alert__title {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.55;
+  color: var(--gray-800);
+}
+
+.svu-types-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin: 0 0 20px;
+}
+
+.svu-types-card {
+  padding: 16px 18px;
+  border-radius: 12px;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.svu-types-card--mvu {
+  background: #f8f6ff;
+  border-color: #d5ccf5;
+}
+
+.svu-types-card__label {
+  display: inline-block;
+  margin-bottom: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--blue);
+}
+
+.svu-types-card--mvu .svu-types-card__label {
+  color: #7048e8;
+}
+
+.svu-types-card__title {
+  margin: 0 0 8px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--gray-800);
+}
+
+.svu-types-card__text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--gray-700);
+}
+
+.svu-mvu-roster {
+  margin: 0 0 28px;
+  padding: 18px 20px;
+  border-radius: 12px;
+  background: #fffbf0;
+  border: 1px solid #f0e6c8;
+  border-left: 4px solid #c9a227;
+}
+
+.svu-mvu-roster__title {
+  margin: 0 0 14px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--gray-800);
+}
+
+.svu-mvu-roster__groups {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.svu-mvu-group {
+  padding: 14px 16px;
+  border-radius: 10px;
+  background: var(--white);
+  border: 1px solid #f0e6c8;
+}
+
+.svu-mvu-group__title {
+  margin: 0 0 8px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.45;
+  color: #6d4fc7;
+}
+
+.svu-mvu-group__names {
+  margin: 0 0 8px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--gray-800);
+}
+
+.svu-mvu-group__note {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--gray-600);
+}
+
+@media (max-width: 720px) {
+  .svu-types-grid,
+  .svu-mvu-roster__groups {
+    grid-template-columns: 1fr;
+  }
 }
 
 .svu-intro-figure {
