@@ -405,6 +405,43 @@ body {
   margin-bottom: 6px;
 }
 
+.help-dept-filter__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.help-dept-filter__btn {
+  padding: 9px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--gray-700);
+  background: var(--white);
+  border: 2px solid var(--gray-200);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, color 0.15s, box-shadow 0.15s;
+}
+
+.help-dept-filter__btn:hover {
+  border-color: var(--blue-soft);
+  color: var(--blue);
+}
+
+.help-dept-filter__btn--active {
+  color: var(--blue);
+  background: var(--blue-light);
+  border-color: var(--blue);
+  box-shadow: 0 2px 8px rgba(76, 110, 245, 0.16);
+}
+
+.help-dept-filter__btn:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
+
 .help-table-wrap {
   overflow-x: auto;
   border: 2px solid var(--gray-200);
@@ -530,6 +567,12 @@ body {
 .help-table__chat-btn:hover .help-table__chat-btn__icon {
   opacity: 1;
   transform: translate(1px, -1px);
+}
+
+.help-table td .help-table__chat-btn {
+  display: inline-flex;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .help-table td .help-table__chat-btn + .help-table__chat-btn {

@@ -40,6 +40,39 @@
     });
   }
 
+  function initDepartmentFilters() {
+    var root = bodyEl.querySelector('[data-help-dept-filter]');
+    if (!root) return;
+
+    var rows = root.querySelectorAll('[data-help-dept]');
+    var buttons = root.querySelectorAll('[data-help-dept-btn]');
+
+    function setFilter(dept) {
+      buttons.forEach(function (btn) {
+        var isActive = btn.dataset.helpDeptBtn === dept;
+        btn.classList.toggle('help-dept-filter__btn--active', isActive);
+        btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+      });
+
+      rows.forEach(function (row) {
+        var rowDepts = (row.dataset.helpDept || '').split(/\s+/);
+        row.hidden = rowDepts.indexOf(dept) === -1;
+      });
+    }
+
+    buttons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        setFilter(btn.dataset.helpDeptBtn);
+      });
+    });
+
+    setFilter('qualifier');
+  }
+
+  function initTopicInteractions() {
+    initDepartmentFilters();
+  }
+
   function openTopic(id) {
     browser.classList.add('help-browser--open');
     selectTopic(id, true);
@@ -55,6 +88,7 @@
 
     if (isInitial) {
       bodyEl.innerHTML = topic.html;
+      initTopicInteractions();
       bodyEl.classList.remove('help-detail__body--visible');
       requestAnimationFrame(function () {
         requestAnimationFrame(function () {
@@ -65,6 +99,7 @@
       bodyEl.classList.remove('help-detail__body--visible');
       setTimeout(function () {
         bodyEl.innerHTML = topic.html;
+        initTopicInteractions();
         requestAnimationFrame(function () {
           bodyEl.classList.add('help-detail__body--visible');
         });

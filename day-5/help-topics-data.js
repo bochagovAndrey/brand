@@ -13,18 +13,37 @@ function helpChatBtn(label, url) {
   );
 }
 
+function helpDeptFilterStart() {
+  return (
+    '<div class="help-dept-filter" data-help-dept-filter>' +
+    '<div class="help-dept-filter__buttons" role="group" aria-label="Фильтр по отделу">' +
+    '<button type="button" class="help-dept-filter__btn help-dept-filter__btn--active" data-help-dept-btn="qualifier" aria-pressed="true">Квалификаторы</button>' +
+    '<button type="button" class="help-dept-filter__btn" data-help-dept-btn="coordinator" aria-pressed="false">Координаторы</button>' +
+    '</div>'
+  );
+}
+
+function helpDeptFilterEnd() {
+  return '</div>';
+}
+
 var PACHCA_CHATS = {
   it: 'https://app.pachca.com/chats/21823477',
   team: 'https://app.pachca.com/chats/25108339',
   news: 'https://app.pachca.com/chats/24553662',
+  coordTeam: 'https://app.pachca.com/chats/39937865',
+  coordNews: 'https://app.pachca.com/chats/39938068',
+  qualCoord: 'https://app.pachca.com/chats/40198312',
+  salesDept: 'https://app.pachca.com/chats/41370522',
   kmCoord: 'https://app.pachca.com/chats/21822422',
+  kmCoordinators: 'https://app.pachca.com/chats/40216284',
+  salesKmCoord: 'https://app.pachca.com/chats/30190070',
   sales: 'https://app.pachca.com/chats/30234862',
   mvu: 'https://app.pachca.com/chats/37597279',
   corp: 'https://app.pachca.com/chats/25906306',
   extra: 'https://app.pachca.com/chats/32168808',
   urgent: 'https://app.pachca.com/chats/32912328',
   shvu: 'https://app.pachca.com/chats/22258949',
-  strachkov: 'https://app.pachca.com/chats/22372082',
   methodist: 'https://app.pachca.com/chats/22257559',
   deals: 'https://app.pachca.com/chats/24553799',
   group: 'https://app.pachca.com/chats/22273273',
@@ -57,14 +76,14 @@ var HELP_TOPICS = [
       '</ol></td>' +
       '<td>Вячеслав Ершов</td>' +
       '<td>Можно в ЛС, можно в чат<br>' +
-      helpChatBtn('Координаторы — IT', PACHCA_CHATS.it) +
+      helpChatBtn('К&К — IT', PACHCA_CHATS.it) +
       '</td>' +
       '</tr>' +
       '<tr>' +
       '<td>Общие проблемы в ЛК/амо/манго (например, не сработало распределение в амо, не начислился КПИ в ЛК).</td>' +
       '<td>Никого тегать не надо — ребята сами подхватят свой вопрос</td>' +
       '<td>В чат<br>' +
-      helpChatBtn('Координаторы — IT', PACHCA_CHATS.it) +
+      helpChatBtn('К&К — IT', PACHCA_CHATS.it) +
       '</td>' +
       '</tr>' +
       '<tr>' +
@@ -81,13 +100,14 @@ var HELP_TOPICS = [
     emoji: '💡',
     name: 'Коммуникация с командой',
     html:
+      helpDeptFilterStart() +
       '<div class="help-table-wrap">' +
       '<table class="help-table help-table--two-cols">' +
       '<thead><tr>' +
       '<th scope="col">Что делаем</th>' +
       '<th scope="col">Название чата в Пачке</th>' +
       '</tr></thead><tbody>' +
-      '<tr>' +
+      '<tr data-help-dept="qualifier">' +
       '<td><ul class="help-table__list">' +
       '<li>Каждое утро перед началом смены пишем «Доброе утро»;</li>' +
       '<li>Пишем о своём перерыве (что ушли на него и что вернулись);</li>' +
@@ -98,7 +118,18 @@ var HELP_TOPICS = [
       helpChatBtn('Команда Квалификации 💌', PACHCA_CHATS.team) +
       '</td>' +
       '</tr>' +
-      '<tr>' +
+      '<tr data-help-dept="coordinator">' +
+      '<td><ul class="help-table__list">' +
+      '<li>Каждое утро перед началом смены пишем «Доброе утро»;</li>' +
+      '<li>Пишем о своём перерыве (что ушли на него и что вернулись);</li>' +
+      '<li>Вопросы в течение смены, если они могут быть полезны остальным коллегам;</li>' +
+      '<li>В конце каждой смены отправляем сюда отчёт.</li>' +
+      '</ul></td>' +
+      '<td>' +
+      helpChatBtn('Команда Координации', PACHCA_CHATS.coordTeam) +
+      '</td>' +
+      '</tr>' +
+      '<tr data-help-dept="qualifier">' +
       '<td><p class="help-table__lead">Посты с новостями для отдела.</p>' +
       '<ul class="help-table__list">' +
       '<li>При ознакомлении — обязательно ставить реакцию, чтобы было видно, что вы ознакомились;</li>' +
@@ -108,52 +139,109 @@ var HELP_TOPICS = [
       helpChatBtn('Новости Квалификация', PACHCA_CHATS.news) +
       '</td>' +
       '</tr>' +
-      '</tbody></table></div>',
+      '<tr data-help-dept="coordinator">' +
+      '<td><p class="help-table__lead">Посты с новостями для отдела.</p>' +
+      '<ul class="help-table__list">' +
+      '<li>При ознакомлении — обязательно ставить реакцию, чтобы было видно, что вы ознакомились;</li>' +
+      '<li>После выходных — обязательно прочесть все новости за ваши выходные, чтобы все были в контексте.</li>' +
+      '</ul></td>' +
+      '<td>' +
+      helpChatBtn('Новости Координация', PACHCA_CHATS.coordNews) +
+      '</td>' +
+      '</tr>' +
+      '</tbody></table></div>' +
+      helpDeptFilterEnd(),
   },
   {
     id: 'departments',
     emoji: '♻️',
     name: 'Коммуникация между смежными отделами',
     html:
+      helpDeptFilterStart() +
       '<div class="help-table-wrap">' +
       '<table class="help-table help-table--two-cols">' +
       '<thead><tr>' +
       '<th scope="col">Запросы</th>' +
       '<th scope="col">Название чата в Пачке</th>' +
       '</tr></thead><tbody>' +
-      '<tr>' +
+      '<tr data-help-dept="qualifier coordinator">' +
+      '<td><ul class="help-table__list">' +
+      '<li>Передача ПИ;</li>' +
+      '<li>Обращения между отделами;</li>' +
+      '<li>Уточнения по заявкам/сделкам.</li>' +
+      '</ul></td>' +
+      '<td>' +
+      helpChatBtn('Квалификация & Координация', PACHCA_CHATS.qualCoord) +
+      '</td>' +
+      '</tr>' +
+      '<tr data-help-dept="qualifier coordinator">' +
+      '<td>' +
+      '<p class="help-table__lead">Это общий чат Департамента.</p>' +
+      '<ul class="help-table__list">' +
+      '<li>Анонсы изменений в департаменте и новости, которые могут касаться всех;</li>' +
+      '<li>Объявление ТОП-ов недели / месяца / квартала среди разных отделов;</li>' +
+      '<li>Клевые рабочие инструменты для роста продуктивности, улучшения показателей и т.д.;</li>' +
+      '<li>Инсайты, которые помогли нам стать лучше, опередить рынок и конкурентов;</li>' +
+      '<li>Обсуждение системных вопросов и улучшений по работе департамента;</li>' +
+      '<li>Общие встречи — пока есть только квартальная встреча компании.</li>' +
+      '</ul></td>' +
+      '<td>' +
+      helpChatBtn('Департамент продаж', PACHCA_CHATS.salesDept) +
+      '</td>' +
+      '</tr>' +
+      '<tr data-help-dept="qualifier">' +
       '<td><ul class="help-table__list">' +
       '<li>передача сообщения из ПИ;</li>' +
       '<li>заявки на возобновление (с нулевым балансом и сроком прерыва более 90 дней);</li>' +
       '<li>передача информации от КМ (например, что препод болеет или просьбы не занимать какой-то слот).</li>' +
       '</ul></td>' +
       '<td>' +
-      helpChatBtn('КМ-Координаторы', PACHCA_CHATS.kmCoord) +
+      helpChatBtn('КМ — Квалификаторы', PACHCA_CHATS.kmCoord) +
       '</td>' +
       '</tr>' +
-      '<tr>' +
+      '<tr data-help-dept="qualifier">' +
       '<td><ul class="help-table__list">' +
       '<li>передача сообщения из ПИ;</li>' +
       '<li>если клиент прошёл ВУ и хочет оплатить;</li>' +
       '<li>если клиент без ВУ хочет сразу оплатить и от ВУ отказывается.</li>' +
       '</ul></td>' +
       '<td>' +
-      helpChatBtn('Координаторы и менеджеры продаж', PACHCA_CHATS.sales) +
+      helpChatBtn('Квалификаторы и Сопровождение оплат', PACHCA_CHATS.sales) +
       '</td>' +
       '</tr>' +
-      '<tr>' +
+      '<tr data-help-dept="coordinator">' +
+      '<td><ul class="help-table__list">' +
+      '<li>Вопросы между отделами;</li>' +
+      '<li>Передача ПИ.</li>' +
+      '</ul></td>' +
+      '<td>' +
+      helpChatBtn('КМ — Координаторы', PACHCA_CHATS.kmCoordinators) +
+      '</td>' +
+      '</tr>' +
+      '<tr data-help-dept="coordinator">' +
+      '<td><ul class="help-table__list">' +
+      '<li>Препод уточняет, будет ли заниматься потенциальный студент (к СО);</li>' +
+      '<li>СО уточняет, есть ли преподы под конкретное расписание/запрос;</li>' +
+      '<li>Прочие запросы между КМ-Координаторами-СО.</li>' +
+      '</ul></td>' +
+      '<td>' +
+      helpChatBtn('Продажи+КМ+Коорд: вопросы', PACHCA_CHATS.salesKmCoord) +
+      '</td>' +
+      '</tr>' +
+      '<tr data-help-dept="qualifier coordinator">' +
       '<td>Чат для уведомлений о СВУ, которые назначили менее чем за час до урока.</td>' +
       '<td>' +
-      helpChatBtn('МВУ — Квалификация', PACHCA_CHATS.mvu) +
+      helpChatBtn('МВУ + К&К', PACHCA_CHATS.mvu) +
       '</td>' +
       '</tr>' +
-      '<tr>' +
+      '<tr data-help-dept="qualifier coordinator">' +
       '<td>Передача заявки для оплаты от юр. лица.</td>' +
       '<td>' +
       helpChatBtn('Корпоративное обучение: заявки', PACHCA_CHATS.corp) +
       '</td>' +
       '</tr>' +
-      '</tbody></table></div>',
+      '</tbody></table></div>' +
+      helpDeptFilterEnd(),
   },
   {
     id: 'teachers',
@@ -204,13 +292,6 @@ var HELP_TOPICS = [
       '<th scope="col">В каком чате</th>' +
       '</tr></thead><tbody>' +
       '<tr>' +
-      '<td><p class="help-table__lead">В основном для МП.</p>' +
-      '<p>Проблемы с оплатами у студентов.</p></td>' +
-      '<td>' +
-      helpChatBtn('А. Страчков+КМ и Координаторы', PACHCA_CHATS.strachkov) +
-      '</td>' +
-      '</tr>' +
-      '<tr>' +
       '<td><p class="help-table__lead">Специфичный запрос клиента и можем ли мы ему помочь:</p>' +
       '<ul class="help-table__list">' +
       '<li>необычная сфера (например, англ для моряков);</li>' +
@@ -230,7 +311,7 @@ var HELP_TOPICS = [
       '<li>передача доп. информации от координаторов (например, если узнали ТГ после передачи в подбор).</li>' +
       '</ul></td>' +
       '<td>' +
-      helpChatBtn('Вопросы по заявкам/сделкам: КМ и координаторы', PACHCA_CHATS.deals) +
+      helpChatBtn('Вопросы по заявкам/сделкам: КМ, квал, коорд', PACHCA_CHATS.deals) +
       '</td>' +
       '</tr>' +
       '<tr>' +
@@ -242,7 +323,7 @@ var HELP_TOPICS = [
       '<tr>' +
       '<td><p class="help-table__lead">В основном для КМ.</p></td>' +
       '<td>' +
-      helpChatBtn('Skills: вопросы от КМ', PACHCA_CHATS.skills) +
+      helpChatBtn('Skills: вопросы от КМ, квал, коорд', PACHCA_CHATS.skills) +
       '</td>' +
       '</tr>' +
       '</tbody></table></div>',
